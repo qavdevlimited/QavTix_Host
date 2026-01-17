@@ -57,9 +57,10 @@ interface FilterValues {
 
 type FilterFor = "homepage" | "eventPage"
 
-type IEventStatus = "filling-fast" | "sold-out" | "new" | "near-capacity"
+type IEventStatus = "selling-fast" | "sold-out" | "new" | "near-capacity" | "low-sales" | "starts-soon"
 
 interface IEvent {
+    id: string
     image: string
     status?: IEventStatus
     category: string
@@ -77,4 +78,21 @@ interface FeaturedEvent {
     id: number
     image: string
     title: string
+}
+
+
+interface TopPerformingEvent extends Partial<IEvent> {
+    conversionRate: number
+    ticketsSold: number
+    totalTickets: number
+    revenueGenerated: number
+    currency: string
+}
+
+
+interface EventTableData extends IEvent {
+    ticketsSold: number
+    totalTickets: number
+    revenue: number
+    time: string
 }

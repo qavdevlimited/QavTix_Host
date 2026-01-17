@@ -118,3 +118,146 @@ export const notifications : NotificationItem[] = [
       status: 'read'
     }
   ]
+
+
+export const mockPerformingEvents: TopPerformingEvent[] = [
+  {
+      id: '1',
+      title: 'Sive Tour',
+      category: 'Music Festival',
+      image: '/images/demo-images/event-detail-img.png',
+      conversionRate: 93,
+      ticketsSold: 487,
+      totalTickets: 500,
+      revenueGenerated: 217500,
+      currency: '₦'
+  },
+  {
+      id: '2',
+      title: 'Tech Summit 2025',
+      category: 'Conference',
+      image: '/images/demo-images/event-detail-img.png',
+      conversionRate: 87,
+      ticketsSold: 350,
+      totalTickets: 400,
+      revenueGenerated: 185000,
+      currency: '₦'
+  },
+  {
+      id: '3',
+      title: 'Food & Wine Expo',
+      category: 'Food & Dining',
+      image: '/images/demo-images/event-detail-img.png',
+      conversionRate: 82,
+      ticketsSold: 290,
+      totalTickets: 350,
+      revenueGenerated: 145000,
+      currency: '₦'
+  }
+]
+
+
+export const mockUpcomingEvents: EventTableData[] = [
+    {
+        id: '1',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'low-sales',
+        category: 'Tech Summit',
+        host: 'Tech Hub',
+        title: 'DevFest Lekki',
+        date: 'Nov 14, 2025',
+        time: '9:00 am',
+        location: '1234 Victoria Island, Opposite Figma Head Office, Lagos, Nigeria',
+        price: '₦5,000',
+        href: '/events/1',
+        attendees: [],
+        ticketsSold: 174,
+        totalTickets: 500,
+        revenue: 635000
+    },
+    {
+        id: '2',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'selling-fast',
+        category: 'Music Festival',
+        host: 'Live Nation',
+        title: 'Sive Tour Concert',
+        date: 'Nov 15, 2025',
+        time: '6:00 pm',
+        location: 'Doo & Shima, Elegushi Beach, Ikoyi, Lagos State',
+        price: '₦15,000',
+        href: '/events/2',
+        attendees: [],
+        ticketsSold: 254,
+        totalTickets: 500,
+        revenue: 635000
+    },
+    {
+        id: '3',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'starts-soon',
+        category: 'Food Festival',
+        host: 'Food Lovers',
+        title: 'Bole Fest 2025',
+        date: 'Nov 17, 2025',
+        time: '11:00 am',
+        location: "567 O'Brien Crescent, off Airport Road, Umuahia",
+        price: '₦3,000',
+        href: '/events/3',
+        attendees: [],
+        ticketsSold: 254,
+        totalTickets: 500,
+        revenue: 635000
+    },
+    {
+        id: '4',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'starts-soon',
+        category: 'Sports Event',
+        host: 'Gaming Hub',
+        title: 'PS5 Gamers Clash',
+        date: 'Nov 18, 2025',
+        time: '4:00 pm',
+        location: "567 O'Brien Crescent, off Airport Road, Umuahia",
+        price: '₦2,500',
+        href: '/events/4',
+        attendees: [],
+        ticketsSold: 254,
+        totalTickets: 500,
+        revenue: 635000
+    },
+    {
+        id: '5',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'selling-fast',
+        category: 'Cultural Event',
+        host: 'Heritage Foundation',
+        title: 'Owerri Cultural Day',
+        date: 'Nov 19, 2025',
+        time: '2:00 pm',
+        location: 'Hero Square, New Owerri, Imo State',
+        price: '₦1,000',
+        href: '/events/5',
+        attendees: [],
+        ticketsSold: 254,
+        totalTickets: 500,
+        revenue: 635000
+    },
+    {
+        id: '6',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'selling-fast',
+        category: 'Kids Event',
+        host: 'Fun Zone',
+        title: 'Kiddies Funfair Fest',
+        date: 'Nov 20, 2025',
+        time: '9:00 am',
+        location: 'Dreamworld Africana, KM 20 Lekki-Ajah Expressway, Lagos',
+        price: '₦5,000',
+        href: '/events/6',
+        attendees: [],
+        ticketsSold: 254,
+        totalTickets: 500,
+        revenue: 635000
+    }
+]

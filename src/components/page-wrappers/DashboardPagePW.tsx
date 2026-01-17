@@ -2,10 +2,8 @@
 
 import RevenueGrowthChart from "@/components/charts/RevenueGrowthChart";
 import OverviewSection from "@/components/dashboard/OverviewSection";
-import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { ChartFilterToggle } from "../dashboard/ChartFilterToggle";
-import UpcomingEvents from "../custom-utils/TableDataDisplayAreas/UpcomingEvents";
 
 export default function DashboardPagePW(){
 
@@ -19,8 +17,6 @@ export default function DashboardPagePW(){
                 <ChartFilterToggle chartFilter={chartFilter} setChartFilter={setChartFilter} />
                 <RevenueGrowthChart />
             </div>
-
-            <UpcomingEvents />
         </main>
     )
 }

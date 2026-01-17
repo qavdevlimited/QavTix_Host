@@ -39,7 +39,7 @@ export function AnimatedDialog({
 
         <DialogPrimitive.Content
           className={cn(
-            "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 w-full max-w-125 bg-white rounded-4xl shadow-2xl outline-none",
+            "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 w-full max-w-[90%] sm:max-w-125 bg-white rounded-4xl shadow-2xl outline-none",
             // Open animation
             "data-[state=open]:animate-in",
             "data-[state=open]:fade-in-0",

@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
-import RecentActivityTab from '../activity/ActivityTabContent'
-import NotificationsTab from '../activity/NotificationTabContent'
+import RecentActivityTab from '../slots/activity/ActivityTabContent'
+import NotificationsTab from '../slots/activity/NotificationTabContent'
 
 type TabType = 'activity' | 'notifications'
 
@@ -61,7 +61,7 @@ export default function ActivitySectionPW({
             </div>
 
             {/* Tab Content */}
-            <div className="p-4">
+            <div className="py-3 w-full">
                 {activeTab === 'activity' ? (
                     <RecentActivityTab activities={activities} />
                 ) : (

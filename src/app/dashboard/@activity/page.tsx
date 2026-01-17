@@ -13,7 +13,7 @@ const getData = async () => {
       data.notifications = notifications;
       
       resolve(true); 
-    }, 10000); // 5 second delay
+    }, 5000) // 5 second delay
   });
 
   return data;

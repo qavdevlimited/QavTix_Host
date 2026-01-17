@@ -1,9 +1,12 @@
+"use client"
+
 import { DashboardUpcomingEventsFilters, FilterKey } from "./resources/avaliable-filters";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import DataCountIndicator from "./DataCountIndicator";
 import SearchTableInput1 from "./SearchTableInput";
 import { FilterRenderer } from "./filters/FilterRenderer";
+import UpcomingEventsTable from "./tables/UpcomingEventsTable";
 
 
 export default function UpcomingEvents(){
@@ -18,8 +21,8 @@ export default function UpcomingEvents(){
     
 
     return (
-        <section className="my-10 px-4 py-8 bg-white rounded-3xl shadow drop-shadow">
-            <div className="w-full border-b border-neutral-3">
+        <section className="my-10 py-8 bg-white rounded-3xl shadow drop-shadow">
+            <div className="px-4 w-full border-b border-neutral-3">
                 <div className="flex items-center gap-8">
                     {tabListData.map((tab) => (
                         <button
@@ -44,7 +47,7 @@ export default function UpcomingEvents(){
 
 
 
-            <div className="">
+            <div className="px-4">
                 <SearchTableInput1 />
 
                 <div className="flex flex-wrap gap-4 mb-8">
@@ -59,6 +62,9 @@ export default function UpcomingEvents(){
                     ))}
                 </div>
             </div>
+
+
+            <UpcomingEventsTable />
         </section>
     )
 }

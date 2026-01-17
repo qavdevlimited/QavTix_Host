@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Icon } from '@iconify/react'
 import RecentActivityItem from './RecentActivityItem'
 import { cn } from '@/lib/utils'
-import { Select, SelectContent, SelectItem, SelectTrigger } from '../ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger } from '../../ui/select'
 import { SelectValue } from '@radix-ui/react-select'
 
 interface RecentActivityTabProps {
@@ -22,21 +22,21 @@ export default function RecentActivityTab({ activities }: RecentActivityTabProps
         },
         {
             name: "Tickets",
-            value: "tcikets"
+            value: "tickets"
         }
     ]
 
     return (
-        <div className="space-y-4">
+        <div className="space-y-2 w-full">
             {/* Filter Button */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between px-4">
                 <Select 
                     value={filterValue} 
                     onValueChange={(v) => setFilterValue(v)}
                 >
                     <SelectTrigger
                         className={cn(
-                            "text-neutral-8 font-medium disabled:cursor-not-allowed disabled:opacity-65 w-fit bg-white rounded-lg border-neutral-4 hover:border-neutral-5 focus:border-primary-6",
+                            "text-neutral-8 font-medium disabled:cursor-not-allowed disabled:opacity-65 text-xs w-fit bg-white rounded-lg border-neutral-4 hover:border-neutral-5 focus:border-primary-6",
                         )}
                     >
                         <Icon icon="hugeicons:sliders-horizontal" width="24" height="24" className='shrink-0' />
@@ -53,7 +53,7 @@ export default function RecentActivityTab({ activities }: RecentActivityTabProps
             </div>
 
             {/* Activity List */}
-            <div className="space-y-3 px-4">
+            <div className="space-y-2 px-4">
                 {activities.length > 0 ? (
                     activities.map((activity) => (
                     <RecentActivityItem key={activity.id} activity={activity} />

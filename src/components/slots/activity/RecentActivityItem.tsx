@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import getActivityTypeText from '@/helper-fns/getActivityTypeText'
-import Timer02 from '../Svg-Icons/Timer02'
+import Timer02 from '../../Svg-Icons/Timer02'
 
 const activityIcons: Record<string, { icon: string; bgColor: string; iconColor: string }> = {
     new_sale: {
@@ -42,7 +42,7 @@ export default function RecentActivityItem({ activity }: RecentActivityItemProps
     const iconConfig = activityIcons[activity.type] || activityIcons.new_sale
 
     return (
-        <div className="flex items-start flex-col gap-3 shadow-sm py-4 border-b border-neutral-2 last:border-0 hover:bg-neutral-1 px-4 -mx-4 rounded-lg transition-colors">
+        <div className="shadow-[0px_5.8px_23.17px_0px_#3326AE14] py-2 space-y-1 border-b border-neutral-2 last:border-0 px-4 rounded-lg">
             <div className='flex w-full justify-between gap-4'>
                 <span className='text-[11px] text-neutral-7'>{getActivityTypeText(activity.type)}</span>
                 <div className="flex items-center gap-1 text-[11px] text-neutral-7">

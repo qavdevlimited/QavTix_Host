@@ -26,11 +26,16 @@ export function StatusFilter({ value = [], onChange, icon }: StatusFilterProps) 
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>(value)
 
   const handleToggle = (statusValue: string) => {
-    setSelectedStatuses(prev =>
-      prev.includes(statusValue)
-        ? prev.filter(v => v !== statusValue)
-        : [...prev, statusValue]
-    )
+    if (selectedStatuses.length){
+      setSelectedStatuses(prev =>
+        prev.includes(statusValue)
+           ? prev.filter(v => v !== statusValue)
+          : [statusValue]
+      )
+    }
+    else {
+      setSelectedStatuses([statusValue])
+    }
   }
 
   const handleApply = () => {
@@ -57,7 +62,7 @@ export function StatusFilter({ value = [], onChange, icon }: StatusFilterProps) 
         />
       }
     >
-      <div className="space-y-4 p-4">
+      <div className="space-y-2 overflow-x-hidden p-4 pb-16 overflow-y-auto relative max-h-[20em]">
         {statusOptions.map(status => {
           const isSelected = selectedStatuses?.includes(status.value)
 
@@ -84,8 +89,9 @@ export function StatusFilter({ value = [], onChange, icon }: StatusFilterProps) 
             </button>
           )
         })}
-
-        <FilterButtonsActions1 onApply={handleApply} onClear={handleClear} />
+        <div className='fixed rounded-b-3xl left-0 ps-4 bottom-0 w-full h-[5em] bg-white'>
+          <FilterButtonsActions1 onApply={handleApply} onClear={handleClear} />
+        </div>
       </div>
     </AnimatedDialog>
   )
