@@ -1,0 +1,80 @@
+interface TicketTier {
+  id: string
+  name: string
+  price: number
+  originalPrice: number
+  currency: string
+  description?: string
+  features?: string[]
+  available: boolean
+  soldOut?: boolean
+}
+
+interface Discount {
+    type: 'coupon' | 'membership'
+    code?: string
+    percentage?: number
+    amount?: number
+    description?: string
+}
+
+interface CheckoutTicket extends TicketTier {
+    quantity: number
+}
+
+
+interface PriceRange {
+    min: number
+    max: number
+}
+
+interface Category {
+    value: string
+    label: string
+    count: number
+}
+
+interface Location {
+    country: string
+    state: string
+}
+
+interface StatusOption {
+    value: string
+    label: string
+    color: string
+    icon: string
+    description: string
+}
+
+
+interface FilterValues {
+    dateRange?: DateRange
+    status: Stat
+    categories: Category["value"][]
+}
+
+
+type FilterFor = "homepage" | "eventPage"
+
+type IEventStatus = "filling-fast" | "sold-out" | "new" | "near-capacity"
+
+interface IEvent {
+    image: string
+    status?: IEventStatus
+    category: string
+    host: string
+    title: string
+    date: string //DateString
+    location: string
+    price: string
+    originalPrice?: string
+    href: string
+    attendees: Attendee[]
+}
+
+interface FeaturedEvent {
+    id: number
+    image: string
+    title: string
+}

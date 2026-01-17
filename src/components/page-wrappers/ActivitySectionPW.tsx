@@ -1,0 +1,77 @@
+'use client'
+
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import RecentActivityTab from '../activity/ActivityTabContent'
+import NotificationsTab from '../activity/NotificationTabContent'
+
+type TabType = 'activity' | 'notifications'
+
+interface ActivityNotificationsProps {
+  activities: ActivityItem[]
+  notifications: NotificationItem[]
+  onMarkAsRead?: (id: string) => void
+  onMarkAllAsRead?: () => void
+}
+
+export default function ActivitySectionPW({
+  activities,
+  notifications,
+  onMarkAsRead,
+  onMarkAllAsRead
+}: ActivityNotificationsProps) {
+
+
+    const [activeTab, setActiveTab] = useState<TabType>('activity')
+
+    return (
+        <div className="bg-white rounded-2xl shadow-sm border border-neutral-2 overflow-hidden w-full">
+            <div className="border-b border-neutral-3">
+                <div className="flex">
+                    <button
+                        onClick={() => setActiveTab('activity')}
+                        className={cn(
+                        "flex-1 px-6 py-4 text-sm md:text-[13px] font-bold transition-colors relative",
+                        activeTab === 'activity'
+                            ? "text-primary-6"
+                            : "text-neutral-6 hover:text-neutral-8"
+                        )}
+                    >
+                        Recent Activity
+                        {activeTab === 'activity' && (
+                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
+                        )}
+                    </button>
+
+                    <button
+                        onClick={() => setActiveTab('notifications')}
+                        className={cn(
+                        "flex-1 px-6 py-4 text-sm md:text-[13px] font-bold transition-colors relative",
+                        activeTab === 'notifications'
+                            ? "text-primary-6"
+                            : "text-neutral-6 hover:text-neutral-8"
+                        )}
+                    >
+                        Notifications
+                        {activeTab === 'notifications' && (
+                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
+                        )}
+                    </button>
+                </div>
+            </div>
+
+            {/* Tab Content */}
+            <div className="p-4">
+                {activeTab === 'activity' ? (
+                    <RecentActivityTab activities={activities} />
+                ) : (
+                    <NotificationsTab 
+                        notifications={notifications}
+                        onMarkAsRead={onMarkAsRead}
+                        onMarkAllAsRead={onMarkAllAsRead}
+                    />
+                )}
+            </div>
+        </div>
+    )
+}

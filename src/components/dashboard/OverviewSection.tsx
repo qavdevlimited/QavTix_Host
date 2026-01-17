@@ -1,0 +1,77 @@
+import Image from "next/image";
+import DashboardStatCard from "../cards/DashboardStatCard";
+import { dashboardCards } from "@/components-data/demo-data";
+import { Button } from "../ui/button";
+import { Icon } from "@iconify/react";
+import { space_grotesk } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+
+export default function OverviewSection() {
+    return (
+        <section className="w-full overflow-hidden mt-10 lg:mt-0">
+            <div className="flex justify-between items-center">
+                <h2 className={cn(space_grotesk.className, 'capitalize text-lg text-secondary-8 font-bold')}>Overview</h2>
+                
+                <button
+                    className={cn(
+                        "md:bg-primary-1 text-primary-6 md:p-2 font-bold text-sm mx-1 flex rounded-md md:rounded-sm gap-1 items-center",
+                        "hover:bg-primary-2 hover:scale-105 transition-all ease-in-out duration-200"
+                    )}
+                    aria-label="Create event"
+                >
+                    <span className="size-10 md:size-7 rounded flex justify-center items-center bg-primary-4  text-white">
+                        <Icon icon="codex:plus" width="21" height="21" className="size-9" />
+                    </span>
+                    <span className="hidden md:inline">Create Event</span>
+                </button>
+            </div>
+
+            <div className="relative mt-12 grid grid-cols-1 xsm:grid-cols-2 items-center gap-6 px-6 md:px-10 bg-linear-to-br from-primary-5.2 to-primary min-h-47 h-49 w-full rounded-xl overflow-hidden">
+                
+                <div className="text-white relative z-10 py-6">
+                    <h3 className={cn(space_grotesk.className, 'capitalize text-lg md:text-2xl leading-tight font-bold')}>
+                        Good Morning, John!
+                    </h3>
+                    <p className="text-xs md:text-sm lg:text-base mt-2 opacity-90">
+                        You have 3 active events and 156 tickets sold today
+                    </p>
+
+                    <Button className="mt-3 md:mt-6 bg-white text-primary-6 font-semibold text-xs md:text-sm hover:bg-neutral-100 border-none">
+                        <span>View All Events</span>
+                        <Icon icon="stash:arrow-right" width="24" height="24" />
+                    </Button>
+                </div>
+
+                <div className="flex h-full">
+                    <Image 
+                        src="/images/vectors/Saly-26.svg"
+                        alt="task management"
+                        width={400}
+                        height={400}
+                        className="w-40 md:w-56 hidden xsm:block h-47.5 md:h-49 absolute z-10 -bottom-1 md:relative md:bottom-0"
+                    />
+                </div>
+                
+                <div 
+                    className="absolute md:hidden right-0 rounded-xl opacity-75 top-0 bottom-0 w-[80%] h-full bg-no-repeat bg-contain bg-right"
+                    style={{
+                        backgroundImage: "url('/images/vectors/logo-bg-element2.svg')"
+                    }}
+                />
+                <div 
+                    className="absolute hidden md:block right-0 rounded-xl opacity-75 top-0 bottom-0 w-[80%] h-full bg-no-repeat bg-contain bg-right"
+                    style={{
+                        backgroundImage: "url('/images/vectors/logo-bg-element.svg')"
+                    }}
+                />
+            </div>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                {dashboardCards.map((v, i) => (
+                    <DashboardStatCard cardData={v} key={`${v.linkHref}-${i}`} />
+                ))}
+            </div>
+        </section>
+    )
+}

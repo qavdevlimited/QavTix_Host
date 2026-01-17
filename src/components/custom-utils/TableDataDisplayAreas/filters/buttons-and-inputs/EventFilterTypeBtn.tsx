@@ -1,0 +1,50 @@
+'use client'
+
+import { Icon } from '@iconify/react'
+import { cn } from '@/lib/utils'
+
+interface EventFilterTypeBtnProps {
+    onClick: () => void
+    displayText: string
+    hasActiveFilter: boolean
+    icon: string
+}
+
+export default function EventFilterTypeBtn({
+    onClick,
+    displayText,
+    hasActiveFilter,
+    icon
+}: EventFilterTypeBtnProps) {
+    const baseStyles = 'flex items-center gap-3 transition-colors outline-none'
+
+    const variants = {
+        compact: cn(
+            'px-2 justify-between text-xs rounded-[11px] h-9 min-w-20 font-medium',
+            'bg-white border border-neutral-5',
+            'hover:border-primary hover:bg-primary-1'
+        )
+    }
+
+    return (
+        <button
+            onClick={onClick}
+            className={cn(
+                baseStyles,
+                variants.compact,
+                hasActiveFilter ? 'text-neutral-8' : 'text-neutral-7'
+            )}
+        >
+
+            <Icon icon={icon} width="20" height="20" className='shrink-0 text-neutral-8' />
+            <span className="truncate">{displayText}</span>
+            <Icon
+                icon="fluent:chevron-down-20-filled"
+                className={cn(
+                    'size-5 shrink-0 text-neutral-8',
+                    'group-hover:text-primary-6'
+                )}
+            />
+        </button>
+    )
+}
