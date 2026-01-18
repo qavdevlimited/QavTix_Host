@@ -45,3 +45,9 @@ export const NAVIGATION_LINKS : INavigationLinks = {
         label: "Check-In System"
     }
 }
+
+
+export const CUSTOMERS_PROFILE = {
+    href: "/customers/profile/[customer_id]",
+    label: "Customer Profile"
+}

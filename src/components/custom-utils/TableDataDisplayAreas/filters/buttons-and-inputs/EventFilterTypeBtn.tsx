@@ -7,7 +7,7 @@ interface EventFilterTypeBtnProps {
     onClick: () => void
     displayText: string
     hasActiveFilter: boolean
-    icon: string
+    icon?: string
 }
 
 export default function EventFilterTypeBtn({
@@ -36,7 +36,11 @@ export default function EventFilterTypeBtn({
             )}
         >
 
-            <Icon icon={icon} width="20" height="20" className='shrink-0 text-neutral-8' />
+            {
+                icon && (
+                    <Icon icon={icon} width="20" height="20" className='shrink-0 text-neutral-8' />
+                )
+            }
             <span className="truncate">{displayText}</span>
             <Icon
                 icon="fluent:chevron-down-20-filled"

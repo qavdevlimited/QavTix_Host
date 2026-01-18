@@ -9,7 +9,9 @@ const useDashboardSegment = () => {
     
     const dashboardSegment = pathName.split("/")[1]
     
-    return dashboardSegment.split("-").join(" ")
+    return dashboardSegment === "customers" && pathName.includes("profile") ? "Customer Profile" :
+      dashboardSegment.split("-").join(" ")
+    ;
 }
 
 export function DashboardHeaderSectionPathName() {

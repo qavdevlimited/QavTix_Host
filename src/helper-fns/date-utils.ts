@@ -62,3 +62,26 @@ export const startOfMonth = (date: Date): Date => {
 export const endOfMonth = (date: Date): Date => {
   return new Date(date.getFullYear(), date.getMonth() + 1, 0)
 }
+
+
+
+
+export function formatDateTime(date: string | Date) {
+  const dateObj = typeof date === "string" ? new Date(date) : date
+
+  if (isNaN(dateObj.getTime())) return ""
+
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(dateObj)
+
+  const formattedTime = new Intl.DateTimeFormat("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  }).format(dateObj)
+
+  return `${formattedDate} | ${formattedTime}`
+}

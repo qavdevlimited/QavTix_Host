@@ -1,0 +1,94 @@
+import { useState } from "react"
+import { AnimatedDialog } from "../../dialogs/AnimatedDialog"
+import EventFilterTypeBtn from "./buttons-and-inputs/EventFilterTypeBtn"
+import { Icon } from "@iconify/react"
+import FilterButtonsActions1 from "./buttons-and-inputs/FilterActionButtons1"
+import { cn } from "@/lib/utils"
+import { eventTypeOptions } from "../resources/event-type-filter"
+
+
+
+interface EventTypeFilterProps {
+    value?: string[]
+    onChange: (value: string[]) => void
+    icon?: string
+}
+
+export function EventTypeFilter({ value = [], onChange, icon }: EventTypeFilterProps) {
+    const [isOpen, setIsOpen] = useState(false)
+    const [selectedTypes, setSelectedTypes] = useState<string[]>(value)
+
+    const handleToggle = (typeValue: string) => {
+        setSelectedTypes((prev) =>
+            prev.includes(typeValue)
+                ? prev.filter((v) => v !== typeValue)
+                : [...prev, typeValue]
+        )
+    }
+
+    const handleApply = () => {
+        onChange(selectedTypes)
+        setIsOpen(false)
+    }
+
+    const handleClear = () => {
+        setSelectedTypes([])
+        onChange([])
+    }
+
+    return (
+        <AnimatedDialog
+            onOpenChange={setIsOpen}
+            open={isOpen}
+            title='Event Type'
+            trigger={
+                <EventFilterTypeBtn
+                    icon={icon}
+                    onClick={() => setIsOpen(true)}
+                    displayText="Event Type"
+                    hasActiveFilter={selectedTypes.length > 0}
+                />
+            }
+        >
+            <div className="space-y-6">
+                <div className="grid grid-cols-1 gap-3">
+                    {eventTypeOptions.map((type) => {
+                        const isSelected = selectedTypes.includes(type.value)
+                        return (
+                            <button
+                                key={type.value}
+                                onClick={() => handleToggle(type.value)}
+                                className={cn(
+                                    'flex items-center gap-4 p-3 rounded-2xl border-[1.5px] transition-all',
+                                    isSelected
+                                        ? 'border-primary-6 shadow-md'
+                                        : 'border-neutral-3 hover:border-primary-3 hover:bg-neutral-1'
+                                )}
+                            >
+                                <div className={cn(
+                                    'w-12 h-12 rounded-xl flex items-center justify-center transition-colors',
+                                    isSelected ? 'bg-primary-6' : 'bg-neutral-2'
+                                )}>
+                                    <Icon
+                                        icon={type.icon}
+                                        className={cn('w-6 h-6', isSelected ? 'text-white' : 'text-neutral-7')}
+                                    />
+                                </div>
+                                <div className="flex-1 text-left">
+                                    <p className={cn('font-medium text-sm', isSelected ? 'text-primary-8' : 'text-secondary-9')}>
+                                        {type.label}
+                                    </p>
+                                    <p className="text-xs text-neutral-6">{type.description}</p>
+                                </div>
+                                {isSelected && (
+                                    <Icon icon="mdi:check-circle" className="w-6 h-6 text-primary-6" />
+                                )}
+                            </button>
+                        )
+                    })}
+                </div>
+                <FilterButtonsActions1 onApply={handleApply} onClear={handleClear} />
+            </div>
+        </AnimatedDialog>
+    )
+}

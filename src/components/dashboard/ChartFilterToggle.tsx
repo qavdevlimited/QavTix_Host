@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react'
 import { cn } from '@/lib/utils'
+import ExportButton1 from '@/lib/features/export/ExportDataBtn1'
 
 interface ChartFilterToggleProps {
   chartFilter: 'revenue' | 'tickets'
@@ -49,17 +50,7 @@ export function ChartFilterToggle({ chartFilter, setChartFilter }: ChartFilterTo
                     </button>
                 </div>
             </div>
-
-            <motion.button
-                whileHover={{ y: -2, scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="flex items-center justify-between text-sm text-primary font-bold gap-2"
-            >
-                <span className="w-6 aspect-square rounded flex justify-center items-center bg-primary-3 text-white">
-                    <Icon icon="pajamas:export" width="16" height="16" />
-                </span>
-                <span>Export Data</span>
-            </motion.button>
+            <ExportButton1 />
         </div>
     )
 }

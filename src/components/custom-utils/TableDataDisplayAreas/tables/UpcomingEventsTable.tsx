@@ -7,13 +7,10 @@ import { cn } from "@/lib/utils"
 import { Icon } from "@iconify/react"
 import Image from "next/image"
 import Link from "next/link"
+import PaginationControls from "../tools/PaginationControl"
+import { upcomingEventsStatusConfig } from "../resources/status-config"
 
-const statusConfig = {
-    'low-sales': { label: 'Low Sales', color: 'text-red-600' },
-    'selling-fast': { label: 'Selling Fast', color: 'text-green-600' },
-    'starts-soon': { label: 'Starts Soon', color: 'text-orange-600' },
-    'sold-out': { label: 'Sold Out', color: 'text-gray-600' }
-}
+
 
 export default function UpcomingEventsTable() {
 
@@ -22,7 +19,7 @@ export default function UpcomingEventsTable() {
     return (
         <div className="w-full space-y-4">
             {/* Desktop Table */}
-            <div className="hidden lg:block border border-neutral-2 overflow-x-auto">
+            <div className="hidden md:block border border-neutral-2 overflow-x-auto">
                 <table className="w-full">
                     <thead className="bg-neutral-3 border-b border-neutral-3">
                         <tr>
@@ -37,7 +34,7 @@ export default function UpcomingEventsTable() {
                     </thead>
                     <tbody className="divide-y divide-neutral-2">
                         {pagination.currentItems.map((event) => {
-                            const status = statusConfig[event.status as keyof typeof statusConfig] || statusConfig['low-sales']
+                            const status = upcomingEventsStatusConfig[event.status as keyof typeof upcomingEventsStatusConfig] || upcomingEventsStatusConfig['low-sales']
                             const percentage = Math.round((event.ticketsSold / event.totalTickets) * 100)
                             
                             return (
@@ -61,7 +58,7 @@ export default function UpcomingEventsTable() {
                                                 />
                                             </div>
                                             <div>
-                                                <p className="font-bold text-sm text-secondary-9">{event.title}</p>
+                                                <p className="font-bold text-xs text-secondary-9">{event.title}</p>
                                                 <p className="text-[11px] text-secondary-8">{event.category}</p>
                                             </div>
                                         </div>
@@ -101,9 +98,9 @@ export default function UpcomingEventsTable() {
             </div>
 
             {/* Mobile Cards */}
-            <div className="lg:hidden space-y-3">
+            <div className="md:hidden space-y-3 grid grid-cols-1 gap-4 md:grid-cols-2 px-4">
                 {pagination.currentItems.map((event) => {
-                    const status = statusConfig[event.status as keyof typeof statusConfig] || statusConfig['low-sales']
+                    const status = upcomingEventsStatusConfig[event.status as keyof typeof upcomingEventsStatusConfig] || upcomingEventsStatusConfig['low-sales']
                     const percentage = Math.round((event.ticketsSold / event.totalTickets) * 100)
                     
                     return (
@@ -159,6 +156,17 @@ export default function UpcomingEventsTable() {
                     )
                 })}
             </div>
+
+
+            <PaginationControls
+                endIndex={pagination.endIndex}
+                startIndex={pagination.startIndex}
+                totalItems={mockUpcomingEvents.length}
+                hasNextPage={pagination.hasNextPage}
+                hasPreviousPage={pagination.hasPreviousPage}
+                onNextPage={pagination.nextPage}
+                onPreviousPage={pagination.previousPage}
+            />
         </div>
     )
 }

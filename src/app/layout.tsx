@@ -20,12 +20,12 @@ export default function Layout({ children }: LayoutProps) {
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
         <ReduxStoreProvider>
-          <div className="flex min-h-screen bg-gray-100/70">
+          <div className="flex justify-end min-h-screen bg-gray-100/70">
             {/* Fixed Sidebar - Takes no space in flex layout */}
             <DesktopSideNav />
             
             {/* Main Content Area */}
-            <div className="flex-1 lg:ml-60">
+            <div className="w-full lg:w-[calc(100%-240px)]">
               {/* Scrollable Content */}
               <div className="w-full">
                 <MobileHeaderSection />

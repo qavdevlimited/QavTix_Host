@@ -1,5 +1,5 @@
-import UpcomingEvents from "@/components/custom-utils/TableDataDisplayAreas/UpcomingEvents";
+import UpcomingEventsPW from "@/components/page-wrappers/UpcomingEventsPW";
 
 export default function UpcomingEventsSlot(){
-    return <UpcomingEvents />
+    return <UpcomingEventsPW />
 }

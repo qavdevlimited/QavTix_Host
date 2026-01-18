@@ -48,14 +48,6 @@ interface StatusOption {
 }
 
 
-interface FilterValues {
-    dateRange?: DateRange
-    status: Stat
-    categories: Category["value"][]
-}
-
-
-type FilterFor = "homepage" | "eventPage"
 
 type IEventStatus = "selling-fast" | "sold-out" | "new" | "near-capacity" | "low-sales" | "starts-soon"
 

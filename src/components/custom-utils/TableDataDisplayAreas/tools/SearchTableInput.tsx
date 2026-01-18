@@ -51,7 +51,7 @@ export default function SearchTableInput1({
     }
 
     return (
-        <div className={cn('w-full my-4', className)}>
+        <div className={cn('w-full', className)}>
             <div
                 className={cn(
                 'relative flex flex-row-reverse  w-full items-center gap-2 px-4 py-3',

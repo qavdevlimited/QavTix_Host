@@ -135,51 +135,53 @@ export default function RevenueGrowthChart() {
                 </div>
             </div>
 
-            <div className="w-full h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                    <BarChart
-                        key={timeFilter}
-                        data={chartData}
-                        margin={{ top: 10, bottom: 30 }}
-                        barCategoryGap="45%"
-                    >
-                        <CartesianGrid
-                            strokeDasharray="4px"
-                            vertical={false}
-                            stroke="#d4d9e0"
-                            strokeWidth={0.5}
-                        />
-                        <XAxis
-                            dataKey="label"
-                            axisLine={false}
-                            tickLine={false}
-                            tick={{ fill: '#9CA3AF', fontSize: 12, fontWeight: 500 }}
-                            tickMargin={12}
-                        />
-                        <YAxis
-                            axisLine={false}
-                            tickLine={false}
-                            tick={{ fill: '#9CA3AF', fontSize: 12 }}
-                            tickFormatter={(value) => (value === 0 ? '0' : `${value / 1000}k`)}
-                            domain={[0, 6000]}
-                            ticks={[0, 1000, 2000, 3000, 4000, 5000, 6000]}
-                            tickMargin={8}
-                        />
-                        <Tooltip content={customTooltip} cursor={{ fill: 'transparent' }} />
-                        
-                        <Bar
-                            dataKey="value"
-                            fill="#FFAB73"
-                            radius={[2, 2, 0, 0]}
-                            maxBarSize={7}
-                            isAnimationActive={true}
-                            animationBegin={0}
-                            animationDuration={500}
-                            animationEasing="ease-in-out"
-                            background={{ fill: '#E5E7EB', radius: "16px" }}
-                        />
-                    </BarChart>
-                </ResponsiveContainer>
+            <div className="w-full overflow-x-auto">
+                <div className="min-w-150 h-100">
+                    <ResponsiveContainer width="100%" height="100%">
+                        <BarChart
+                            key={timeFilter}
+                            data={chartData}
+                            margin={{ top: 10, bottom: 30 }}
+                            barCategoryGap="45%"
+                        >
+                            <CartesianGrid
+                                strokeDasharray="4px"
+                                vertical={false}
+                                stroke="#d4d9e0"
+                                strokeWidth={0.5}
+                            />
+                            <XAxis
+                                dataKey="label"
+                                axisLine={false}
+                                tickLine={false}
+                                tick={{ fill: '#9CA3AF', fontSize: 12, fontWeight: 500 }}
+                                tickMargin={12}
+                            />
+                            <YAxis
+                                axisLine={false}
+                                tickLine={false}
+                                tick={{ fill: '#9CA3AF', fontSize: 12 }}
+                                tickFormatter={(value) => (value === 0 ? '0' : `${value / 1000}k`)}
+                                domain={[0, 6000]}
+                                ticks={[0, 1000, 2000, 3000, 4000, 5000, 6000]}
+                                tickMargin={8}
+                            />
+                            <Tooltip content={customTooltip} cursor={{ fill: 'transparent' }} />
+                            
+                            <Bar
+                                dataKey="value"
+                                fill="#FFAB73"
+                                radius={[2, 2, 0, 0]}
+                                maxBarSize={7}
+                                isAnimationActive={true}
+                                animationBegin={0}
+                                animationDuration={500}
+                                animationEasing="ease-in-out"
+                                background={{ fill: '#E5E7EB', radius: "16px" }}
+                            />
+                        </BarChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
         </div>
     )

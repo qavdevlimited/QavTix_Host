@@ -60,43 +60,43 @@ export type TabListItem = {
 }
 
 export const DashboardUpcomingEventsFilters = {
-    filterOptions: [
-      ALL_FILTERS.category,
-      ALL_FILTERS.status,
-      ALL_FILTERS.dateRange,
-    ] as const,
+  filterOptions: [
+    ALL_FILTERS.category,
+    ALL_FILTERS.status,
+    ALL_FILTERS.dateRange,
+  ] as const,
 
-    tabList: [
-        { value: 'upcoming', label: 'Upcoming Events' }
-    ] as const
+  tabList: [
+      { value: 'upcoming', label: 'Upcoming Events' }
+  ] as const
 }
 
 
 export const DashboardConsumerListFilters = {
-    filterOptions: [
-        ALL_FILTERS.ticketType,
-        ALL_FILTERS.purchaseDate
-    ] as const,
-    tabList: [] as const
+  filterOptions: [
+    ALL_FILTERS.ticketType,
+    ALL_FILTERS.purchaseDate
+  ] as const,
+  tabList: [] as const
 }
 
 
 export const DashboardEventsFilters = {
-    filterOptions: [
-        ALL_FILTERS.category,
-        ALL_FILTERS.status,
-        ALL_FILTERS.performance,
-        ALL_FILTERS.sortBy,
-        ALL_FILTERS.dateRange
-    ] as const,
+  filterOptions: [
+    ALL_FILTERS.category,
+    ALL_FILTERS.status,
+    ALL_FILTERS.performance,
+    ALL_FILTERS.sortBy,
+    ALL_FILTERS.dateRange
+  ] as const,
 
-    tabList: [
-        { value: 'all', label: 'All' },
-        { value: 'live', label: 'Live' },
-        { value: 'draft', label: 'Draft' },
-        { value: 'ended', label: 'Ended' },
-        { value: 'cancelled', label: 'Cancelled' }
-    ] as const
+  tabList: [
+    { value: 'all', label: 'All' },
+    { value: 'live', label: 'Live' },
+    { value: 'draft', label: 'Draft' },
+    { value: 'ended', label: 'Ended' },
+    { value: 'cancelled', label: 'Cancelled' }
+  ] as const
 }
 
 

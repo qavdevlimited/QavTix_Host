@@ -12,7 +12,7 @@ import FilterButtonsActions1 from "./buttons-and-inputs/FilterActionButtons1"
 interface DateFilterProps {
     value?: DateRange | null
     onChange: (value: DateRange | null) => void,
-    icon: string
+    icon?: string
 }
 
 export default function DateFilter({ value, onChange, icon } : DateFilterProps) {

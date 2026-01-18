@@ -6,8 +6,8 @@ import { filterRegistry } from './filter-registry'
 
 interface FilterRendererProps {
   filterKey: FilterKey
-  filters: FilterValues
-  setFilters: Dispatch<SetStateAction<FilterValues>>
+  filters: Partial<FilterValues>
+  setFilters: Dispatch<SetStateAction<Partial<FilterValues>>>
   className?: string
   icon: string
 }
