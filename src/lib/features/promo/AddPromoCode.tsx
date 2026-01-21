@@ -14,7 +14,7 @@ export default function AddPromoCode({
     onAddPromoCode
 }: AddPromoCodeProps) {
 
-    const [showAddPromoCodeModal, setShowAddPromoCodeModal] =  useState(true)
+    const [showAddPromoCodeModal, setShowAddPromoCodeModal] =  useState(false)
 
     return (
         <>

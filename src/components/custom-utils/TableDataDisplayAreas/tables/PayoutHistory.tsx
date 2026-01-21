@@ -45,7 +45,7 @@ export default function PayoutHistoryTable() {
                                 return (
                                     <tr 
                                         key={payout.id} 
-                                        className="hover:bg-primary-1/30 transition-colors cursor-pointer"
+                                        className="hover:bg-accent-2/50 transition-colors"
                                     >
                                         <td className="py-4 px-5">
                                             <p className="text-xs text-secondary-9">

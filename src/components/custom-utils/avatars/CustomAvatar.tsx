@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 function CustomAvatar({ profileImg, name, id, size }: { profileImg?: string | null; name: string; id: string, size: string }) {
     return (
-        <Avatar className={cn(size, "mb-4 ring-4 ring-neutral-2")}>
+        <Avatar className={cn(size, "ring-4 ring-neutral-2")}>
             {profileImg ? (
                 <AvatarImage src={profileImg} />
             ) : null}

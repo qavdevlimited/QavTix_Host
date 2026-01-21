@@ -11,6 +11,7 @@ interface AnimatedDialogProps {
   title?: string
   children: React.ReactNode
   className?: string
+  showCloseButton?: boolean
 }
 
 export function AnimatedDialog({
@@ -19,6 +20,7 @@ export function AnimatedDialog({
   trigger,
   title,
   children,
+  showCloseButton = true,
   className = ''
 }: AnimatedDialogProps) {
   return (
@@ -62,9 +64,12 @@ export function AnimatedDialog({
 
           <div className="px-6 py-6 overflow-y-auto flex-1">{children}</div>
 
-          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 hover:bg-neutral-2 transition-colors z-10 bg-white/80 backdrop-blur-sm">
-            <X className="h-5 w-5 text-neutral-7" />
-          </DialogPrimitive.Close>
+          {
+            showCloseButton &&
+            <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 hover:bg-neutral-2 transition-colors z-10 bg-white/80 backdrop-blur-sm">
+              <X className="h-5 w-5 text-neutral-7" />
+            </DialogPrimitive.Close>
+          }
         </DialogPrimitive.Content>
       </DialogPrimitive.Portal>
     </DialogPrimitive.Root>

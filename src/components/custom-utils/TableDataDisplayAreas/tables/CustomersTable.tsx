@@ -78,7 +78,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                     <tr 
                                         key={customer.id} 
                                         className={cn(
-                                            "hover:bg-primary-1/30 transition-colors cursor-pointer",
+                                            "hover:bg-accent-2/50 transition-colors",
                                             isSelected && "bg-primary-1 hover:bg-primary-1"
                                         )}
                                         onClick={() => handleSelectCustomer(customer.id)}

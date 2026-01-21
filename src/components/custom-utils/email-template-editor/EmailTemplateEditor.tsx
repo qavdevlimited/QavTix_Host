@@ -6,13 +6,13 @@ import StarterKit from '@tiptap/starter-kit'
 import Underline from '@tiptap/extension-underline'
 import TextAlign from '@tiptap/extension-text-align'
 import FontFamily from '@tiptap/extension-font-family'
-import TextStyle from '@tiptap/extension-text-style'
 import { Icon } from '@iconify/react'
 
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { cn } from "@/lib/utils"
+import { TextStyle } from '@tiptap/extension-text-style'
 
-export default function CreateMessageModal({
+export default function EmailTemplateEditor({
   open,
   setOpen,
 }: {
@@ -40,8 +40,7 @@ export default function CreateMessageModal({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      {/* showClose={false} should be handled in your custom Dialog component or via CSS if using standard shadcn */}
-      <DialogContent className="max-w-2xl p-0 overflow-hidden border-none gap-0">
+      <DialogContent showCloseButton={false} className="max-w-2xl p-0 overflow-y-auto h-[90vh] border-none gap-0">
         
         {/* 1. Header: Custom Close & Title */}
         <div className="bg-secondary-9 h-12 flex items-center justify-between px-4 text-white">

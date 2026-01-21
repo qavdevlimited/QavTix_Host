@@ -33,7 +33,7 @@ export default function OrderListTable() {
                                     <tr 
                                         key={order.order_id} 
                                         className={cn(
-                                            "hover:bg-primary-1/30 transition-colors cursor-pointer",
+                                            "hover:bg-accent-2/50 transition-colors",
                                         )}
                                     >
                                         <td className="py-4 px-5">

@@ -31,14 +31,14 @@ export default function UserInfo({
             <CustomAvatar
                 name={user.name}
                 id={user.id as string}
-                size={isDesktop ? "size-30 shrink-0" : "size-8"}
+                size={isDesktop ? "size-9 shrink-0" : "size-8"}
             />
 
             <div className={cn(isDesktop ? "whitespace-nowrap" : "flex-1 min-w-0")}>
                 <p
                     className={cn(
-                        "text-secondary-9",
-                        isDesktop ? "text-xs" : "font-semibold text-sm"
+                        "text-secondary-9 text-xs",
+                        isDesktop ? "" : "font-semibold"
                     )}
                 >
                     {user.name}
@@ -47,7 +47,7 @@ export default function UserInfo({
                     className={cn(
                         isDesktop
                         ? "text-[11px] text-secondary-9 font-bold"
-                        : "text-xs text-neutral-6 truncate"
+                        : "text-neutral-6 truncate"
                     )}
                 >
                     {user.email}

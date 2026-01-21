@@ -35,11 +35,11 @@ export default function AttendeeCheckInTable() {
                                     <tr 
                                         key={v.id} 
                                         className={cn(
-                                            "hover:bg-primary-1/30 transition-colors cursor-pointer"
+                                            "hover:bg-accent-2/50 transition-colors"
                                         )}
                                     >
                                         <td className="py-4 px-5">
-                                            <UserInfo user={v.attendee} variant="desktop" />
+                                            <UserInfo user={v.attendee} variant="desktop" className="" />
                                         </td>
                                         <td className="py-4 px-5">
                                             <p className="text-xs text-secondary-6 min-w-37 max-w-37">
@@ -47,7 +47,7 @@ export default function AttendeeCheckInTable() {
                                             </p>
                                         </td>
                                         <td className="py-4 px-4 text-center">
-                                            <p className="text-sm font-medium text-secondary-9 whitespace-nowrap">
+                                            <p className="text-sm font-semibold text-secondary-9 whitespace-nowrap">
                                                 {v.ticketType}
                                             </p>
                                         </td>

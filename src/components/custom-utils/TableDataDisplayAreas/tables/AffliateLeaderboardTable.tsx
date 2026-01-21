@@ -2,9 +2,7 @@ import { usePagination } from "@/custom-hooks/PaginationHook"
 import { cn } from "@/lib/utils"
 import PaginationControls from "../tools/PaginationControl"
 import { mockAffiliateLeaderboard } from "@/components-data/demo-data"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { getInitialsFromName } from "@/helper-fns/getInitialFromName"
-import { getAvatarColor } from "@/helper-fns/getAvatarColor"
+import UserInfo from "../../users/UserInfo"
 
 export default function AffiliateLeaderboardTable() {
 
@@ -49,20 +47,7 @@ export default function AffiliateLeaderboardTable() {
                                             </span>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <div className="flex items-center gap-3">
-                                                <Avatar className="size-10">
-                                                    <AvatarImage src={affiliate.affiliate.avatar} alt={affiliate.affiliate.name} />
-                                                    <AvatarFallback
-                                                        className={`${getAvatarColor(affiliate.id.toString())} text-white text-xs`}
-                                                    >
-                                                        {getInitialsFromName(affiliate.affiliate.name)}
-                                                    </AvatarFallback>
-                                                </Avatar>
-                                                <div>
-                                                    <p className="font-bold text-xs text-secondary-9">{affiliate.affiliate.name}</p>
-                                                    <p className="text-[11px] text-secondary-8">{affiliate.affiliate.email}</p>
-                                                </div>
-                                            </div>
+                                            <UserInfo user={affiliate.affiliate as any} variant="desktop" />
                                         </td>
                                         <td className="py-4 px-5">
                                             <p className="text-xs text-secondary-9 font-medium whitespace-nowrap">
@@ -130,20 +115,7 @@ export default function AffiliateLeaderboardTable() {
                                     </div>
 
                                     {/* User Info */}
-                                    <div className="flex items-center gap-2 flex-1 min-w-0">
-                                        <Avatar className="size-7 shrink-0">
-                                            <AvatarImage src={affiliate.affiliate.avatar} alt={affiliate.affiliate.name} />
-                                            <AvatarFallback
-                                                className={`${getAvatarColor(affiliate.id.toString())} text-white text-xs`}
-                                            >
-                                                {getInitialsFromName(affiliate.affiliate.name)}
-                                            </AvatarFallback>
-                                        </Avatar>
-                                        <div className="flex-1 min-w-0">
-                                            <p className="text-xs text-secondary-9 truncate">{affiliate.affiliate.name}</p>
-                                            <p className="text-[11px] font-bold  text-secondary-8 truncate">{affiliate.affiliate.email}</p>
-                                        </div>
-                                    </div>
+                                    <UserInfo user={affiliate.affiliate as any}  variant="mobile" />
 
                                     {/* Clicks & Conv Rate */}
                                     <div className="flex flex-col text-right text-[11px] shrink-0">

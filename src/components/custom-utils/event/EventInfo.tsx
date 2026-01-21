@@ -20,12 +20,12 @@ export default function EventInfo({
     const isDesktop = variant === "desktop";
 
     return (
-        <div className={cn("flex gap-2 items-start", !isDesktop && "items-center gap-3", className)}>
+        <div className={cn("flex gap-2 items-center", !isDesktop && "items-center gap-3", className)}>
             {/* Image Container */}
             <div
                 className={cn(
                     "relative overflow-hidden shrink-0 rounded-lg",
-                    isDesktop ? "size-12" : "w-10 aspect-square rounded-md"
+                    isDesktop ? "size-10" : "w-10 aspect-square rounded-md"
                 )}
             >
                 <Image 
@@ -41,14 +41,14 @@ export default function EventInfo({
                 <h3
                     className={cn(
                         "font-bold text-secondary-9",
-                        isDesktop ? "text-[13px] mb-1" : "text-xs"
+                        isDesktop ? "text-sm" : "text-xs"
                     )}
                     >
                     {title}
                 </h3>
                 <p
                     className={cn(
-                        isDesktop ? "text-[13px] text-neutral-6" : "text-[11px] text-secondary-8"
+                        isDesktop ? "text-[11px] text-secondary-6" : "text-[11px] text-secondary-8"
                     )}
                 >
                     {category}

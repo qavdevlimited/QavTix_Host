@@ -397,7 +397,7 @@ export const mockMetrics4: MetricCardData[] = [
         label: 'Not Arrived',
         description: 'Tickets not yet scanned',
         icon: "mingcute:sandglass-line",
-        iconColor: 'text-primary-4'
+        iconColor: 'text-accent-4'
     },
     {
         id: 'issues-duplicates',
@@ -1023,11 +1023,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 1,
         rank: 1,
-        affiliate: {
-            name: "Dominic Evans",
-            email: "domevans@gmail.com",
-            avatar: "/images/avatar1.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 6200,
         tickets_sold: 340,
         revenue: 1250000,
@@ -1037,11 +1033,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 2,
         rank: 2,
-        affiliate: {
-            name: "Chinedu Okafor",
-            email: "edubrazil042@gmail.com",
-            avatar: "/images/avatar2.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 5480,
         tickets_sold: 275,
         revenue: 980000,
@@ -1051,11 +1043,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 3,
         rank: 3,
-        affiliate: {
-            name: "Aisha Mohammed",
-            email: "Aishaмнa22@yahoo.com",
-            avatar: "/images/avatar3.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 4950,
         tickets_sold: 198,
         revenue: 820000,
@@ -1065,11 +1053,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 4,
         rank: 4,
-        affiliate: {
-            name: "Temitope Adeyemi",
-            email: "temiyemi10@outlook.com",
-            avatar: "/images/avatar4.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 4300,
         tickets_sold: 170,
         revenue: 540000,
@@ -1079,11 +1063,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 5,
         rank: 5,
-        affiliate: {
-            name: "Ibrahim Danladi",
-            email: "ibrahimladi77@gmail.com",
-            avatar: "/images/avatar5.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 3900,
         tickets_sold: 150,
         revenue: 480000,
@@ -1093,11 +1073,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 6,
         rank: 6,
-        affiliate: {
-            name: "Samuel Oladimeji",
-            email: "samoladimeji@gmail.com",
-            avatar: "/images/avatar6.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 3500,
         tickets_sold: 135,
         revenue: 420000,
@@ -1107,11 +1083,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 7,
         rank: 7,
-        affiliate: {
-            name: "Blessing Nwosu",
-            email: "blessingnwosu@yahoo.com",
-            avatar: "/images/avatar7.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 3200,
         tickets_sold: 120,
         revenue: 380000,
@@ -1121,11 +1093,7 @@ export const mockAffiliateLeaderboard = [
     {
         id: 8,
         rank: 8,
-        affiliate: {
-            name: "Funke Adeleke",
-            email: "funkadeleke@gmail.com",
-            avatar: "/images/avatar8.jpg"
-        },
+        affiliate: mockCustomers[0],
         clicks: 2800,
         tickets_sold: 105,
         revenue: 340000,
@@ -1358,7 +1326,7 @@ export const mockAttendeesCheckIns = [
     ticketType: 'Regular',
     event: mockUpcomingEvents[0],
     checkInTime: null,
-    status: 'cancelled' // order was cancelled
+    status: 'pending' // order was cancelled
   },
   {
     id: 'chk-005',
@@ -1376,7 +1344,7 @@ export const mockAttendeesCheckIns = [
     ticketType: 'VIP',
     event: mockUpcomingEvents[0],
     checkInTime: null,
-    status: 'cancelled'
+    status: 'failed'
   },
   {
     id: 'chk-007',
