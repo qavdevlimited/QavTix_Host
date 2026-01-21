@@ -23,13 +23,13 @@ export default function UpcomingEventsTable() {
                 <table className="w-full">
                     <thead className="bg-neutral-3 border-b border-neutral-3">
                         <tr>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Status</th>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Event Name</th>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Date & Time</th>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Location</th>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Tickets Sold</th>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Revenue</th>
-                            <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize">Action</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Status</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Event Name</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Date & Time</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Location</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Tickets Sold</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Revenue</th>
+                            <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize">Action</th>
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-neutral-2">
@@ -166,6 +166,8 @@ export default function UpcomingEventsTable() {
                 hasPreviousPage={pagination.hasPreviousPage}
                 onNextPage={pagination.nextPage}
                 onPreviousPage={pagination.previousPage}
+                currentPage={pagination.currentPage}
+                totalPages={pagination.totalPages}
             />
         </div>
     )

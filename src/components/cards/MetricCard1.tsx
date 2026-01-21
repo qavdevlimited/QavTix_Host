@@ -10,7 +10,7 @@ interface MetricCardProps {
 export default function MetricCard({ data, className }: MetricCardProps) {
     return (
         <div className={cn(
-            'shadow-[0px_5.8px_23.17px_0px_#3326AE14] bg-white rounded-lg border border-neutral-2 p-4 md:p-6 hover:scale-103 transition-transform duration-300 ease-in-out',
+            'shadow-[0px_5.8px_23.17px_0px_#3326AE14] flex flex-col justify-center max-h-32 xl:h-28 bg-white rounded-lg border border-neutral-2 px-4 py-5 hover:scale-103 transition-transform duration-300 ease-in-out',
             className
         )}>
             <div className="">

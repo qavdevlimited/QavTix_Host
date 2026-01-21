@@ -1,19 +1,26 @@
 import { cn } from "@/lib/utils"
 import { FilterRenderer } from "./filters/FilterRenderer"
 import SearchTableInput1 from "./tools/SearchTableInput"
-import { DashboardConsumerListFilters, DashboardUpcomingEventsFilters } from "./resources/avaliable-filters"
+import { DashboardConsumerListFilters, DashboardUpcomingEventsFilters, MarketingToolsFilter, SystemCheckInDataTableFilters } from "./resources/avaliable-filters"
 import { Dispatch, ReactNode, SetStateAction } from "react";
 import DataCountIndicator from "./tools/DataCountIndicator";
 
 interface DataDisplayTableWrapperProps {
     tabs: typeof DashboardUpcomingEventsFilters.tabList |
-    typeof DashboardConsumerListFilters.tabList;
+    typeof DashboardConsumerListFilters.tabList |
+    typeof SystemCheckInDataTableFilters.tabList |
+    typeof MarketingToolsFilter.tabList;
+    
     activeTab?: string;
     setActiveTab?: Dispatch<SetStateAction<string>>;
-    filters: Partial<FilterValues>;
-    setFilters: Dispatch<SetStateAction<Partial<FilterValues>>>;
-    filterOptions: typeof DashboardUpcomingEventsFilters.filterOptions |
-    typeof DashboardConsumerListFilters.filterOptions;
+    filters?: Partial<FilterValues>;
+    setFilters?: Dispatch<SetStateAction<Partial<FilterValues>>>;
+
+    filterOptions?: typeof DashboardUpcomingEventsFilters.filterOptions |
+    typeof DashboardConsumerListFilters.filterOptions |
+    typeof MarketingToolsFilter.filterOptions |
+    typeof SystemCheckInDataTableFilters.filterOptions;
+
     showSearch?: boolean
     searchPlaceholder?: string
     onTabChange?: (tab: string) => void
@@ -44,20 +51,20 @@ export default function DataDisplayTableWrapper({
             {/* Tabs */}
             {
                 activeTab && setActiveTab &&
-                <div className="px-4 w-full border-b border-neutral-3">
+                <div className="px-4 w-full border-b border-neutral-5 mb-4">
                     <div className="flex items-center gap-8 overflow-x-auto">
                         {tabs.map((tab) => (
                             <button
                                 key={tab.value}
                                 onClick={() => setActiveTab(tab.value)}
                                 className={cn(
-                                    'relative pb-4 px-1 text-sm font-medium transition-colors whitespace-nowrap',
+                                    'relative pb-4 px-1 text-sm font-semibold transition-colors whitespace-nowrap',
                                     activeTab === tab.value
                                         ? 'text-primary-6'
                                         : 'text-neutral-6 hover:text-neutral-8'
                                 )}
                             >
-                                <DataCountIndicator count={5} label={tab.label} />
+                                <DataCountIndicator label={tab.label} />
                                 
                                 {activeTab === tab.value && (
                                     <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
@@ -76,19 +83,22 @@ export default function DataDisplayTableWrapper({
                         onSearch={onSearch}
                     />
                 )}
-                {filterOptions.length > 0 && (
-                    <div className="flex flex-wrap gap-4 mb-4">
+                {setFilters && filters && filterOptions && filterOptions.length > 0 ? (
+                    <div className="flex flex-wrap gap-4 my-4">
                         {filterOptions.map((filter) => (
                             <FilterRenderer
                                 key={filter.value}
                                 filterKey={filter.value}
-                                filters={filters}
+                                filters={filters!}
                                 icon={filter.icon}
                                 setFilters={setFilters}
                             />
                         ))}
                     </div>
-                )}
+                )
+                :
+                null
+                }
             </div>
 
             <div className="w-full overflow-x-auto px-4">

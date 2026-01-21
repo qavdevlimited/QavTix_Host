@@ -67,7 +67,7 @@ export const DashboardUpcomingEventsFilters = {
   ] as const,
 
   tabList: [
-      { value: 'upcoming', label: 'Upcoming Events' }
+    { value: 'upcoming', label: 'Upcoming Events' }
   ] as const
 }
 
@@ -78,6 +78,28 @@ export const DashboardConsumerListFilters = {
     ALL_FILTERS.purchaseDate
   ] as const,
   tabList: [] as const
+}
+
+
+export const MarketingToolsFilter = {
+  filterOptions: [] as const,
+  tabList: [
+    { value: "promo-codes", label: "Promo Codes"},
+    { value: "affiliate-program", label: "Affiliate Program"},
+    { value: "email-campaigns", label: "Email Campaigns"}
+  ] as const
+}
+
+
+export const SystemCheckInDataTableFilters = {
+  filterOptions: [
+    ALL_FILTERS.ticketType,
+    ALL_FILTERS.status
+  ] as const,
+  tabList: [
+    { value: "scan-code", label: "Scan Code"},
+    { value: "attendee-list", label: "Attendee List"},
+  ] as const
 }
 
 

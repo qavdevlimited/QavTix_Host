@@ -26,7 +26,6 @@ export function AnimatedDialog({
       {trigger && <DialogPrimitive.Trigger asChild>{trigger}</DialogPrimitive.Trigger>}
 
       <DialogPrimitive.Portal>
-        {/* Overlay - smooth fade only (no blur on mobile) */}
         <DialogPrimitive.Overlay
           className={cn(
             "fixed inset-0 z-50 bg-black/60",
@@ -39,7 +38,7 @@ export function AnimatedDialog({
 
         <DialogPrimitive.Content
           className={cn(
-            "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 w-full max-w-[90%] sm:max-w-125 bg-white rounded-4xl shadow-2xl outline-none",
+            "fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 w-full max-w-[90%] sm:max-w-125 max-h-[95vh] bg-white rounded-4xl shadow-2xl outline-none overflow-hidden flex flex-col",
             // Open animation
             "data-[state=open]:animate-in",
             "data-[state=open]:fade-in-0",
@@ -56,14 +55,14 @@ export function AnimatedDialog({
           )}
         >
           {title && (
-            <DialogPrimitive.Title className="px-6 pt-6 text-xl font-semibold">
+            <DialogPrimitive.Title className="px-6 pt-6 text-xl font-semibold shrink-0">
               {title}
             </DialogPrimitive.Title>
           )}
 
-          <div className="px-6 py-6">{children}</div>
+          <div className="px-6 py-6 overflow-y-auto flex-1">{children}</div>
 
-          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 hover:bg-neutral-2 transition-colors">
+          <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 hover:bg-neutral-2 transition-colors z-10 bg-white/80 backdrop-blur-sm">
             <X className="h-5 w-5 text-neutral-7" />
           </DialogPrimitive.Close>
         </DialogPrimitive.Content>

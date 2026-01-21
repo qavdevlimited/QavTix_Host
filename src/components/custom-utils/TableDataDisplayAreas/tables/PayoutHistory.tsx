@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import PaginationControls from "../tools/PaginationControl";
@@ -12,7 +11,7 @@ import { Icon } from "@iconify/react";
 
 export default function PayoutHistoryTable() {
 
-    const { currentItems, endIndex, startIndex, hasNextPage, hasPreviousPage, nextPage, previousPage } = usePagination(mockPayoutTransactions,5)
+    const { currentItems, endIndex, startIndex, hasNextPage, hasPreviousPage, nextPage, previousPage, currentPage, totalPages } = usePagination(mockPayoutTransactions,5)
 
     return (
         <div className="w-full space-y-4">
@@ -22,19 +21,19 @@ export default function PayoutHistoryTable() {
                     <table className="w-full min-h-[20em]">
                         <thead className="bg-neutral-3 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
                                     Payment ID
                                 </th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
                                     Bank Account
                                 </th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
                                     Amount
                                 </th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
                                     Payout Date
                                 </th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
                                     Status
                                 </th>
                             </tr>
@@ -176,6 +175,8 @@ export default function PayoutHistoryTable() {
                 hasPreviousPage={hasPreviousPage}
                 onNextPage={nextPage}
                 onPreviousPage={previousPage}
+                currentPage={currentPage}
+                totalPages={totalPages}
             />
         </div>
     )

@@ -10,3 +10,9 @@ export const customerListStatusConfig = {
     'repeat-buyer': { label: 'Repeat Buyer', color: 'text-blue-600' },
     'first-timer': { label: 'First Timer', color: 'text-green-600' }
 }
+
+export const attendeeCheckInStatusConfig = {
+    'checked-in': { color: 'text-green-600' },
+    'pending': { color: 'text-orange-600' },
+    'failed': { color: 'text-red-600' }
+}

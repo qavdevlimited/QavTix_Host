@@ -336,6 +336,82 @@ export const mockMetrics2: MetricCardData[] = [
     ]
 
 
+export const mockMetrics3: MetricCardData[] = [
+        {
+            id: 'affiliates',
+            value: '47',
+            label: 'Affiliates',
+            description: "Partners driving referrals",
+            icon: "famicons:people-outline",
+            iconColor: 'text-accent-9',
+        },
+        {
+            id: 'new-month',
+            value: '₦154,050',
+            label: 'New this month',
+            description: 'Recently added affiliates',
+            icon: "hugeicons:discount-01",
+            iconColor: 'text-accent-5',
+        },
+        {
+            id: 'tickets-sold',
+            value: '201',
+            label: 'Tickets Sold',
+            description: 'Units sold by affiliates',
+            icon: "hugeicons:ticket-02",
+            iconColor: 'text-primary-4'
+        },
+        {
+            id: 'commission-paid',
+            value: '₦154,500',
+            label: 'Commission Paid',
+            description: 'Total earnings distributed.',
+            icon: "hugeicons:dollar-square",
+            iconColor: 'text-accent-5',
+        },
+    ]
+
+
+
+
+export const mockMetrics4: MetricCardData[] = [
+    {
+        id: 'total-tickets',
+        value: '201',
+        label: 'Tickets Sold',
+        description: 'All tickets issued out',
+        icon: "hugeicons:ticket-02",
+        iconColor: 'text-primary-4'
+    },
+    {
+        id: 'checked-in',
+        value: '123',
+        label: 'Checked-In',
+        description: 'Successfully admitted',
+        icon: "hugeicons:checkmark-badge-03",
+        iconColor: 'text-[#359160]',
+    },
+    {
+        id: 'not-arrived',
+        value: '78',
+        label: 'Not Arrived',
+        description: 'Tickets not yet scanned',
+        icon: "mingcute:sandglass-line",
+        iconColor: 'text-primary-4'
+    },
+    {
+        id: 'issues-duplicates',
+        value: '₦154,500',
+        label: 'Issues / Duplicates',
+        description: 'Failed or repeated scans',
+        icon: "octicon:alert-16",
+        iconColor: 'text-[#FF0000]',
+    },
+]
+
+
+
+
 
 export const mockCustomers: Customer[] = [
     {
@@ -765,4 +841,560 @@ export const mockPayoutTransactions: PayoutTransaction[] = [
         payoutTime: "1:15 pm",
         status: "pending"
     }
-];
+]
+
+
+
+
+// Mock Data
+export const mockPromoCodes : PromoCode[] = [
+  {
+    id: 1,
+    status: "active",
+    promo_code: "SAVE4X7P",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 12,
+    revenue_impact: -335000,
+    expiry_date: "2025-12-31T23:59:59"
+  },
+  {
+    id: 2,
+    status: "ended",
+    promo_code: "DEO25OFF",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 50,
+    revenue_impact: -512800,
+    expiry_date: "2025-06-15T23:59:59"
+  },
+  {
+    id: 3,
+    status: "active",
+    promo_code: "LUCKYN9Q",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 38,
+    revenue_impact: -278450,
+    expiry_date: "2025-08-20T23:59:59"
+  },
+  {
+    id: 4,
+    status: "active",
+    promo_code: "FLASH50X",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 75,
+    revenue_impact: -689900,
+    expiry_date: "2025-11-30T23:59:59"
+  },
+  {
+    id: 5,
+    status: "ended",
+    promo_code: "BONUS777",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 45,
+    revenue_impact: -201100,
+    expiry_date: "2025-03-10T23:59:59"
+  },
+  {
+    id: 6,
+    status: "ended",
+    promo_code: "DEAL9Z2K",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 30,
+    revenue_impact: -410500,
+    expiry_date: "2025-04-25T23:59:59"
+  },
+  {
+    id: 7,
+    status: "active",
+    promo_code: "EARLY20",
+            event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+    usage: 89,
+    revenue_impact: -890000,
+    expiry_date: "2025-10-15T23:59:59"
+  },
+  {
+    id: 8,
+    status: "active",
+    promo_code: "VIPX100",
+    event: {
+        id: '8',
+        image: '/images/demo-images/event-detail-img.png',
+        status: 'selling-fast',
+        category: 'Concert',
+        host: 'Afrobeat Live',
+        title: 'Afrobeats Night Lagos',
+        date: 'Dec 15, 2025',
+        location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+        price: '₦20,000',
+        href: '/events/8',
+        attendees: []
+    },
+    usage: 22,
+    revenue_impact: -445600,
+    expiry_date: "2025-09-05T23:59:59"
+  }
+]
+
+
+export const mockAffiliateLeaderboard = [
+    {
+        id: 1,
+        rank: 1,
+        affiliate: {
+            name: "Dominic Evans",
+            email: "domevans@gmail.com",
+            avatar: "/images/avatar1.jpg"
+        },
+        clicks: 6200,
+        tickets_sold: 340,
+        revenue: 1250000,
+        commission: 125000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 2,
+        rank: 2,
+        affiliate: {
+            name: "Chinedu Okafor",
+            email: "edubrazil042@gmail.com",
+            avatar: "/images/avatar2.jpg"
+        },
+        clicks: 5480,
+        tickets_sold: 275,
+        revenue: 980000,
+        commission: 98000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 3,
+        rank: 3,
+        affiliate: {
+            name: "Aisha Mohammed",
+            email: "Aishaмнa22@yahoo.com",
+            avatar: "/images/avatar3.jpg"
+        },
+        clicks: 4950,
+        tickets_sold: 198,
+        revenue: 820000,
+        commission: 62000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 4,
+        rank: 4,
+        affiliate: {
+            name: "Temitope Adeyemi",
+            email: "temiyemi10@outlook.com",
+            avatar: "/images/avatar4.jpg"
+        },
+        clicks: 4300,
+        tickets_sold: 170,
+        revenue: 540000,
+        commission: 54000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 5,
+        rank: 5,
+        affiliate: {
+            name: "Ibrahim Danladi",
+            email: "ibrahimladi77@gmail.com",
+            avatar: "/images/avatar5.jpg"
+        },
+        clicks: 3900,
+        tickets_sold: 150,
+        revenue: 480000,
+        commission: 48000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 6,
+        rank: 6,
+        affiliate: {
+            name: "Samuel Oladimeji",
+            email: "samoladimeji@gmail.com",
+            avatar: "/images/avatar6.jpg"
+        },
+        clicks: 3500,
+        tickets_sold: 135,
+        revenue: 420000,
+        commission: 42000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 7,
+        rank: 7,
+        affiliate: {
+            name: "Blessing Nwosu",
+            email: "blessingnwosu@yahoo.com",
+            avatar: "/images/avatar7.jpg"
+        },
+        clicks: 3200,
+        tickets_sold: 120,
+        revenue: 380000,
+        commission: 38000,
+        conversion_rate: 7.3
+    },
+    {
+        id: 8,
+        rank: 8,
+        affiliate: {
+            name: "Funke Adeleke",
+            email: "funkadeleke@gmail.com",
+            avatar: "/images/avatar8.jpg"
+        },
+        clicks: 2800,
+        tickets_sold: 105,
+        revenue: 340000,
+        commission: 34000,
+        conversion_rate: 7.3
+    }
+]
+
+
+
+
+
+
+
+
+// Mock Mail Data
+export const mockEmailCampaigns = [
+    {
+        id: 1,
+        campaign: "Early Bird Tickets Announcement",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 1550,
+        sent_date: "2025-11-14T09:00:00",
+        open_rate: 48,
+        click_rate: 24,
+        status: "successful"
+    },
+    {
+        id: 2,
+        campaign: "VIP Pass Promotion",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 5850,
+        sent_date: "2025-11-15T11:30:00",
+        open_rate: null,
+        click_rate: null,
+        status: "failed"
+    },
+    {
+        id: 3,
+        campaign: "Flash Sale – 24 Hours Only",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 3200,
+        sent_date: "2025-11-17T15:00:00",
+        open_rate: 37,
+        click_rate: 16,
+        status: "successful"
+    },
+    {
+        id: 4,
+        campaign: "Sold-Out Soon Alert",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 934,
+        sent_date: "2025-11-18T18:45:00",
+        open_rate: 56,
+        click_rate: 27,
+        status: "successful"
+    },
+    {
+        id: 5,
+        campaign: "Holiday Festival Promo",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 4100,
+        sent_date: "2025-11-20T10:00:00",
+        open_rate: 67,
+        click_rate: 33,
+        status: "successful"
+    },
+    {
+        id: 6,
+        campaign: "Last-Minute Ticket Deals",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 2456,
+        sent_date: "2025-11-22T14:15:00",
+        open_rate: 81,
+        click_rate: 39,
+        status: "successful"
+    },
+    {
+        id: 7,
+        campaign: "Weekend Special Offer",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 6200,
+        sent_date: "2025-11-23T08:30:00",
+        open_rate: 42,
+        click_rate: 18,
+        status: "successful"
+    },
+    {
+        id: 8,
+        campaign: "New Year Countdown Event",
+        event: {
+            id: '8',
+            image: '/images/demo-images/event-detail-img.png',
+            status: 'selling-fast',
+            category: 'Concert',
+            host: 'Afrobeat Live',
+            title: 'Afrobeats Night Lagos',
+            date: 'Dec 15, 2025',
+            location: 'Eko Hotel & Suites, Victoria Island, Lagos',
+            price: '₦20,000',
+            href: '/events/8',
+            attendees: []
+        },
+        recipients: 8900,
+        sent_date: "2025-11-25T16:00:00",
+        open_rate: null,
+        click_rate: null,
+        status: "failed"
+    }
+]
+
+
+
+export const mockAttendeesCheckIns = [
+  {
+    id: 'chk-001',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-001-01',
+    ticketType: 'VIP',
+    event: mockUpcomingEvents[0],
+    checkInTime: '2025-11-15 19:12',
+    status: 'checked-in'
+  },
+  {
+    id: 'chk-002',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-001-02',
+    ticketType: 'VIP',
+    event: mockUpcomingEvents[0],
+    checkInTime: '2025-11-15 19:15',
+    status: 'checked-in'
+  },
+  {
+    id: 'chk-003',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-002-01',
+    ticketType: 'Regular',
+    event: mockUpcomingEvents[0],
+    checkInTime: '2025-11-14 09:05',
+    status: 'checked-in'
+  },
+  {
+    id: 'chk-004',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-003-01',
+    ticketType: 'Regular',
+    event: mockUpcomingEvents[0],
+    checkInTime: null,
+    status: 'cancelled' // order was cancelled
+  },
+  {
+    id: 'chk-005',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-004-01',
+    ticketType: 'Regular',
+    event: mockUpcomingEvents[0],
+    checkInTime: null,
+    status: 'pending' // event not yet happened
+  },
+  {
+    id: 'chk-006',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-005-01',
+    ticketType: 'VIP',
+    event: mockUpcomingEvents[0],
+    checkInTime: null,
+    status: 'cancelled'
+  },
+  {
+    id: 'chk-007',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-006-01',
+    ticketType: 'Family Pass',
+    event: mockUpcomingEvents[0],
+    checkInTime: '2025-11-20 09:45',
+    status: 'checked-in'
+  },
+  {
+    id: 'chk-008',
+    attendee: mockCustomers[0],
+    ticketId: 'TKT-ORD-2024-006-02',
+    ticketType: 'Family Pass',
+    event: mockUpcomingEvents[0],
+    checkInTime: '2025-11-20 09:50',
+    status: 'checked-in'
+  },
+  // ... more entries can be added similarly
+]

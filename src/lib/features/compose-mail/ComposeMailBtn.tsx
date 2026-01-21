@@ -1,24 +1,25 @@
+import CreatePromoCodeForm from "@/components/custom-utils/promo-code/CreatePromoCodeForm"
 import AddBankAccountForm from "@/components/custom-utils/withdrawal/AddBankAccountForm"
 import { cn } from "@/lib/utils"
 import { Icon } from "@iconify/react"
 import { useState } from "react"
 
-interface AddAccountBtnProps {
-    onAddAccount?: (format: ExportFormat) => void
+interface AddPromoCodeProps {
+    onComposeMail?: (format: ExportFormat) => void
     className?: string
 }
 
-export default function AddAccountBtn({
+export default function ComposeMailBtn({
     className,
-    onAddAccount
-}: AddAccountBtnProps) {
+    onComposeMail
+}: AddPromoCodeProps) {
 
-    const [showAddAccountModal, setShowAddAccountModal] =  useState(false)
+    const [showAddPromoCodeModal, setShowAddPromoCodeModal] =  useState(false)
 
     return (
         <>
             <button
-                onClick={() => setShowAddAccountModal(true)}
+                onClick={() => setShowAddPromoCodeModal(true)}
                 className={cn(
                     'flex items-center rounded justify-between text-xs md:text-sm font-bold gap-2 bg-primary-1 p-1.5 transition-opacity',
                     'text-primary-6 hover:text-primary-7 hover:bg-primary-2 transition-colors ease-in-out duration-200'
@@ -30,10 +31,10 @@ export default function AddAccountBtn({
                 )}>
                     <Icon icon="pajamas:export" width="16" height="16" />
                 </span>
-                <span>Add Account Bank</span>
+                <span>Compose Mail</span>
             </button>
 
-            <AddBankAccountForm openAddAccountModal={showAddAccountModal} setOpenAddAccountModal={setShowAddAccountModal} />
+            <CreatePromoCodeForm openPromoModal={showAddPromoCodeModal} setOpenPromoModal={setShowAddPromoCodeModal} />
         </>
     )
 }

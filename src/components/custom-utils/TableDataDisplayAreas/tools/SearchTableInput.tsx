@@ -55,7 +55,7 @@ export default function SearchTableInput1({
             <div
                 className={cn(
                 'relative flex flex-row-reverse  w-full items-center gap-2 px-4 py-3',
-                'rounded-lg border h-10 text-sm transition-all duration-200 bg-secondary-1',
+                'rounded-lg border h-11 text-sm transition-all duration-200 bg-secondary-1',
                 isFocused
                     ? 'border-[1.6px] border-primary-6'
                     : 'border-[0.5px] border-secondary-3 hover:border-neutral-4'

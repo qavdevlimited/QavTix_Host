@@ -19,12 +19,12 @@ export default function OrderListTable() {
                     <table className="w-full">
                         <thead className="bg-neutral-2 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Event ID</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Event</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Purchase date</th>
-                                <th className="text-center py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Quantity</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Amount</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event ID</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Purchase date</th>
+                                <th className="text-center py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Quantity</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Amount</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-2 bg-white">
@@ -165,6 +165,8 @@ export default function OrderListTable() {
                 hasPreviousPage={pagination.hasPreviousPage}
                 onNextPage={pagination.nextPage}
                 onPreviousPage={pagination.previousPage}
+                currentPage={pagination.currentPage}
+                totalPages={pagination.totalPages}
             />
         </div>
     )

@@ -5,13 +5,10 @@ import { usePagination } from "@/custom-hooks/PaginationHook"
 import { mockCustomers } from "@/components-data/demo-data"
 import { Dispatch, SetStateAction, useEffect } from "react"
 import { cn } from "@/lib/utils"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { getAvatarColor } from "@/helper-fns/getAvatarColor"
-import { getInitialsFromName } from "@/helper-fns/getInitialFromName"
 import { CustomerItemAction } from "../tools/CustomerItemAction"
 import PaginationControls from "../tools/PaginationControl"
-import CustomAvatar from "../../avatars/CustomAvatar"
 import { formatDateTime } from "@/helper-fns/date-utils"
+import UserInfo from "../../users/UserInfo"
 
 interface CustomersTableProps {
     setSelectedCustomers: Dispatch<SetStateAction<string[]>>
@@ -63,12 +60,12 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                         onCheckedChange={handleSelectAll}
                                     />
                                 </th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Profile Info</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Address</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Attended</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Total Spend</th>
-                                <th className="text-left py-4 px-5 text-xs font-semibold text-secondary-8 capitalize whitespace-nowrap">Last Purchase</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Profile Info</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Address</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Attended</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Total Spend</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Last Purchase</th>
                                 <th className="w-12 py-4 px-4"></th>
                             </tr>
                         </thead>
@@ -101,13 +98,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                             </div>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <div className="flex items-center gap-3 min-w-max">
-                                                <CustomAvatar name={customer.name} id={customer.id} size="size-12 shrink-0" />
-                                                <div className="whitespace-nowrap">
-                                                    <p className="text-xs text-secondary-9">{customer.name}</p>
-                                                    <p className="text-[11px] text-secondary-9 font-bold">{customer.email}</p>
-                                                </div>
-                                            </div>
+                                            <UserInfo user={customer} variant="desktop"  />
                                         </td>
                                         <td className="py-4 px-5">
                                             <p className="text-xs text-secondary-6 min-w-37 max-w-37">
@@ -150,7 +141,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                         <div 
                             key={customer.id} 
                             className={cn(
-                                "bg-white rounded-xl border border-neutral-5 p-4",
+                                "border-b border-neutral-5 p-4",
                                 isSelected && "bg-primary-1"
                             )}
                         >
@@ -172,13 +163,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                             </div>
 
                             {/* Profile */}
-                            <div className="flex items-center gap-3 mb-4">
-                                <CustomAvatar name={customer.name} id={customer.id} size="size-12" />
-                                <div className="flex-1 min-w-0">
-                                    <p className="font-semibold text-sm text-secondary-9">{customer.name}</p>
-                                    <p className="text-xs text-neutral-6 truncate">{customer.email}</p>
-                                </div>
-                            </div>
+                            <UserInfo user={customer} variant="mobile" className="mb-4"  />
 
                             {/* Details */}
                             <div className="space-y-2 text-xs">
@@ -212,6 +197,8 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                 hasPreviousPage={pagination.hasPreviousPage}
                 onNextPage={pagination.nextPage}
                 onPreviousPage={pagination.previousPage}
+                currentPage={pagination.currentPage}
+                totalPages={pagination.totalPages}
             />
         </div>
     )

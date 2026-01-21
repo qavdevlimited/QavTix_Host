@@ -6,14 +6,15 @@ interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string
     error?: string
     required?: boolean
+    showAshk?: boolean 
 }
 
 const CustomInput1 = forwardRef<HTMLInputElement, FormInputProps>(
-    ({ label, error, required, className = '', ...props }, ref) => {
+    ({ label, error, required, showAshk = true, className = '', ...props }, ref) => {
         return (
             <div className="w-full">
                 <label className="block text-sm font-medium text-neutral-9 mb-2">
-                    {label} {required && <span className="">*</span>}
+                    {label} {required && showAshk && <span className="">*</span>}
                 </label>
                 <input
                     ref={ref}
