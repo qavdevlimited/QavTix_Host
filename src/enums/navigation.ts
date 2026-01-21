@@ -43,6 +43,11 @@ export const NAVIGATION_LINKS : INavigationLinks = {
         href: "/checkin-system",
         icon: "hugeicons:add-to-list",
         label: "Check-In System"
+    },
+    SECURITY: {
+        href: "/security",
+        icon: "hugeicons:security-lock",
+        label: "Security"
     }
 }
 
