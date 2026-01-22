@@ -1,33 +1,38 @@
 import { cn } from "@/lib/utils"
 import { FilterRenderer } from "./filters/FilterRenderer"
 import SearchTableInput1 from "./tools/SearchTableInput"
-import { DashboardConsumerListFilters, DashboardUpcomingEventsFilters, MarketingToolsFilter, SystemCheckInDataTableFilters } from "./resources/avaliable-filters"
+import { 
+    DashboardConsumerListFilters, 
+    DashboardUpcomingEventsFilters, 
+    TableDataDisplayFilter, 
+    SystemCheckInDataTableFilters, 
+    MarketingToolsFilter 
+} from "./resources/avaliable-filters"
 import { Dispatch, ReactNode, SetStateAction } from "react";
 import DataCountIndicator from "./tools/DataCountIndicator";
 
+
+
+
+
 interface DataDisplayTableWrapperProps {
-    tabs: typeof DashboardUpcomingEventsFilters.tabList |
-    typeof DashboardConsumerListFilters.tabList |
-    typeof SystemCheckInDataTableFilters.tabList |
-    typeof MarketingToolsFilter.tabList;
+    tabs?: typeof DashboardUpcomingEventsFilters.tabList |
+        typeof DashboardConsumerListFilters.tabList |
+        typeof SystemCheckInDataTableFilters.tabList |
+        typeof MarketingToolsFilter.tabList;
     
     activeTab?: string;
     setActiveTab?: Dispatch<SetStateAction<string>>;
     filters?: Partial<FilterValues>;
     setFilters?: Dispatch<SetStateAction<Partial<FilterValues>>>;
-
-    filterOptions?: typeof DashboardUpcomingEventsFilters.filterOptions |
-    typeof DashboardConsumerListFilters.filterOptions |
-    typeof MarketingToolsFilter.filterOptions |
-    typeof SystemCheckInDataTableFilters.filterOptions;
-
-    showSearch?: boolean
-    searchPlaceholder?: string
-    onTabChange?: (tab: string) => void
-    onSearch?: (query: string) => void
-    onFilterChange?: (filters: FilterValues) => void
-    children: ReactNode
-    className?: string
+    filterOptions?: readonly TableDataDisplayFilter[];
+    showSearch?: boolean;
+    searchPlaceholder?: string;
+    onTabChange?: (tab: string) => void;
+    onSearch?: (query: string) => void;
+    onFilterChange?: (filters: FilterValues) => void;
+    children: ReactNode;
+    className?: string;
 }
 
 export default function DataDisplayTableWrapper({
@@ -49,8 +54,7 @@ export default function DataDisplayTableWrapper({
             className
         )}>
             {/* Tabs */}
-            {
-                activeTab && setActiveTab &&
+            {tabs && activeTab && setActiveTab && (
                 <div className="px-4 w-full border-b border-neutral-5 mb-4">
                     <div className="flex items-center gap-8 overflow-x-auto">
                         {tabs.map((tab) => (
@@ -73,7 +77,7 @@ export default function DataDisplayTableWrapper({
                         ))}
                     </div>
                 </div>
-            }
+            )}
 
             {/* Search & Filters */}
             <div className="px-4 shrink-0">
@@ -83,22 +87,19 @@ export default function DataDisplayTableWrapper({
                         onSearch={onSearch}
                     />
                 )}
-                {setFilters && filters && filterOptions && filterOptions.length > 0 ? (
+                {setFilters && filters && filterOptions && filterOptions.length > 0 && (
                     <div className="flex flex-wrap gap-4 my-4">
                         {filterOptions.map((filter) => (
                             <FilterRenderer
                                 key={filter.value}
                                 filterKey={filter.value}
-                                filters={filters!}
-                                icon={filter.icon}
+                                filter={filter}
+                                filters={filters}
                                 setFilters={setFilters}
                             />
                         ))}
                     </div>
-                )
-                :
-                null
-                }
+                )}
             </div>
 
             <div className="w-full overflow-x-auto px-4">

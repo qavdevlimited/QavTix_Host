@@ -1,23 +1,25 @@
 'use client'
 
 import { Dispatch, SetStateAction } from 'react'
-import { FilterKey } from '../resources/avaliable-filters'
+import { FilterKey, TableDataDisplayFilter } from '../resources/avaliable-filters'
 import { filterRegistry } from './filter-registry'
 
+
+
 interface FilterRendererProps {
-  filterKey: FilterKey
-  filters: Partial<FilterValues>
-  setFilters: Dispatch<SetStateAction<Partial<FilterValues>>>
-  className?: string
-  icon: string
+    filterKey: FilterKey
+    filter: TableDataDisplayFilter
+    filters: Partial<FilterValues>
+    setFilters: Dispatch<SetStateAction<Partial<FilterValues>>>
+    className?: string
 }
 
 export function FilterRenderer({
-  filterKey,
-  filters,
-  setFilters,
-  className,
-  icon
+    filterKey,
+    filter,
+    filters,
+    setFilters,
+    className
 }: FilterRendererProps) {
     const entry = filterRegistry[filterKey]
     if (!entry) return null
@@ -27,8 +29,8 @@ export function FilterRenderer({
     const value = filters[stateKey]
     const onChange = (newValue: any) => {
         setFilters(prev => ({
-        ...prev,
-        [stateKey]: newValue
+            ...prev,
+            [stateKey]: newValue
         }))
     }
 
@@ -37,7 +39,7 @@ export function FilterRenderer({
             value={value}
             onChange={onChange}
             className={className}
-            icon={icon}
+            icon={filter.icon}
         />
     )
 }

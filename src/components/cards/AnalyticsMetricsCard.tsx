@@ -1,0 +1,43 @@
+import { space_grotesk } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
+import Image from "next/image"
+import { salesAnalyticsMetricsConfig } from "./resources/metrics-config"
+
+interface MetricCardProps {
+    data: typeof salesAnalyticsMetricsConfig[number] & { value : string }
+    className?: string
+}
+
+export default function AnalyticsMetricsCard({ data, className }: MetricCardProps) {
+    return (
+        <div className={cn(
+            'shadow-[0px_5.8px_23.17px_0px_#3326AE14] flex flex-col justify-center max-h-32 xl:h-28 bg-white rounded-lg border border-neutral-2 px-4 py-5 hover:scale-103 transition-transform duration-300 ease-in-out',
+            className
+        )}>
+            <div className="">
+                <div className="flex justify-between items-center gap-2 md:gap-3">
+                    <h3 className={cn(space_grotesk.className, "text-xl font-bold text-secondary-9 mb-2")}>
+                        {data.value}
+                    </h3>
+
+                    <Image
+                        src={data.icon}
+                        alt=""
+                        aria-hidden="true"
+                        width={40}
+                        height={40} 
+                        className="select-none pointer-events-none"
+                    />
+                </div>
+                <div className="flex justify-between items-center gap-2 md:gap-3">
+                    <p className="text-xs font-medium text-secondary-8">
+                        {data.label}
+                    </p>
+                    <p className="text-[11px] md:text-xs text-neutral-6">
+                        {data.description}
+                    </p>
+                </div>
+            </div>
+        </div>
+    )
+}

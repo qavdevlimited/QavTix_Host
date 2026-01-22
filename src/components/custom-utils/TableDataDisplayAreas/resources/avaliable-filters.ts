@@ -1,12 +1,11 @@
 export type TableDataDisplayFilter = {
   label: string
   icon: string
-  value: string
+  value: FilterKey
 }
 
-
 export type FilterKey =
-  | 'category'
+  | 'categories'
   | 'status'
   | 'ticketType'
   | 'dateRange'
@@ -16,8 +15,8 @@ export type FilterKey =
 
 
 export const ALL_FILTERS = {
-  category: {
-    value: 'category',
+  categories: {
+    value: 'categories',
     label: 'Category',
     icon: 'tabler:triangle-square-circle'
   },
@@ -61,7 +60,7 @@ export type TabListItem = {
 
 export const DashboardUpcomingEventsFilters = {
   filterOptions: [
-    ALL_FILTERS.category,
+    ALL_FILTERS.categories,
     ALL_FILTERS.status,
     ALL_FILTERS.dateRange,
   ] as const,
@@ -103,9 +102,18 @@ export const SystemCheckInDataTableFilters = {
 }
 
 
+export const SalesAnalyticsDataTableFilters = {
+  filterOptions: [
+    ALL_FILTERS.ticketType,
+    ALL_FILTERS.purchaseDate
+  ] as const,
+  tabList: [] as const
+}
+
+
 export const DashboardEventsFilters = {
   filterOptions: [
-    ALL_FILTERS.category,
+    ALL_FILTERS.categories,
     ALL_FILTERS.status,
     ALL_FILTERS.performance,
     ALL_FILTERS.sortBy,

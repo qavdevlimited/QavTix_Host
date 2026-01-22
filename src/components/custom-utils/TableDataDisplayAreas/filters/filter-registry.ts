@@ -17,7 +17,7 @@ type FilterRegistryEntry<T> = {
 }
 
 export const filterRegistry: Partial<Record<FilterKey, FilterRegistryEntry<any>>> = {
-  category: {
+  categories: {
     component: CategoryFilter,
     stateKey: 'categories'
   },

@@ -1366,3 +1366,245 @@ export const mockAttendeesCheckIns = [
   },
   // ... more entries can be added similarly
 ]
+
+
+
+
+export const mockPayments: Payment[] = [
+    {
+        id: '1',
+        payment_id: 'PMT-2025-1234567',
+        purchased_by: {
+            id: '1',
+            name: 'Dominic Evans',
+            email: 'domevans@gmail.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: 'Doo & Shima, Elegushi Beach, Ikoyi, Lagos State',
+            attended: 13,
+            totalSpend: 105000,
+            lastPurchaseDate: new Date('2026-01-03'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'top-spender'
+        },
+        event: {
+            id: 'EVT001',
+            title: 'DevFest Lekki',
+            category: 'Tech Summit',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2026-01-03T16:15:00',
+        quantity: 1,
+        amount: 4500,
+        status: 'successful'
+    },
+    {
+        id: '2',
+        payment_id: 'PMT-2025-1234567',
+        purchased_by: {
+            id: '2',
+            name: 'Chinedu Okafor',
+            email: 'edubrazil042@gmail.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: '1234 Victoria Island, Lagos',
+            attended: 7,
+            totalSpend: 78000,
+            lastPurchaseDate: new Date('2025-02-21'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'repeat-buyer'
+        },
+        event: {
+            id: 'EVT002',
+            title: '5ive Tour Concert',
+            category: 'Music Festival',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2025-02-21T08:40:00',
+        quantity: 3,
+        amount: 15000,
+        status: 'successful'
+    },
+    {
+        id: '3',
+        payment_id: 'PMT-2025-1234567',
+        purchased_by: {
+            id: '3',
+            name: 'Aisha Mohammed',
+            email: 'Aishamona22@yahoo.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: '18 Admiralty Way, Lekki Phase 1, Lagos',
+            attended: 1,
+            totalSpend: 10200,
+            lastPurchaseDate: new Date('2026-03-12'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'first-timer'
+        },
+        event: {
+            id: 'EVT003',
+            title: 'Bole Fest 2025',
+            category: 'Food Festival',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2026-03-12T18:55:00',
+        quantity: 2,
+        amount: 3500,
+        status: 'cancelled'
+    },
+    {
+        id: '4',
+        payment_id: 'PMT-2025-1234567',
+        purchased_by: {
+            id: '4',
+            name: 'Temitope Adeyemi',
+            email: 'temiyemi10@outlook.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: '4 Boudillion Road, Ikoyi, Lagos',
+            attended: 3,
+            totalSpend: 15000,
+            lastPurchaseDate: new Date('2025-04-29'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'repeat-buyer'
+        },
+        event: {
+            id: 'EVT004',
+            title: 'PS5 Gamers Clash',
+            category: 'Sports Event',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2025-04-29T11:20:00',
+        quantity: 1,
+        amount: 2200,
+        status: 'successful'
+    },
+    {
+        id: '5',
+        payment_id: 'PMT-2025-1234567',
+        purchased_by: {
+            id: '5',
+            name: 'Ibrahim Danladi',
+            email: 'ibrahimladi77@gmail.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: 'Plot 54 Alausa Extension, Allen Avenue, Ikeja',
+            attended: 3,
+            totalSpend: 21350,
+            lastPurchaseDate: new Date('2026-07-07'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'repeat-buyer'
+        },
+        event: {
+            id: 'EVT005',
+            title: 'Owerri Cultural Day',
+            category: 'Cultural Event',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2026-07-07T14:10:00',
+        quantity: 1,
+        amount: 5000,
+        status: 'successful'
+    },
+    {
+        id: '6',
+        payment_id: 'PMT-2025-1234568',
+        purchased_by: {
+            id: '6',
+            name: 'Samuel Oladimeji',
+            email: 'sam.oladimeji25@gmail.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: 'Doo & Shima, Elegushi Beach, Ikoyi',
+            attended: 8,
+            totalSpend: 85000,
+            lastPurchaseDate: new Date('2025-06-15'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'top-spender'
+        },
+        event: {
+            id: 'EVT006',
+            title: 'Kiddies Funfair Fest',
+            category: 'Kids Event',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2025-06-15T10:30:00',
+        quantity: 4,
+        amount: 20000,
+        status: 'successful'
+    },
+    {
+        id: '7',
+        payment_id: 'PMT-2025-1234569',
+        purchased_by: {
+            id: '1',
+            name: 'Dominic Evans',
+            email: 'domevans@gmail.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: 'Doo & Shima, Elegushi Beach, Ikoyi',
+            attended: 13,
+            totalSpend: 105000,
+            lastPurchaseDate: new Date('2025-08-20'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'top-spender'
+        },
+        event: {
+            id: 'EVT007',
+            title: 'Lagos Tech Conference',
+            category: 'Conference',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2025-08-20T09:00:00',
+        quantity: 2,
+        amount: 18000,
+        status: 'successful'
+    },
+    {
+        id: '8',
+        payment_id: 'PMT-2025-1234570',
+        purchased_by: {
+            id: '3',
+            name: 'Aisha Mohammed',
+            email: 'Aishamona22@yahoo.com',
+            profileImg: '/images/demo-images/avatar.png',
+            address: '18 Admiralty Way, Lekki Phase 1, Lagos',
+            attended: 1,
+            totalSpend: 10200,
+            lastPurchaseDate: new Date('2025-09-10'),
+            firstPurchaseDate: new Date('2025-11-14'),
+            status: 'first-timer'
+        },
+        event: {
+            id: 'EVT008',
+            title: 'Afrobeat Night Live',
+            category: 'Music Concert',
+            image: '/images/demo-images/event-detail-img.png'
+        },
+        purchase_date: '2025-09-10T19:45:00',
+        quantity: 1,
+        amount: 8500,
+        status: 'cancelled'
+    }
+]
+
+// TypeScript Interface
+export interface Payment {
+    id: string
+    payment_id: string
+    purchased_by: {
+        id: string
+        name: string
+        email: string
+        profileImg?: string
+        address: string
+        attended: number
+        totalSpend: number
+        lastPurchaseDate: Date
+        firstPurchaseDate: Date
+        status: string
+    }
+    event: {
+        id: string
+        title: string
+        category: string
+        image: string
+    }
+    purchase_date: string
+    quantity: number
+    amount: number
+    status: 'successful' | 'cancelled' | 'pending'
+}

@@ -38,16 +38,16 @@ export default function UserInfo({
                 <p
                     className={cn(
                         "text-secondary-9 text-xs",
-                        isDesktop ? "" : "font-semibold"
                     )}
                 >
                     {user.name}
                 </p>
                 <p
                     className={cn(
+                        "text-[11px] text-secondary-9 font-bold",
                         isDesktop
-                        ? "text-[11px] text-secondary-9 font-bold"
-                        : "text-neutral-6 truncate"
+                        ? ""
+                        : " truncate"
                     )}
                 >
                     {user.email}
