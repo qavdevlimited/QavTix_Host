@@ -171,8 +171,9 @@ export default function RevenueGrowthChart() {
                             <Bar
                                 dataKey="value"
                                 fill="#FFAB73"
-                                radius={[2, 2, 0, 0]}
+                                radius={[4, 4, 2, 2]}
                                 maxBarSize={7}
+                                barSize={8}
                                 isAnimationActive={true}
                                 animationBegin={0}
                                 animationDuration={500}

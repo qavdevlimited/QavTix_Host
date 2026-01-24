@@ -308,3 +308,37 @@ export const analyticsMetricStatCardsConfig2VariantStyles = {
         description: 'text-white/80'
     }
 }
+
+
+
+
+export const myEventsMetricsConfig: Record<string, MetricConfig> = {
+    'live-events': {
+        id: 'live-events',
+        label: 'Live Events',
+        description: "Events currently listed",
+        icon: "hugeicons:calendar-03",
+        iconColor: 'text-[#359160]',
+    },
+    'draft': {
+        id: 'draft',
+        label: 'Draft',
+        description: 'Events in preparation',
+        icon: "hugeicons:task-edit-02",
+        iconColor: 'text-accent-5',
+    },
+    'ended': {
+        id: 'ended',
+        label: 'Ended',
+        description: 'Events already concluded',
+        icon: "fluent-mdl2:end-point-solid",
+        iconColor: 'text-[#FF0000]'
+    },
+    'sold-out': {
+        id: 'sold-out',
+        label: 'Sold Out',
+        description: 'Events fully booked',
+        icon: "hugeicons:wallet-done-01",
+        iconColor: 'text-primary-4',
+    },
+}

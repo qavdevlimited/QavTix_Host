@@ -6,7 +6,8 @@ import {
     DashboardUpcomingEventsFilters, 
     TableDataDisplayFilter, 
     SystemCheckInDataTableFilters, 
-    MarketingToolsFilter 
+    MarketingToolsFilter, 
+    MyEventsPageFilters
 } from "./resources/avaliable-filters"
 import { Dispatch, ReactNode, SetStateAction } from "react";
 import DataCountIndicator from "./tools/DataCountIndicator";
@@ -19,6 +20,7 @@ interface DataDisplayTableWrapperProps {
     tabs?: typeof DashboardUpcomingEventsFilters.tabList |
         typeof DashboardConsumerListFilters.tabList |
         typeof SystemCheckInDataTableFilters.tabList |
+        typeof MyEventsPageFilters.tabList |
         typeof MarketingToolsFilter.tabList;
     
     activeTab?: string;

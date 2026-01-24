@@ -135,14 +135,14 @@ export default function RevenueGrowthChart() {
                             <Bar
                                 dataKey="value"
                                 fill="#FFAB73"
-                                radius={[3, 3, 0, 0]}
+                                radius={[5, 5, 2, 2]}
                                 maxBarSize={10}
                                 barSize={9}
                                 isAnimationActive={true}
                                 animationBegin={0}
                                 animationDuration={500}
                                 animationEasing="ease-in-out"
-                                background={{ fill: '#E5E7EB', radius: "16px" }}
+                                background={{ fill: '#E5E7EB', radius: "20px" }}
                             />
                         </BarChart>
                     </ResponsiveContainer>

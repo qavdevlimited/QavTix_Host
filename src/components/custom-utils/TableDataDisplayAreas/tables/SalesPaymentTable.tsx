@@ -110,7 +110,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                         </td>
                                         <td className="py-4 px-5">
                                             <Badge className={cn(
-                                                "p-2 rounded-md border-[0.8px] capitalize border-neutral-4",
+                                                "p-1.5 rounded-md text-[11px] border-[0.8px] capitalize border-neutral-4",
                                                 payment.status === "successful" ? "text-postive-default bg-green-50" :
                                                 payment.status === "cancelled" ? "text-secondary-4 bg-secondary-1" : ""
                                             )}>

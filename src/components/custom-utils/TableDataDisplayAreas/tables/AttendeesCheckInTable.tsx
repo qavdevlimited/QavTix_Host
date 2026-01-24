@@ -35,7 +35,7 @@ export default function AttendeeCheckInTable() {
                                     <tr 
                                         key={v.id} 
                                         className={cn(
-                                            "hover:bg-accent-2/50 transition-colors"
+                                            "hover:bg-neutral-3/70 transition-colors"
                                         )}
                                     >
                                         <td className="py-4 px-5">

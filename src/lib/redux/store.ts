@@ -1,14 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit'
 import alertReducer from "./slices/alertSlice"
-import settingsReducer from "./slices/settingsSlice"
 import authUserReducer from "./slices/authUserSlice"
+import confirmationReducer from './slices/confirmationSlice'
+import successModalReducer from './slices/successModalSlice'
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       alert: alertReducer,
       authUser: authUserReducer,
-      settings: settingsReducer
+      confirmation: confirmationReducer,
+      successModal: successModalReducer
     }
   })
 }

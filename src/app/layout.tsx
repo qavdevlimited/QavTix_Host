@@ -2,6 +2,8 @@ import "./globals.css"
 import DesktopHeaderSection from "@/components/layout/DesktopHeaderSection"
 import DesktopSideNav from "@/components/layout/DesktopSideNav"
 import MobileHeaderSection from "@/components/layout/MobileHeaderSection"
+import ConfirmationModal from "@/components/modals/ConfirmationModal"
+import SuccessModal from "@/components/modals/SuccessModal"
 import { inter } from "@/lib/fonts"
 import ReduxStoreProvider from "@/lib/redux/ReduxStoreProvider"
 import { Metadata } from "next"
@@ -37,6 +39,10 @@ export default function Layout({ children }: LayoutProps) {
               </div>
             </div>
           </div>
+
+
+          <ConfirmationModal />
+          <SuccessModal />
         </ReduxStoreProvider>
       </body>
     </html>

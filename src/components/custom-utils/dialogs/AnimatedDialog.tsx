@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 interface AnimatedDialogProps {
   open: boolean
-  onOpenChange: (open: boolean) => void
+  onOpenChange?: (open: boolean) => void
   trigger?: React.ReactNode
   title?: string
   children: React.ReactNode
