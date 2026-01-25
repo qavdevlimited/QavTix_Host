@@ -58,16 +58,16 @@ export default function SuccessModal() {
 
                 {/* Content */}
                 <DialogHeader className="text-center flex justify-center items-center">
-                    <DialogTitle className="text-lg font-bold text-secondary-9">
+                    <DialogTitle className="text-lg font-bold text-brand-secondary-9">
                         {title}
                     </DialogTitle>
-                    <DialogDescription className="text-sm text-secondary-6 max-w-sm">
+                    <DialogDescription className="text-sm text-brand-secondary-6 max-w-sm">
                         {description}
                     </DialogDescription>
                 </DialogHeader>
             </div>
 
-            <button className='absolute top-4 right-4 text-neutral-6' aria-label="close modal">
+            <button className='absolute top-4 right-4 bg-brand-neutral-6' aria-label="close modal">
                 <Icon icon="line-md:close-circle-filled" width="24" height="24" className='size-7' />
             </button>
         </AnimatedDialog>

@@ -33,13 +33,13 @@ export default function ActivitySectionPW({
                         className={cn(
                         "flex-1 px-6 py-4 text-sm md:text-[13px] font-bold transition-colors relative",
                         activeTab === 'activity'
-                            ? "text-primary-6"
-                            : "text-neutral-6 hover:text-neutral-8"
+                            ? "text-brand-primary-6"
+                            : "bg-brand-neutral-6 hover:bg-brand-neutral-8"
                         )}
                     >
                         Recent Activity
                         {activeTab === 'activity' && (
-                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
+                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-primary-6" />
                         )}
                     </button>
 
@@ -48,13 +48,13 @@ export default function ActivitySectionPW({
                         className={cn(
                         "flex-1 px-6 py-4 text-sm md:text-[13px] font-bold transition-colors relative",
                         activeTab === 'notifications'
-                            ? "text-primary-6"
-                            : "text-neutral-6 hover:text-neutral-8"
+                            ? "text-brand-primary-6"
+                            : "bg-brand-neutral-6 hover:bg-brand-neutral-8"
                         )}
                     >
                         Notifications
                         {activeTab === 'notifications' && (
-                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
+                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-primary-6" />
                         )}
                     </button>
                 </div>

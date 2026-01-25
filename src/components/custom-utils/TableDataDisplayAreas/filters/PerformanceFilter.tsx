@@ -56,7 +56,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
             <div className="space-y-6">
                 {/* Quick Presets */}
                 <div className="space-y-3">
-                    <p className="text-sm font-medium text-neutral-7">Quick Select</p>
+                    <p className="text-sm font-medium bg-brand-neutral-7">Quick Select</p>
                     <div className="grid grid-cols-3 gap-2">
                         {performanceLevels.map((level) => (
                             <button
@@ -65,13 +65,13 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                                 className={cn(
                                     'flex flex-col items-center gap-2 p-3 rounded-xl border-2 transition-all',
                                     range[0] === level.value[0] && range[1] === level.value[1]
-                                        ? 'border-primary-6 bg-primary-1'
+                                        ? 'border-brand-primary-6 bg-brand-primary-1'
                                         : 'border-neutral-3 hover:border-neutral-4'
                                 )}
                             >
                                 <div className={cn('w-8 h-2 rounded-full', level.color)} />
-                                <span className="text-xs font-medium text-secondary-9">{level.label}</span>
-                                <span className="text-xs text-neutral-6">{level.value[0]}-{level.value[1]}%</span>
+                                <span className="text-xs font-medium text-brand-secondary-9">{level.label}</span>
+                                <span className="text-xs bg-brand-neutral-6">{level.value[0]}-{level.value[1]}%</span>
                             </button>
                         ))}
                     </div>
@@ -80,8 +80,8 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                 {/* Range Slider */}
                 <div className="space-y-4 pt-4">
                     <div className="flex justify-between items-center">
-                        <p className="text-sm font-medium text-neutral-7">Custom Range</p>
-                        <p className="text-sm font-semibold text-primary-6">
+                        <p className="text-sm font-medium bg-brand-neutral-7">Custom Range</p>
+                        <p className="text-sm font-semibold text-brand-primary-6">
                             {range[0]}% - {range[1]}%
                         </p>
                     </div>
@@ -93,7 +93,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                         step={5}
                         className="w-full"
                     />
-                    <div className="flex justify-between text-xs text-neutral-6">
+                    <div className="flex justify-between text-xs bg-brand-neutral-6">
                         <span>0%</span>
                         <span>50%</span>
                         <span>100%</span>
@@ -101,14 +101,14 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                 </div>
 
                 {/* Visual Indicator */}
-                <div className="bg-neutral-2 rounded-xl p-4">
+                <div className="bg-brand-neutral-2 rounded-xl p-4">
                     <div className="flex items-center gap-3">
-                        <Icon icon="mdi:chart-line" className="w-8 h-8 text-primary-6" />
+                        <Icon icon="mdi:chart-line" className="w-8 h-8 text-brand-primary-6" />
                         <div>
-                            <p className="text-sm font-medium text-secondary-9">
+                            <p className="text-sm font-medium text-brand-secondary-9">
                                 Filtering: {range[0]}% - {range[1]}%
                             </p>
-                            <p className="text-xs text-neutral-6">
+                            <p className="text-xs bg-brand-neutral-6">
                                 Shows events with ticket sales in this range
                             </p>
                         </div>

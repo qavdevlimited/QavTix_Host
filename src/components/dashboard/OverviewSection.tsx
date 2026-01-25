@@ -11,7 +11,7 @@ export default function OverviewSection() {
     return (
         <section className="w-full overflow-hidden mt-10 lg:mt-0">
             <div className="flex justify-between items-center">
-                <h2 className={cn(space_grotesk.className, 'capitalize text-lg text-secondary-8 font-bold')}>Overview</h2>
+                <h2 className={cn(space_grotesk.className, 'capitalize text-lg text-brand-secondary-8 font-bold')}>Overview</h2>
                 <CreateEventBtn />
             </div>
 
@@ -25,7 +25,7 @@ export default function OverviewSection() {
                         You have 3 active events and 156 tickets sold today
                     </p>
 
-                    <Button className="mt-3 md:mt-6 bg-white text-primary-6 font-semibold text-xs md:text-sm hover:bg-neutral-100 border-none">
+                    <Button className="mt-3 md:mt-6 bg-white text-brand-primary-6 font-semibold text-xs md:text-sm hover:bg-brand-neutral-100 border-none">
                         <span>View All Events</span>
                         <Icon icon="stash:arrow-right" width="24" height="24" />
                     </Button>

@@ -16,7 +16,7 @@ export default function AnalyticsMetricsCard({ data, className }: MetricCardProp
         )}>
             <div className="">
                 <div className="flex justify-between items-center gap-2 md:gap-3">
-                    <h3 className={cn(space_grotesk.className, "text-xl font-bold text-secondary-9 mb-2")}>
+                    <h3 className={cn(space_grotesk.className, "text-xl font-bold text-brand-secondary-9 mb-2")}>
                         {data.value}
                     </h3>
 
@@ -30,10 +30,10 @@ export default function AnalyticsMetricsCard({ data, className }: MetricCardProp
                     />
                 </div>
                 <div className="flex justify-between items-center gap-2 md:gap-3">
-                    <p className="text-xs font-medium text-secondary-8">
+                    <p className="text-xs font-medium text-brand-secondary-8">
                         {data.label}
                     </p>
-                    <p className="text-[11px] md:text-xs text-neutral-6">
+                    <p className="text-[11px] md:text-xs bg-brand-neutral-6">
                         {data.description}
                     </p>
                 </div>

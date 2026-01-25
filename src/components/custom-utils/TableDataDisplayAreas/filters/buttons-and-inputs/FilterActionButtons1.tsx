@@ -27,7 +27,7 @@ export default function FilterButtonsActions1({
             <button
                 type="button"
                 onClick={onClear}
-                className="flex-1 h-12 max-w-36 border border-neutral-6 rounded-full font-medium text-sm transition-all hover:bg-neutral-2 hover:shadow-sm active:scale-[0.98]"
+                className="flex-1 h-12 max-w-36 border border-neutral-6 rounded-full font-medium text-sm transition-all hover:bg-brand-neutral-2 hover:shadow-sm active:scale-[0.98]"
                 disabled={isApplying}
             >
                 {clearLabel}
@@ -40,8 +40,8 @@ export default function FilterButtonsActions1({
                 disabled={applyDisabled || isApplying}
                 className={`flex-1 h-12 max-w-36 rounded-full font-medium text-sm transition-all shadow-lg active:scale-[0.98] 
                     ${isApplying || applyDisabled
-                        ? 'bg-neutral-4 text-neutral-6 cursor-not-allowed'
-                        : 'bg-primary-6 text-white hover:bg-primary-7'
+                        ? 'bg-brand-neutral-4 bg-brand-neutral-6 cursor-not-allowed'
+                        : 'bg-brand-primary-6 text-white hover:bg-brand-primary-7'
                     }
                 `}
             >

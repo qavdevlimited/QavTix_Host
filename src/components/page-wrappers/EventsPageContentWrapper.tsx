@@ -39,7 +39,7 @@ function EventsPageContentWrapper() {
     return (
         <main className="pb-12">
             <div className="flex justify-between items-center my-5">
-                <h2 className={cn(space_grotesk.className, 'capitalize text-lg text-secondary-8 font-bold')}>Overview</h2>
+                <h2 className={cn(space_grotesk.className, 'capitalize text-lg text-brand-secondary-8 font-bold')}>Overview</h2>
                 <CreateEventBtn />
             </div>
 

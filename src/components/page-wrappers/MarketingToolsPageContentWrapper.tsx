@@ -23,7 +23,7 @@ export default function MarketingToolsPageContentWrapper(){
     return (
         <main className="pt-6 pb-10">
             <div className="flex justify-between items-center gap-5 mb-5 mt-10 lg:mt-0">
-                <h2 className={cn(space_grotesk.className, "text-secondary-8 font-bold text-lg mb-4 capitalize")}>{activeTab.replace("-", " ")}</h2>
+                <h2 className={cn(space_grotesk.className, "text-brand-secondary-8 font-bold text-lg mb-4 capitalize")}>{activeTab.replace("-", " ")}</h2>
                 {
                     activeTab === "promo-codes" ?
                     <AddPromoCode /> :

@@ -43,15 +43,15 @@ export default function EventsItemDropdown({
                         "p-1 border border-neutral-5 rounded-md transition-colors",
                         disabled 
                             ? "opacity-50 cursor-not-allowed" 
-                            : "hover:bg-neutral-2"
+                            : "hover:bg-brand-neutral-2"
                     )}
                     disabled={disabled}
                 >
-                    <Icon icon="tabler:dots" className="w-5 h-5 text-secondary-9 hidden md:inline-block" />
-                    <Icon icon="ix:context-menu" className="w-5 h-5 text-secondary-9 md:hidden" />
+                    <Icon icon="tabler:dots" className="w-5 h-5 text-brand-secondary-9 hidden md:inline-block" />
+                    <Icon icon="ix:context-menu" className="w-5 h-5 text-brand-secondary-9 md:hidden" />
                 </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-52 text-secondary-9 space-y-1.5">
+            <DropdownMenuContent align="end" className="w-52 text-brand-secondary-9 space-y-1.5">
                 {actions.map((action) => {
                     const isActionLoading = loadingAction === action.id
                     const isActionDisabled = isProcessing && !isActionLoading
@@ -68,7 +68,7 @@ export default function EventsItemDropdown({
                                 type="button"
                                 className={cn(
                                     "w-full text-left flex items-center text-xs gap-2 font-normal cursor-pointer transition-colors px-2 py-1.5 rounded-sm",
-                                    "hover:bg-neutral-4 focus:bg-neutral-4 focus:outline-none",
+                                    "hover:bg-brand-neutral-4 focus:bg-brand-neutral-4 focus:outline-none",
                                     action.variant === 'danger' && "text-red-600 hover:bg-red-50 focus:bg-red-50",
                                     isActionDisabled && "opacity-50 cursor-not-allowed"
                                 )}

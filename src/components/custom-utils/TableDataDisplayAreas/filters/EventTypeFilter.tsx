@@ -61,27 +61,27 @@ export function EventTypeFilter({ value = [], onChange, icon }: EventTypeFilterP
                                 className={cn(
                                     'flex items-center gap-4 p-3 rounded-2xl border-[1.5px] transition-all',
                                     isSelected
-                                        ? 'border-primary-6 shadow-md'
-                                        : 'border-neutral-3 hover:border-primary-3 hover:bg-neutral-1'
+                                        ? 'border-brand-primary-6 shadow-md'
+                                        : 'border-neutral-3 hover:border-brand-primary-3 hover:bg-brand-neutral-1'
                                 )}
                             >
                                 <div className={cn(
                                     'w-12 h-12 rounded-xl flex items-center justify-center transition-colors',
-                                    isSelected ? 'bg-primary-6' : 'bg-neutral-2'
+                                    isSelected ? 'bg-brand-primary-6' : 'bg-brand-neutral-2'
                                 )}>
                                     <Icon
                                         icon={type.icon}
-                                        className={cn('w-6 h-6', isSelected ? 'text-white' : 'text-neutral-7')}
+                                        className={cn('w-6 h-6', isSelected ? 'text-white' : 'bg-brand-neutral-7')}
                                     />
                                 </div>
                                 <div className="flex-1 text-left">
-                                    <p className={cn('font-medium text-sm', isSelected ? 'text-primary-8' : 'text-secondary-9')}>
+                                    <p className={cn('font-medium text-sm', isSelected ? 'text-brand-primary-8' : 'text-brand-secondary-9')}>
                                         {type.label}
                                     </p>
-                                    <p className="text-xs text-neutral-6">{type.description}</p>
+                                    <p className="text-xs bg-brand-neutral-6">{type.description}</p>
                                 </div>
                                 {isSelected && (
-                                    <Icon icon="mdi:check-circle" className="w-6 h-6 text-primary-6" />
+                                    <Icon icon="mdi:check-circle" className="w-6 h-6 text-brand-primary-6" />
                                 )}
                             </button>
                         )

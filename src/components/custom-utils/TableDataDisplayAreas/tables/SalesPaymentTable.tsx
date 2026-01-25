@@ -48,7 +48,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -56,13 +56,13 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                         onCheckedChange={handleSelectAll}
                                     />
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Payment ID</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Purchased By</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Purchase Date</th>
-                                <th className="text-center py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Quantity</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Amount</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Payment ID</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Purchased By</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Purchase Date</th>
+                                <th className="text-center py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Quantity</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Amount</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-5 bg-white">
@@ -73,8 +73,8 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                     <tr 
                                         key={payment.id} 
                                         className={cn(
-                                            "hover:bg-accent-2/5 transition-colors cursor-pointer",
-                                            isSelected && "bg-primary-1 hover:bg-primary-1"
+                                            "hover:bg-brand-accent-2/5 transition-colors cursor-pointer",
+                                            isSelected && "bg-brand-primary-1 hover:bg-brand-primary-1"
                                         )}
                                         onClick={() => handleSelectPayment(payment.id)}
                                     >
@@ -85,7 +85,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                             />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 font-medium">{payment.payment_id}</p>
+                                            <p className="text-xs text-brand-secondary-8 font-medium">{payment.payment_id}</p>
                                         </td>
                                         <td className="py-4 px-5">
                                             <UserInfo user={payment.purchased_by} variant="desktop" />
@@ -94,17 +94,17 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                             <EventInfo {...payment.event} />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-8 whitespace-nowrap">
                                                 {formatDateTime(payment.purchase_date)}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5 text-center">
-                                            <p className="text-xs font-semibold text-secondary-9">
+                                            <p className="text-xs font-semibold text-brand-secondary-9">
                                                 {payment.quantity}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{payment.amount.toLocaleString()}
                                             </p>
                                         </td>
@@ -112,7 +112,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                             <Badge className={cn(
                                                 "p-1.5 rounded-md text-[11px] border-[0.8px] capitalize border-neutral-4",
                                                 payment.status === "successful" ? "text-postive-default bg-green-50" :
-                                                payment.status === "cancelled" ? "text-secondary-4 bg-secondary-1" : ""
+                                                payment.status === "cancelled" ? "text-brand-secondary-4 bg-brand-secondary-1" : ""
                                             )}>
                                                 {payment.status}
                                             </Badge>
@@ -135,12 +135,12 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                             key={payment.id} 
                             className={cn(
                                 "border border-neutral-3 rounded-lg p-4 bg-white",
-                                isSelected && "bg-primary-1 border-primary-3"
+                                isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >
                             <div className="space-y-3">
                                 {/* First Row - Payment ID, Amount, Quantity */}
-                                <div className="flex justify-between gap-2 flex-wrap items-center text-xs text-secondary-9 pb-2 border-b border-neutral-2">
+                                <div className="flex justify-between gap-2 flex-wrap items-center text-xs text-brand-secondary-9 pb-2 border-b border-neutral-2">
                                     <div className="flex items-center gap-2">
                                         <Checkbox
                                             checked={isSelected}
@@ -167,7 +167,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                     <Badge className={cn(
                                         "p-1 text-[11px] rounded-sm border-[0.8px] capitalize border-neutral-4 shrink-0",
                                         payment.status === "successful" ? "text-postive-default bg-green-50" :
-                                        payment.status === "cancelled" ? "text-secondary-4 bg-secondary-1" : ""
+                                        payment.status === "cancelled" ? "text-brand-secondary-4 bg-brand-secondary-1" : ""
                                     )}>
                                         {payment.status}
                                     </Badge>
@@ -176,7 +176,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                 {/* Third Row - Event Info & Purchase Date */}
                                 <div className="flex items-start justify-between gap-3 pt-2 border-t border-neutral-2">
                                     <EventInfo {...payment.event} variant="mobile" />
-                                    <div className="flex flex-col text-right text-xs text-secondary-9 shrink-0">
+                                    <div className="flex flex-col text-right text-xs text-brand-secondary-9 shrink-0">
                                         <span className="font-bold">Purchase Date:</span>
                                         <span className="font-normal">
                                             {formatDateTime(payment.purchase_date)}

@@ -36,7 +36,7 @@ export default function RecentActivityTab({ activities }: RecentActivityTabProps
                 >
                     <SelectTrigger
                         className={cn(
-                            "text-neutral-8 font-medium disabled:cursor-not-allowed disabled:opacity-65 text-xs w-fit bg-white rounded-lg border-neutral-4 hover:border-neutral-5 focus:border-primary-6",
+                            "border-brand-neutral-8 font-medium disabled:cursor-not-allowed disabled:opacity-65 text-xs w-fit bg-white rounded-lg border-neutral-4 hover:border-neutral-5 focus:border-brand-primary-6",
                         )}
                     >
                         <Icon icon="hugeicons:sliders-horizontal" width="24" height="24" className='shrink-0' />
@@ -60,8 +60,8 @@ export default function RecentActivityTab({ activities }: RecentActivityTabProps
                 ))
                 ) : (
                     <div className="py-12 text-center">
-                        <Icon icon="hugeicons:clock-01" className="w-12 h-12 text-neutral-4 mx-auto mb-3" />
-                        <p className="text-sm text-neutral-6">No recent activity</p>
+                        <Icon icon="hugeicons:clock-01" className="w-12 h-12 border-brand-neutral-4 mx-auto mb-3" />
+                        <p className="text-sm border-brand-neutral-6">No recent activity</p>
                     </div>
                 )}
             </div>

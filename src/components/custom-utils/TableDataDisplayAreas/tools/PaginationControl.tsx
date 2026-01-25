@@ -61,8 +61,8 @@ export default function PaginationControls({
           className={cn(
               "p-2.5 rounded-md text-xs font-medium transition-all flex items-center gap-1",
               hasPreviousPage 
-                  ? "bg-primary-6 text-white hover:bg-primary-7" 
-                  : "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+                  ? "bg-brand-primary-6 text-white hover:bg-brand-primary-7" 
+                  : "bg-brand-neutral-3 bg-brand-neutral-5 cursor-not-allowed"
           )}
           aria-label="Previous page"
         >
@@ -77,7 +77,7 @@ export default function PaginationControls({
               return (
                 <span 
                   key={`ellipsis-${index}`}
-                    className="min-w-9 h-9 px-3 flex items-center justify-center text-xs text-neutral-6"
+                    className="min-w-9 h-9 px-3 flex items-center justify-center text-xs bg-brand-neutral-6"
                 >
                   ...
                 </span>
@@ -93,8 +93,8 @@ export default function PaginationControls({
                 className={cn(
                     "min-w-7 h-7 px-3 rounded-sm text-xs font-medium flex items-center justify-center transition-colors",
                     isActive
-                        ? "bg-primary-6 text-white"
-                        : "bg-white text-neutral-8 border border-neutral-3"
+                        ? "bg-brand-primary-6 text-white"
+                        : "bg-white bg-brand-neutral-8 border border-neutral-3"
                 )}
               >
                 {pageNum}
@@ -110,8 +110,8 @@ export default function PaginationControls({
           className={cn(
             "p-2.5 rounded-md text-xs font-medium transition-all flex items-center gap-1",
             hasNextPage 
-              ? "bg-primary-6 text-white hover:bg-primary-7" 
-              : "bg-neutral-3 text-neutral-5 cursor-not-allowed"
+              ? "bg-brand-primary-6 text-white hover:bg-brand-primary-7" 
+              : "bg-brand-neutral-3 bg-brand-neutral-5 cursor-not-allowed"
           )}
           aria-label="Next page"
         >

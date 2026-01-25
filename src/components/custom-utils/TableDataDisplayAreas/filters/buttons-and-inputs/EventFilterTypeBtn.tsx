@@ -22,7 +22,7 @@ export default function EventFilterTypeBtn({
         compact: cn(
             'px-2 justify-between text-xs rounded-[11px] h-9 min-w-20 font-medium',
             'bg-white border border-neutral-5',
-            'hover:border-primary hover:bg-primary-1'
+            'hover:border-brand-primary hover:bg-brand-primary-1'
         )
     }
 
@@ -32,21 +32,21 @@ export default function EventFilterTypeBtn({
             className={cn(
                 baseStyles,
                 variants.compact,
-                hasActiveFilter ? 'text-neutral-8' : 'text-neutral-7'
+                hasActiveFilter ? 'bg-brand-neutral-8' : 'bg-brand-neutral-7'
             )}
         >
 
             {
                 icon && (
-                    <Icon icon={icon} width="20" height="20" className='shrink-0 text-neutral-8' />
+                    <Icon icon={icon} width="20" height="20" className='shrink-0 bg-brand-neutral-8' />
                 )
             }
             <span className="truncate">{displayText}</span>
             <Icon
                 icon="fluent:chevron-down-20-filled"
                 className={cn(
-                    'size-5 shrink-0 text-neutral-8',
-                    'group-hover:text-primary-6'
+                    'size-5 shrink-0 bg-brand-neutral-8',
+                    'group-hover:text-brand-primary-6'
                 )}
             />
         </button>

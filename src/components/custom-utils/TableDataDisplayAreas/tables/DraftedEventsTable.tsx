@@ -24,14 +24,14 @@ export default function DraftedEventsTable() {
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event Name</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Date & Time</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Location</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
-                                <th className="text-center py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Actions</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event Name</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Date & Time</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Location</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
+                                <th className="text-center py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Actions</th>
                                 <th className="w-12 py-4 px-4"></th>
                             </tr>
                         </thead>
@@ -43,7 +43,7 @@ export default function DraftedEventsTable() {
                                 return (
                                     <tr 
                                         key={event.id} 
-                                        className="hover:bg-neutral-3/70 transition-colors"
+                                        className="hover:bg-brand-neutral-3/70 transition-colors"
                                     >
                                         <td className="py-4 px-5">
                                             <div className="flex items-center gap-1 whitespace-nowrap">
@@ -62,22 +62,22 @@ export default function DraftedEventsTable() {
                                             />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <div className="flex flex-col text-xs text-secondary-9">
+                                            <div className="flex flex-col text-xs text-brand-secondary-9">
                                                 <span>{event.date} | {event.time}</span>
                                             </div>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-[11px] text-secondary-6 max-w-[15em]">
+                                            <p className="text-[11px] text-brand-secondary-6 max-w-[15em]">
                                                 {event.location}
                                             </p>
                                         </td>
-                                        <td className="py-4 px-5 text-secondary-9 text-center">
+                                        <td className="py-4 px-5 text-brand-secondary-9 text-center">
                                             --
                                         </td>
                                         <td className="py-4 px-5 text-center">
                                             <Link 
                                                 href={`/dashboard/events/edit/${event.id}`}
-                                                className="inline-flex items-center gap-1 text-xs font-semibold text-primary-6 hover:text-primary-7 transition-colors"
+                                                className="inline-flex items-center gap-1 text-xs font-semibold text-brand-primary-6 hover:text-brand-primary-7 transition-colors"
                                             >
                                                 {event.status as any === 'unpublished' ? 'Publish Again' : 'Continue Editing'}
                                                 <Icon icon="lucide:arrow-right" className="w-4 h-4" />
@@ -159,14 +159,14 @@ export default function DraftedEventsTable() {
                                         image={event.image}
                                         title={event.title}
                                     />
-                                    <div className="flex flex-col text-xs text-secondary-9">
+                                    <div className="flex flex-col text-xs text-brand-secondary-9">
                                         <span className="font-bold">Date & Time</span>
                                         <span>{event.time} | {event.date}</span>
                                     </div>
                                 </div>
 
                                 {/* Third Row - Location */}
-                                <div className="text-[11px] text-secondary-6">
+                                <div className="text-[11px] text-brand-secondary-6">
                                     <div className="flex items-start gap-1">
                                         <Icon icon="lucide:map-pin" className="w-3 h-3 mt-0.5 shrink-0" />
                                         <span>{event.location}</span>
@@ -177,7 +177,7 @@ export default function DraftedEventsTable() {
                                 <div className="pt-1">
                                     <Link 
                                         href={`/dashboard/events/edit/${event.id}`}
-                                        className="inline-flex items-center gap-1 text-xs font-semibold text-primary-6 hover:text-primary-7 transition-colors"
+                                        className="inline-flex items-center gap-1 text-xs font-semibold text-brand-primary-6 hover:text-brand-primary-7 transition-colors"
                                     >
                                         {event.status as any === 'unpublished' ? 'Publish Again' : 'Continue Editing'}
                                         <Icon icon="lucide:arrow-right" className="w-4 h-4" />

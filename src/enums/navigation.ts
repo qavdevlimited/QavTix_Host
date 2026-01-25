@@ -56,3 +56,9 @@ export const CUSTOMERS_PROFILE = {
     href: "/customers/profile/[customer_id]",
     label: "Customer Profile"
 }
+
+export const CREATE_EVENT = {
+    href: "/events/create",
+    label: "Create Event"
+}
+

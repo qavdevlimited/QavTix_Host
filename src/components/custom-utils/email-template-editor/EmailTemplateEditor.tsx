@@ -43,7 +43,7 @@ export default function EmailTemplateEditor({
       <DialogContent showCloseButton={false} className="max-w-2xl p-0 overflow-y-auto h-[90vh] border-none gap-0">
         
         {/* 1. Header: Custom Close & Title */}
-        <div className="bg-secondary-9 h-12 flex items-center justify-between px-4 text-white">
+        <div className="bg-brand-secondary-9 h-12 flex items-center justify-between px-4 text-white">
           <DialogTitle className="text-sm font-medium">New Message</DialogTitle>
           <button 
             onClick={() => setOpen(false)}
@@ -57,12 +57,12 @@ export default function EmailTemplateEditor({
           {/* 2. Recipients & Subject */}
           <div className="px-4 py-1">
             <div className="flex items-center gap-2 border-b py-2 text-sm">
-              <span className="text-neutral-400 w-16">Recipients</span>
+              <span className="bg-brand-neutral-400 w-16">Recipients</span>
               <input type="text" className="flex-1 outline-none" />
-              <Icon icon="hugeicons:plus-01" className="text-neutral-400 cursor-pointer" />
+              <Icon icon="hugeicons:plus-01" className="bg-brand-neutral-400 cursor-pointer" />
             </div>
             <div className="flex items-center gap-2 border-b py-2 text-sm">
-              <span className="text-neutral-400 w-16">Subject</span>
+              <span className="bg-brand-neutral-400 w-16">Subject</span>
               <input type="text" className="flex-1 outline-none" />
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function EmailTemplateEditor({
 
           {/* 4. Formatting Toolbar (Floating look) */}
           <div className="p-3 border-t space-y-3">
-            <div className="flex flex-wrap items-center gap-1 p-1 bg-neutral-50 rounded-lg border w-fit">
+            <div className="flex flex-wrap items-center gap-1 p-1 bg-brand-neutral-50 rounded-lg border w-fit">
               {/* Undo/Redo */}
               <ToolbarButton onClick={() => editor.chain().focus().undo().run()}>
                 <Icon icon="hugeicons:undo-01" width="18" />
@@ -83,7 +83,7 @@ export default function EmailTemplateEditor({
                 <Icon icon="hugeicons:redo-01" width="18" />
               </ToolbarButton>
               
-              <div className="w-px h-4 bg-neutral-300 mx-1" />
+              <div className="w-px h-4 bg-brand-neutral-300 mx-1" />
 
               {/* Font Family Dropdown Emulation */}
               <select 
@@ -95,7 +95,7 @@ export default function EmailTemplateEditor({
                 <option value="Courier New">Courier</option>
               </select>
 
-              <div className="w-px h-4 bg-neutral-300 mx-1" />
+              <div className="w-px h-4 bg-brand-neutral-300 mx-1" />
 
               {/* Basic Marks */}
               <ToolbarButton 
@@ -117,7 +117,7 @@ export default function EmailTemplateEditor({
                 <Icon icon="hugeicons:underline" width="18" />
               </ToolbarButton>
 
-              <div className="w-px h-4 bg-neutral-300 mx-1" />
+              <div className="w-px h-4 bg-brand-neutral-300 mx-1" />
 
               {/* Alignment */}
               <ToolbarButton onClick={() => editor.chain().focus().setTextAlign('left').run()}>
@@ -143,7 +143,7 @@ export default function EmailTemplateEditor({
                   Schedule
                 </button>
                 
-                <div className="flex items-center gap-4 ml-4 text-neutral-500">
+                <div className="flex items-center gap-4 ml-4 bg-brand-neutral-500">
                   <Icon icon="hugeicons:attachment-01" className="cursor-pointer hover:text-black" width="20" />
                   <Icon icon="hugeicons:link-01" className="cursor-pointer hover:text-black" width="20" />
                   <Icon icon="hugeicons:sticker-smile-face" className="cursor-pointer hover:text-black" width="20" />
@@ -153,7 +153,7 @@ export default function EmailTemplateEditor({
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 text-neutral-400">
+              <div className="flex items-center gap-3 bg-brand-neutral-400">
                 <Icon icon="hugeicons:more-vertical" className="cursor-pointer" width="20" />
                 <Icon icon="hugeicons:delete-02" className="cursor-pointer hover:text-red-500" width="20" />
               </div>
@@ -171,8 +171,8 @@ function ToolbarButton({ children, onClick, active = false }: { children: React.
       type="button"
       onClick={onClick}
       className={cn(
-        "p-1.5 rounded hover:bg-neutral-200 transition-colors",
-        active ? "bg-neutral-200 text-blue-600" : "text-neutral-500"
+        "p-1.5 rounded hover:bg-brand-neutral-200 transition-colors",
+        active ? "bg-brand-neutral-200 text-blue-600" : "bg-brand-neutral-500"
       )}
     >
       {children}

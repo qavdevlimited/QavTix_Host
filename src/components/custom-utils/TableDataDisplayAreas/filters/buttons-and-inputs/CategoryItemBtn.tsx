@@ -12,9 +12,9 @@ export default function CategoryItemBtn({ category, handleToggle, isSelected }: 
             key={category.value}
             onClick={() => handleToggle(category.value)}
             className={cn(
-                'w-full flex items-center gap-5 text-secondary-9 px-4 py-3 rounded-md text-xs transition-colors',
+                'w-full flex items-center gap-5 text-brand-secondary-9 px-4 py-3 rounded-md text-xs transition-colors',
                 isSelected
-                    ? 'bg-neutral-3 font-medium'
+                    ? 'bg-brand-neutral-3 font-medium'
                     : ''
             )}
         >
@@ -23,8 +23,8 @@ export default function CategoryItemBtn({ category, handleToggle, isSelected }: 
                 className={cn(
                     'px-3 py-1 rounded-full text-xs font-medium min-w-9.5 text-center',
                     isSelected
-                        ? 'bg-accent-5 text-white'
-                        : 'bg-neutral-3 text-neutral-7'
+                        ? 'bg-brand-accent-5 text-white'
+                        : 'bg-brand-neutral-3 bg-brand-neutral-7'
                 )}
             >
                 {category.count}

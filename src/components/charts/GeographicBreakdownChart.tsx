@@ -40,7 +40,7 @@ const STATS = {
 export default function GeographicBreakdown() {
     return (
         <div className="w-full bg-white rounded-[32px] p-8 shadow-sm border border-neutral-50">
-            <h2 className="text-secondary-5 text-xs mb-6">Geographic Breakdown</h2>
+            <h2 className="text-brand-secondary-5 text-xs mb-6">Geographic Breakdown</h2>
 
             {/* Main Blue Chart Card */}
             <div className="w-full bg-[linear-gradient(183.13deg,#2E71D5_2.58%,#0052CC_97.42%)] rounded-[24px] p-8 mb-10 relative overflow-x-auto">
@@ -89,54 +89,54 @@ export default function GeographicBreakdown() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-end">
                 {/* Best Performing Label */}
                 <div className="space-y-1">
-                    <h3 className="text-secondary-9 font-bold">Best Performing Location</h3>
-                    <p className="text-secondary-3 text-sm">{STATS.bestLocation}</p>
+                    <h3 className="text-brand-secondary-9 font-bold">Best Performing Location</h3>
+                    <p className="text-brand-secondary-3 text-sm">{STATS.bestLocation}</p>
                 </div>
 
                 {/* Purchases Stat */}
                 <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-secondary-3 font-bold">
-                        <div className="p-2 bg-primary-4 rounded-lg">
+                    <div className="flex items-center gap-2 text-brand-secondary-3 font-bold">
+                        <div className="p-2 bg-brand-primary-4 rounded-lg">
                             <ShoppingCart size={16} className='text-white' />
                         </div>
                         <span className="text-xs">Purchases</span>
                     </div>
                     <div className="space-y-2">
-                        <span className="font-bold text-secondary-9 mb-2">{STATS.purchases}</span>
+                        <span className="font-bold text-brand-secondary-9 mb-2">{STATS.purchases}</span>
                         <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                            <div className="h-full bg-primary-4 rounded-full" style={{ width: `${STATS.purchasesProgress}%` }} />
+                            <div className="h-full bg-brand-primary-4 rounded-full" style={{ width: `${STATS.purchasesProgress}%` }} />
                         </div>
                     </div>
                 </div>
 
                 {/* Revenue Stat */}
                 <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-secondary-3 font-bold">
-                        <div className="p-2 bg-primary-4 rounded-lg">
+                    <div className="flex items-center gap-2 text-brand-secondary-3 font-bold">
+                        <div className="p-2 bg-brand-primary-4 rounded-lg">
                             <Wallet size={16} className='text-white' />
                         </div>
                         <span className="text-xs">Revenue</span>
                     </div>
                     <div className="space-y-2">
-                        <span className="font-bold text-secondary-9 mb-2">{STATS.revenue}</span>
+                        <span className="font-bold text-brand-secondary-9 mb-2">{STATS.revenue}</span>
                         <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                            <div className="h-full bg-primary-4 rounded-full" style={{ width: `${STATS.revenueProgress}%` }} />
+                            <div className="h-full bg-brand-primary-4 rounded-full" style={{ width: `${STATS.revenueProgress}%` }} />
                         </div>
                     </div>
                 </div>
 
                 {/* Clicks Stat */}
                 <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-secondary-3 font-bold">
-                        <div className="p-2 bg-primary-4 rounded-lg">
+                    <div className="flex items-center gap-2 text-brand-secondary-3 font-bold">
+                        <div className="p-2 bg-brand-primary-4 rounded-lg">
                             <Rocket size={16} className='text-white' />
                         </div>
                         <span className="text-xs">Clicks</span>
                     </div>
                     <div className="space-y-2">
-                        <span className="font-bold text-secondary-9 mb-2">{STATS.clicks}</span>
+                        <span className="font-bold text-brand-secondary-9 mb-2">{STATS.clicks}</span>
                         <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                            <div className="h-full bg-primary-4 rounded-full" style={{ width: `${STATS.clicksProgress}%` }} />
+                            <div className="h-full bg-brand-primary-4 rounded-full" style={{ width: `${STATS.clicksProgress}%` }} />
                         </div>
                     </div>
                 </div>

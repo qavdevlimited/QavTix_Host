@@ -16,15 +16,15 @@ export default function DashboardStatCard({ cardData }:{ cardData: IDashboardSta
 
 
             <div>
-                <h3 className={`${space_grotesk.className} font-bold text-lg text-secondary-9`}>
+                <h3 className={`${space_grotesk.className} font-bold text-lg text-brand-secondary-9`}>
                     {cardData.label.includes("Revenue") ? formatPrice(cardData.number,"NG") : cardData.number}
                 </h3>
-                <p className="text-secondary-8 text-sm font-medium mt-1">{cardData.label}</p>
-                <span className="text-xs text-secondary-6">{cardData.change.value}{" "}{cardData.change.period}{" "}</span>
+                <p className="text-brand-secondary-8 text-sm font-medium mt-1">{cardData.label}</p>
+                <span className="text-xs text-brand-secondary-6">{cardData.change.value}{" "}{cardData.change.period}{" "}</span>
             </div>
 
             
-            <button className="mt-3 w-fit flex items-center justify-center gap-1 text-primary-6 font-bold text-xs">
+            <button className="w-fit flex items-center justify-center gap-1 text-brand-primary-6 font-bold text-xs">
                 <span>View Details</span>
                 <Icon icon="stash:arrow-right" width="22" height="22" />
             </button>

@@ -15,7 +15,7 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
 
         return (
             <div className="w-full">
-                <label className="block text-sm font-medium text-neutral-9 mb-2">
+                <label className="block text-sm font-medium bg-brand-neutral-9 mb-2">
                     {label}
                 </label>
 
@@ -33,20 +33,20 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
                     <input
                         ref={ref}
                         type={showPassword ? 'text' : 'password'}
-                        className={`flex-1 outline-none text-sm text-neutral-9 placeholder:text-neutral-6 bg-transparent ${className}`}
+                        className={`flex-1 outline-none text-sm bg-brand-neutral-9 placeholder:bg-brand-neutral-6 bg-transparent ${className}`}
                         {...props}
                     />
 
                     <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="shrink-0 p-1 hover:bg-neutral-2 rounded transition-colors"
+                        className="shrink-0 p-1 hover:bg-brand-neutral-2 rounded transition-colors"
                         tabIndex={-1}
                     >
                         {showPassword ? (
-                            <Icon icon="octicon:eye-16" className="w-5 h-5 text-neutral-8" />
+                            <Icon icon="octicon:eye-16" className="w-5 h-5 bg-brand-neutral-8" />
                         ) : (
-                            <Icon icon="octicon:eye-closed-16" className="w-5 h-5 text-neutral-8" />
+                            <Icon icon="octicon:eye-closed-16" className="w-5 h-5 bg-brand-neutral-8" />
                         )}
                     </button>
                 </div>

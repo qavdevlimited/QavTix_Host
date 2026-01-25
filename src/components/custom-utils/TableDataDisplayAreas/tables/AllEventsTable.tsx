@@ -50,7 +50,7 @@ export default function AllEventsTable({
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -58,12 +58,12 @@ export default function AllEventsTable({
                                         onCheckedChange={handleSelectAll}
                                     />
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event Name</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Date & Time</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Location</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Revenue</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event Name</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Date & Time</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Location</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Revenue</th>
                                 <th className="w-12 py-4 px-4"></th>
                             </tr>
                         </thead>
@@ -76,8 +76,8 @@ export default function AllEventsTable({
                                     <tr 
                                         key={event.id} 
                                         className={cn(
-                                            "hover:bg-neutral-3/70 transition-colors cursor-pointer",
-                                            isSelected && "bg-primary-1 hover:bg-primary-1"
+                                            "hover:bg-brand-neutral-3/70 transition-colors cursor-pointer",
+                                            isSelected && "bg-brand-primary-1 hover:bg-brand-primary-1"
                                         )}
                                         onClick={() => handleSelectEvent(event.id)}
                                     >
@@ -104,27 +104,27 @@ export default function AllEventsTable({
                                             />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <div className="flex flex-col text-xs text-secondary-9">
+                                            <div className="flex flex-col text-xs text-brand-secondary-9">
                                                 <span>{event.date} | {event.time}</span>
                                             </div>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-[11px] text-secondary-6 max-w-[15em]">
+                                            <p className="text-[11px] text-brand-secondary-6 max-w-[15em]">
                                                 {event.location}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5 text-center">
                                             <div className="flex flex-col text-[11px]">
-                                                <span className="text-secondary-9">
+                                                <span className="text-brand-secondary-9">
                                                     {event.ticketsSold}/{event.totalTickets}
                                                 </span>
-                                                <span className="text-secondary-6">
+                                                <span className="text-brand-secondary-6">
                                                     <span className="font-bold">Views:</span> {event.ticketsSold * 4} | <span className="font-bold">Saves:</span> {Math.floor(event.ticketsSold / 2)}
                                                 </span>
                                             </div>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-bold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-bold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{event.revenue.toLocaleString()}
                                             </p>
                                         </td>
@@ -150,7 +150,7 @@ export default function AllEventsTable({
                             key={event.id} 
                             className={cn(
                                 "border-b border-neutral-5 p-3",
-                                isSelected && "bg-primary-1 border-primary-3"
+                                isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >
                             <div className="space-y-3">
@@ -187,7 +187,7 @@ export default function AllEventsTable({
                                         image={event.image}
                                         title={event.title}
                                     />
-                                    <div className="flex flex-col text-xs text-secondary-9">
+                                    <div className="flex flex-col text-xs text-brand-secondary-9">
                                         <span className="font-bold">Date & Time</span>
                                         <span>{event.time} | {event.date}</span>
                                     </div>
@@ -195,18 +195,18 @@ export default function AllEventsTable({
 
                                 {/* Third Row - Tickets Sold & Revenue */}
                                 <div className="flex justify-between items-center text-xs pt-2 border-t border-neutral-2">
-                                    <div className="flex items-center gap-1 text-secondary-9">
+                                    <div className="flex items-center gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Tickets Sold:</span>
                                         <span className="font-normal">{event.ticketsSold}/{event.totalTickets}</span>
                                     </div>
-                                    <div className="flex items-center gap-1 text-secondary-9">
+                                    <div className="flex items-center gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Revenue:</span>
                                         <span className="font-semibold">₦{event.revenue.toLocaleString()}</span>
                                     </div>
                                 </div>
 
                                 {/* Fourth Row - Location */}
-                                <div className="text-[11px] text-secondary-6">
+                                <div className="text-[11px] text-brand-secondary-6">
                                     <div className="flex items-start gap-1">
                                         <Icon icon="lucide:map-pin" className="w-3 h-3 mt-0.5 shrink-0" />
                                         <span>{event.location}</span>

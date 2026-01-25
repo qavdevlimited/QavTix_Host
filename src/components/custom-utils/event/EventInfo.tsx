@@ -40,7 +40,7 @@ export default function EventInfo({
             <div className={cn("min-w-0", isDesktop ? "flex-1" : "")}>
                 <h3
                     className={cn(
-                        "font-bold text-secondary-9",
+                        "font-bold text-brand-secondary-9",
                         isDesktop ? "text-sm" : "text-xs"
                     )}
                     >
@@ -48,7 +48,7 @@ export default function EventInfo({
                 </h3>
                 <p
                     className={cn(
-                        isDesktop ? "text-[11px] text-secondary-6" : "text-[11px] text-secondary-8"
+                        isDesktop ? "text-[11px] text-brand-secondary-6" : "text-[11px] text-brand-secondary-8"
                     )}
                 >
                     {category}

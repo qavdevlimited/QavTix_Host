@@ -18,14 +18,14 @@ export default function PromoCodeListTable() {
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Promo Code</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event</th>
-                                <th className="text-center py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Usage</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Revenue Impact</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Expiry Date</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Promo Code</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event</th>
+                                <th className="text-center py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Usage</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Revenue Impact</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Expiry Date</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-5 bg-white">
@@ -34,7 +34,7 @@ export default function PromoCodeListTable() {
                                     <tr 
                                         key={promo.id} 
                                         className={cn(
-                                            "hover:bg-neutral-3/70 transition-colors cursor-pointer",
+                                            "hover:bg-brand-neutral-3/70 transition-colors cursor-pointer",
                                         )}
                                     >
                                         <td className="py-4 px-5">
@@ -46,7 +46,7 @@ export default function PromoCodeListTable() {
                                             </div>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-bold text-secondary-9">{promo.promo_code}</p>
+                                            <p className="text-xs font-bold text-brand-secondary-9">{promo.promo_code}</p>
                                         </td>
                                         <td className="py-4 px-4">
                                             <EventInfo 
@@ -57,7 +57,7 @@ export default function PromoCodeListTable() {
                                             />
                                         </td>
                                         <td className="py-4 px-5 text-center">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 {promo.usage}
                                             </p>
                                         </td>
@@ -67,7 +67,7 @@ export default function PromoCodeListTable() {
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-8 whitespace-nowrap">
                                                 {formatDateTime(promo.expiry_date)}
                                             </p>
                                         </td>
@@ -95,13 +95,13 @@ export default function PromoCodeListTable() {
                                                 {promo.status}
                                             </span>
                                         </div>
-                                        <div className="flex gap-1 items-center text-secondary-9 border-t border-neutral-2">
+                                        <div className="flex gap-1 items-center text-brand-secondary-9 border-t border-neutral-2">
                                             <span className="font-bold">Revenue Impact:</span>
                                             <span>
                                                 ₦{Math.abs(promo.revenue_impact).toLocaleString()}
                                             </span>
                                         </div>
-                                        <div className="flex gap-1 items-center text-secondary-9 pt-2 border-t border-neutral-2">
+                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 border-t border-neutral-2">
                                             <span className="font-bold">Usage:</span>
                                             <span>
                                                 {promo.usage}
@@ -115,12 +115,12 @@ export default function PromoCodeListTable() {
                                             image={promo.event.image}
                                             title={promo.event.title}
                                         />
-                                        <div className="flex flex-col justify-center items-center gap-1 text-secondary-9">
+                                        <div className="flex flex-col justify-center items-center gap-1 text-brand-secondary-9">
                                             <span className="text-xs font-bold">Promo Code: <span className="font-normal">{promo.promo_code}</span></span>
                                         </div>
                                     </div>
 
-                                    <div className="flex text-xs gap-1 text-secondary-8">
+                                    <div className="flex text-xs gap-1 text-brand-secondary-8">
                                         <span className="font-bold">Expiry Date:</span>
                                         <span>
                                             {formatDateTime(promo.expiry_date)}

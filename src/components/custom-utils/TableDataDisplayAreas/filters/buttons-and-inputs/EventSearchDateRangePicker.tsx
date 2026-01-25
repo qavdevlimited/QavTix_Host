@@ -64,7 +64,7 @@ export function DatePickerInput({
                                 icon="hugeicons:calendar-03"
                                 width="30"
                                 height="30"
-                                className="text-secondary-9 size-5"
+                                className="text-brand-secondary-9 size-5"
                             />
                             <span className="sr-only">Open calendar</span>
                         </Button>
@@ -93,7 +93,7 @@ export function DatePickerInput({
                     onFocus={() => setOpen(true)}
                     readOnly
                     placeholder={placeholder}
-                    className="pl-9 h-12 text-xs rounded-2xl border border-neutral-6 focus:border-primary bg-background"
+                    className="pl-9 h-12 text-xs rounded-2xl border border-neutral-6 focus:border-brand-primary bg-background"
                     onKeyDown={(e) => {
                         if (e.key === "ArrowDown") {
                             e.preventDefault()
@@ -133,7 +133,7 @@ export function EventSearchDateRangePicker({
                 id="from-date"
             />
 
-            <div className="flex text-xs items-center justify-center gap-1 text-neutral-6 pb-2 sm:pb-0">
+            <div className="flex text-xs items-center justify-center gap-1 bg-brand-neutral-6 pb-2 sm:pb-0">
                 <span aria-hidden="true">—</span>
                 <span className="">to</span>
                 <span aria-hidden="true">—</span>

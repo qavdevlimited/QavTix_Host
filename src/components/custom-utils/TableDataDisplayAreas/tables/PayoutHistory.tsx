@@ -19,21 +19,21 @@ export default function PayoutHistoryTable() {
             <div className="hidden md:block overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full min-h-[20em]">
-                        <thead className="bg-neutral-3 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">
                                     Payment ID
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">
                                     Bank Account
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">
                                     Amount
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">
                                     Payout Date
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">
                                     Status
                                 </th>
                             </tr>
@@ -45,10 +45,10 @@ export default function PayoutHistoryTable() {
                                 return (
                                     <tr 
                                         key={payout.id} 
-                                        className="hover:bg-neutral-3/70 transition-colors"
+                                        className="hover:bg-brand-neutral-3/70 transition-colors"
                                     >
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-9">
+                                            <p className="text-xs text-brand-secondary-9">
                                                 {payout.paymentId}
                                             </p>
                                         </td>
@@ -63,10 +63,10 @@ export default function PayoutHistoryTable() {
                                                     className="w-8 h-8 object-contain rounded-md"
                                                 />
                                                 <div className="min-w-44">
-                                                    <p className="font-bold whitespace-nowrap text-xs text-secondary-9">
+                                                    <p className="font-bold whitespace-nowrap text-xs text-brand-secondary-9">
                                                         {payout.bankAccount.name}
                                                     </p>
-                                                    <p className="text-[11px] text-secondary-8">
+                                                    <p className="text-[11px] text-brand-secondary-8">
                                                         {payout.bankAccount.bank}
                                                     </p>
                                                 </div>
@@ -74,13 +74,13 @@ export default function PayoutHistoryTable() {
                                         </td>
                                         
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{payout.amount.toLocaleString()}
                                             </p>
                                         </td>
                                         
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-8 whitespace-nowrap">
                                                 {payout.payoutDate} | {payout.payoutTime}
                                             </p>
                                         </td>
@@ -114,10 +114,10 @@ export default function PayoutHistoryTable() {
                             <div className="space-y-2">
                                 {/* Header - Payment ID and Status */}
                                 <div className="flex justify-between items-center border-b border-neutral-2">
-                                    <span className="text-xs font-bold text-secondary-9">
+                                    <span className="text-xs font-bold text-brand-secondary-9">
                                         Payment ID: <span className="font-normal">{payout.paymentId}</span>
                                     </span>
-                                    <span className="text-xs text-neutral-7">Status</span>
+                                    <span className="text-xs bg-brand-neutral-7">Status</span>
                                 </div>
 
                                 {/* Bank Account Info */}
@@ -131,10 +131,10 @@ export default function PayoutHistoryTable() {
                                             className="w-8 h-8 object-contain rounded-md"
                                         />
                                         <div className="flex-1 min-w-0">
-                                            <p className="font-bold text-xs text-secondary-9 mb-1">
+                                            <p className="font-bold text-xs text-brand-secondary-9 mb-1">
                                                 {payout.bankAccount.name}
                                             </p>
-                                            <p className="text-xs text-secondary-8">
+                                            <p className="text-xs text-brand-secondary-8">
                                                 {payout.bankAccount.bank}
                                             </p>
                                         </div>
@@ -149,12 +149,12 @@ export default function PayoutHistoryTable() {
 
                                 {/* Amount and Date */}
                                 <div className="flex justify-between items-center border-t border-neutral-2">
-                                    <div className="flex gap-1 text-xs text-secondary-9">
-                                        <Icon icon="hugeicons:sale-tag-02" width="18" height="18" className="text-primary-6" />
+                                    <div className="flex gap-1 text-xs text-brand-secondary-9">
+                                        <Icon icon="hugeicons:sale-tag-02" width="18" height="18" className="text-brand-primary-6" />
                                         <p className="font-bold">Amount: <span className="font-normal">₦{payout.amount.toLocaleString()}</span></p>
                                     </div>
                                     <div className="text-right">
-                                        <p className="text-secondary-9 text-[10px]">
+                                        <p className="text-brand-secondary-9 text-[10px]">
                                             {payout.payoutDate}{payout.payoutTime}
                                         </p>
                                     </div>

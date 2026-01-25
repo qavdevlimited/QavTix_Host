@@ -18,14 +18,14 @@ export default function AttendeeCheckInTable() {
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-2 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-2 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Attendee</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Ticket ID</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Ticket Type</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Check-In Time</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Attendee</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Ticket ID</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Ticket Type</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Check-In Time</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-2 bg-white">
@@ -35,19 +35,19 @@ export default function AttendeeCheckInTable() {
                                     <tr 
                                         key={v.id} 
                                         className={cn(
-                                            "hover:bg-neutral-3/70 transition-colors"
+                                            "hover:bg-brand-neutral-3/70 transition-colors"
                                         )}
                                     >
                                         <td className="py-4 px-5">
                                             <UserInfo user={v.attendee} variant="desktop" className="" />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-6 min-w-37 max-w-37">
+                                            <p className="text-xs text-brand-secondary-6 min-w-37 max-w-37">
                                                 {v.ticketId}
                                             </p>
                                         </td>
                                         <td className="py-4 px-4 text-center">
-                                            <p className="text-sm font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-sm font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 {v.ticketType}
                                             </p>
                                         </td>
@@ -55,7 +55,7 @@ export default function AttendeeCheckInTable() {
                                             <EventInfo {...v.event} />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-8 whitespace-nowrap">
                                                 {v.checkInTime}
                                             </p>
                                         </td>
@@ -89,12 +89,12 @@ export default function AttendeeCheckInTable() {
                                 {/* Top Row - Ticket ID & Ticket Type */}
                                 <div className="flex justify-between items-center text-xs pb-2 border-b border-neutral-2">
                                     <div>
-                                        <span className="font-bold text-secondary-8">Ticket ID: </span>
-                                        <span className="text-secondary-6">{attendee.ticketId}</span>
+                                        <span className="font-bold text-brand-secondary-8">Ticket ID: </span>
+                                        <span className="text-brand-secondary-6">{attendee.ticketId}</span>
                                     </div>
                                     <div>
-                                        <span className="font-bold text-secondary-8">Ticket Type: </span>
-                                        <span className="text-secondary-9">{attendee.ticketType}</span>
+                                        <span className="font-bold text-brand-secondary-8">Ticket Type: </span>
+                                        <span className="text-brand-secondary-9">{attendee.ticketType}</span>
                                     </div>
                                 </div>
 
@@ -113,8 +113,8 @@ export default function AttendeeCheckInTable() {
                                 <div className="flex justify-between items-start gap-3 pt-2 border-t border-neutral-2">
                                     <EventInfo {...attendee.event} />
                                     <div className="text-right text-xs shrink-0">
-                                        <span className="font-bold text-secondary-8 block">Check-In Time:</span>
-                                        <span className="text-secondary-9">{attendee.checkInTime}</span>
+                                        <span className="font-bold text-brand-secondary-8 block">Check-In Time:</span>
+                                        <span className="text-brand-secondary-9">{attendee.checkInTime}</span>
                                     </div>
                                 </div>
                             </div>

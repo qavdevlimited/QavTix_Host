@@ -21,14 +21,14 @@ export const customerMetricsConfig: Record<string, MetricConfig> = {
         label: 'New this month',
         description: 'Latest ticket buyers.',
         icon: "famicons:gift-outline",
-        iconColor: 'text-accent-5',
+        iconColor: 'text-brand-accent-5',
     },
     'repeat-buyers': {
         id: 'repeat-buyers',
         label: 'Repeat Buyers',
         description: 'Customers who returned',
         icon: "uil:repeat",
-        iconColor: 'text-accent-9',
+        iconColor: 'text-brand-accent-9',
     },
     'average-spend': {
         id: 'average-spend',
@@ -64,14 +64,14 @@ export const financeMetricsConfig: Record<string, MetricConfig> = {
         label: 'All-time Payouts',
         description: 'Total payouts made',
         icon: "hugeicons:wallet-done-01",
-        iconColor: 'text-accent-5',
+        iconColor: 'text-brand-accent-5',
     },
     'next-payout-date': {
         id: 'next-payout-date',
         label: 'Next Payout Date',
         description: 'Scheduled payment date',
         icon: "hugeicons:calendar-03",
-        iconColor: 'text-primary-4'
+        iconColor: 'text-brand-primary-4'
     }
 }
 
@@ -83,28 +83,28 @@ export const affiliateMetricsConfig: Record<string, MetricConfig> = {
         label: 'Affiliates',
         description: "Partners driving referrals",
         icon: "famicons:people-outline",
-        iconColor: 'text-accent-9',
+        iconColor: 'text-brand-accent-9',
     },
     'new-affiliates-month': {
         id: 'new-affiliates-month',
         label: 'New this month',
         description: 'Recently added affiliates',
         icon: "hugeicons:discount-01",
-        iconColor: 'text-accent-5',
+        iconColor: 'text-brand-accent-5',
     },
     'tickets-sold': {
         id: 'tickets-sold',
         label: 'Tickets Sold',
         description: 'Units sold by affiliates',
         icon: "hugeicons:ticket-02",
-        iconColor: 'text-primary-4'
+        iconColor: 'text-brand-primary-4'
     },
     'commission-paid': {
         id: 'commission-paid',
         label: 'Commission Paid',
         description: 'Total earnings distributed.',
         icon: "hugeicons:dollar-square",
-        iconColor: 'text-accent-5',
+        iconColor: 'text-brand-accent-5',
         valueFormatter: (value: number) => `₦${value.toLocaleString()}`
     },
 }
@@ -118,7 +118,7 @@ export const checkInMetricsConfig: Record<string, MetricConfig> = {
         label: 'Tickets Sold',
         description: 'All tickets issued out',
         icon: "hugeicons:ticket-02",
-        iconColor: 'text-primary-4'
+        iconColor: 'text-brand-primary-4'
     },
     'checked-in': {
         id: 'checked-in',
@@ -132,7 +132,7 @@ export const checkInMetricsConfig: Record<string, MetricConfig> = {
         label: 'Not Arrived',
         description: 'Tickets not yet scanned',
         icon: "mingcute:sandglass-line",
-        iconColor: 'text-accent-4'
+        iconColor: 'text-brand-accent-4'
     },
     'issues-duplicates': {
         id: 'issues-duplicates',
@@ -160,7 +160,7 @@ export const userProfileMetricsConfig: Record<string, MetricConfig> = {
         label: "Tickets Bought",
         description: "Total tickets purchased",
         icon: "hugeicons:ticket-02",
-        iconColor: 'text-primary-4'
+        iconColor: 'text-brand-primary-4'
     },
     'refund-count': {
         id: 'refund-count',
@@ -174,7 +174,7 @@ export const userProfileMetricsConfig: Record<string, MetricConfig> = {
         label: "Last Order Value",
         description: "Most recent purchase amount",
         icon: "hugeicons:shopping-cart-01",
-        iconColor: 'text-accent-5',
+        iconColor: 'text-brand-accent-5',
         valueFormatter: (value: number) => `₦${value.toLocaleString()}`
     }
 }
@@ -202,7 +202,7 @@ export const dashboardStatsConfig = {
     'active-events': {
         id: 'active-events',
         icon: "hugeicons:calendar-check-out-02",
-        iconBg: "bg-primary-5",
+        iconBg: "bg-brand-primary-5",
         cardBg: "bg-[#E6EEFA]",
         label: "Active Events",
         linkText: "Manage Events →",
@@ -290,19 +290,19 @@ export const analyticsMetricStatCardsConfig2: MetricStatCardConfig[] = [
 
 export const analyticsMetricStatCardsConfig2VariantStyles = {
     primary: {
-        container: 'bg-primary-1 border-primary-2',
-        value: 'text-primary-6',
-        label: 'text-primary-7',
-        description: 'text-primary-5'
+        container: 'bg-brand-primary-1 border-brand-primary-2',
+        value: 'text-brand-primary-6',
+        label: 'text-brand-primary-7',
+        description: 'text-brand-primary-5'
     },
     accent: {
-        container: 'bg-accent-1 border-accent-2',
-        value: 'text-accent-6',
-        label: 'text-accent-7',
-        description: 'text-accent-5'
+        container: 'bg-brand-accent-1 border-brand-accent-2',
+        value: 'text-brand-accent-6',
+        label: 'text-brand-accent-7',
+        description: 'text-brand-accent-5'
     },
     blue: {
-        container: 'bg-primary-4 border-primary-5',
+        container: 'bg-brand-primary-4 border-brand-primary-5',
         value: 'text-white',
         label: 'text-white',
         description: 'text-white/80'
@@ -325,7 +325,7 @@ export const myEventsMetricsConfig: Record<string, MetricConfig> = {
         label: 'Draft',
         description: 'Events in preparation',
         icon: "hugeicons:task-edit-02",
-        iconColor: 'text-accent-5',
+        iconColor: 'text-brand-accent-5',
     },
     'ended': {
         id: 'ended',
@@ -339,6 +339,6 @@ export const myEventsMetricsConfig: Record<string, MetricConfig> = {
         label: 'Sold Out',
         description: 'Events fully booked',
         icon: "hugeicons:wallet-done-01",
-        iconColor: 'text-primary-4',
+        iconColor: 'text-brand-primary-4',
     },
 }

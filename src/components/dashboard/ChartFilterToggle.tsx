@@ -13,9 +13,9 @@ interface ChartFilterToggleProps {
 export function ChartFilterToggle({ chartFilter, setChartFilter }: ChartFilterToggleProps) {
     return (
         <div className="flex gap-4 flex-wrap justify-between items-center mb-6">
-            <div className="relative bg-primary-1 rounded-xl p-1.5">
+            <div className="relative bg-brand-primary-1 rounded-xl p-1.5">
                 <motion.div
-                    className="absolute inset-y-1.5 left-1.5 bg-primary-6 rounded-lg shadow-sm"
+                    className="absolute inset-y-1.5 left-1.5 bg-brand-primary-6 rounded-lg shadow-sm"
                     initial={false}
                     animate={{
                         x: chartFilter === 'revenue' ? 0 : '87%',
@@ -33,7 +33,7 @@ export function ChartFilterToggle({ chartFilter, setChartFilter }: ChartFilterTo
                         onClick={() => setChartFilter('revenue')}
                         className={cn(
                         'relative z-10 px-5 py-2.5 rounded-lg text-xs font-medium transition-colors min-w-20',
-                        chartFilter === 'revenue' ? 'text-white' : 'text-neutral-7 hover:text-neutral-9'
+                        chartFilter === 'revenue' ? 'text-white' : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
                         )}
                     >
                         Revenue
@@ -43,7 +43,7 @@ export function ChartFilterToggle({ chartFilter, setChartFilter }: ChartFilterTo
                         onClick={() => setChartFilter('tickets')}
                         className={cn(
                         'relative z-10 px-5 py-2.5 rounded-lg text-xs font-medium transition-colors min-w-20',
-                        chartFilter === 'tickets' ? 'text-white' : 'text-neutral-7 hover:text-neutral-9'
+                        chartFilter === 'tickets' ? 'text-white' : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
                         )}
                     >
                         Tickets

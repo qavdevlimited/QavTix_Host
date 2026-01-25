@@ -58,7 +58,7 @@ export default function PopUpMessageAlertModal({ alerts, open, onOpenChange }: A
                 {/* Close Button */}
                 <button
                     onClick={handleClose}
-                    className="absolute right-4 size-8 flex justify-center items-center top-4 z-50 rounded-full p-2 bg-neutral-6 hover:bg-neutral-5 text-white transition-colors"
+                    className="absolute right-4 size-8 flex justify-center items-center top-4 z-50 rounded-full p-2 bg-brand-neutral-6 hover:bg-brand-neutral-5 text-white transition-colors"
                 >
                     <Icon icon="iconamoon:close-duotone" width="24" height="24" />
                 </button>
@@ -107,17 +107,17 @@ export default function PopUpMessageAlertModal({ alerts, open, onOpenChange }: A
 
                         {/* Content */}
                         <div className="pb-8 px-8 text-center">
-                            <h2 className={cn(space_grotesk.className, "text-2xl md:text-3xl font-bold text-secondary-9 mb-2")}>
+                            <h2 className={cn(space_grotesk.className, "text-2xl md:text-3xl font-bold text-brand-secondary-9 mb-2")}>
                                 {currentAlert.title}
                             </h2>
                             
                             {currentAlert.subtitle && (
-                                <p className="text-sm text-secondary-9">
+                                <p className="text-sm text-brand-secondary-9">
                                     {currentAlert.subtitle}
                                 </p>
                             )}
                             
-                            <p className="text-sm text-secondary-9 leading-relaxed mb-6 max-w-md mx-auto">
+                            <p className="text-sm text-brand-secondary-9 leading-relaxed mb-6 max-w-md mx-auto">
                                 {currentAlert.description}
                             </p>
 
@@ -126,7 +126,7 @@ export default function PopUpMessageAlertModal({ alerts, open, onOpenChange }: A
                                 <Button
                                     onClick={handleButtonClick}
                                     className={cn(
-                                        "text-white bg-primary-6 font-medium text-center px-8 py-3 rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-1",
+                                        "text-white bg-brand-primary-6 font-medium text-center px-8 py-3 rounded-lg hover:opacity-90 transition-opacity inline-flex items-center gap-1",
                                     )}
                                 >
                                     {currentAlert.buttonText}

@@ -112,25 +112,25 @@ export function SortBy_Filter({ value = 'date-newest', onChange, icon }: SortByF
                                     className={cn(
                                         'flex items-center gap-4 p-4 rounded-xl border-2 cursor-pointer transition-all',
                                         isSelected
-                                            ? 'border-primary-6 bg-primary-1 shadow-sm'
-                                            : 'border-neutral-3 hover:border-neutral-4 hover:bg-neutral-1'
+                                            ? 'border-brand-primary-6 bg-brand-primary-1 shadow-sm'
+                                            : 'border-neutral-3 hover:border-neutral-4 hover:bg-brand-neutral-1'
                                     )}
                                 >
                                     <RadioGroupItem value={option.value} id={option.value} />
                                     <div className={cn(
                                         'w-10 h-10 rounded-lg flex items-center justify-center',
-                                        isSelected ? 'bg-primary-6' : 'bg-neutral-2'
+                                        isSelected ? 'bg-brand-primary-6' : 'bg-brand-neutral-2'
                                     )}>
                                         <Icon
                                             icon={option.icon}
-                                            className={cn('w-5 h-5', isSelected ? 'text-white' : 'text-neutral-7')}
+                                            className={cn('w-5 h-5', isSelected ? 'text-white' : 'bg-brand-neutral-7')}
                                         />
                                     </div>
                                     <div className="flex-1">
-                                        <p className={cn('font-medium', isSelected ? 'text-primary-8' : 'text-secondary-9')}>
+                                        <p className={cn('font-medium', isSelected ? 'text-brand-primary-8' : 'text-brand-secondary-9')}>
                                             {option.label}
                                         </p>
-                                        <p className="text-xs text-neutral-6">{option.description}</p>
+                                        <p className="text-xs bg-brand-neutral-6">{option.description}</p>
                                     </div>
                                 </label>
                             )
@@ -139,14 +139,14 @@ export function SortBy_Filter({ value = 'date-newest', onChange, icon }: SortByF
                 </RadioGroup>
 
                 {/* Current Selection Summary */}
-                <div className="bg-linear-to-br from-primary-1 to-primary-2 rounded-xl p-4 border border-primary-3">
+                <div className="bg-linear-to-br from-primary-1 to-primary-2 rounded-xl p-4 border border-brand-primary-3">
                     <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-primary-6 rounded-lg flex items-center justify-center">
+                        <div className="w-10 h-10 bg-brand-primary-6 rounded-lg flex items-center justify-center">
                             <Icon icon={currentSort?.icon || 'mdi:sort'} className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                            <p className="text-xs text-neutral-7">Sorting by</p>
-                            <p className="font-semibold text-secondary-9">{currentSort?.label}</p>
+                            <p className="text-xs bg-brand-neutral-7">Sorting by</p>
+                            <p className="font-semibold text-brand-secondary-9">{currentSort?.label}</p>
                         </div>
                     </div>
                 </div>

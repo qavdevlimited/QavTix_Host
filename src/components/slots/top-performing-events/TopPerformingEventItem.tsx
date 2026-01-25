@@ -15,13 +15,13 @@ export default function TopPerformingEventCard({ event, rank }: TopPerformingEve
     return (
         <div  className="shadow-[0px_5.8px_23.17px_0px_#3326AE14] py-2 space-y-1 border-b border-neutral-2 last:border-0 px-3 rounded-lg">
             {/* Header Stats */}
-            <div className="flex items-center gap-3 justify-between mb-3 text-[11px] text-neutral-7">
+            <div className="flex items-center gap-3 justify-between mb-3 text-[11px] bg-brand-neutral-7">
                 <div className="flex items-center gap-1">
-                    <Icon icon="hugeicons:target-02" width="24" height="24" className='shrink-0 size-4 text-accent-3' />
+                    <Icon icon="hugeicons:target-02" width="24" height="24" className='shrink-0 size-4 text-brand-accent-3' />
                     <span>Conversion Rate: <span className="font-medium">{event.conversionRate}%</span></span>
                 </div>
                 <div className="flex items-center gap-1">
-                    <Icon icon="hugeicons:ticket-02" className="size-4 shrink-0 text-accent-3" />
+                    <Icon icon="hugeicons:ticket-02" className="size-4 shrink-0 text-brand-accent-3" />
                     <span>Tickets Sold: <span className="font-medium">{event.ticketsSold}/{event.totalTickets}</span></span>
                 </div>
             </div>
@@ -40,13 +40,13 @@ export default function TopPerformingEventCard({ event, rank }: TopPerformingEve
                 <div className="flex-1 min-w-0">
                     <Link 
                         href={`/events/${event.id}`}
-                        className="block hover:text-primary-6 transition-colors"
+                        className="block hover:text-brand-primary-6 transition-colors"
                     >
-                        <h3 className="text-xs font-semibold text-secondary-9 truncate mb-0.5">
+                        <h3 className="text-xs font-semibold text-brand-secondary-9 truncate mb-0.5">
                             {event.title}
                         </h3>
                     </Link>
-                    <p className="text-xs text-neutral-7">
+                    <p className="text-xs bg-brand-neutral-7">
                         {event.category}
                     </p>
                 </div>
@@ -54,7 +54,7 @@ export default function TopPerformingEventCard({ event, rank }: TopPerformingEve
 
             <div className="border-t border-neutral-2">
                 <div className="flex items-center justify-between">
-                    <span className="text-xs text-neutral-7">Revenue Generated:</span>
+                    <span className="text-xs bg-brand-neutral-7">Revenue Generated:</span>
                     <span className="text-sm font-medium text-[#5F9F7D]">
                         {event.currency}{event.revenueGenerated.toLocaleString()}
                     </span>

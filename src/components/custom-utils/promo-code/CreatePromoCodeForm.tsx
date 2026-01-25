@@ -41,8 +41,8 @@ export default function CreatePromoCodeForm({
         <AnimatedDialog className="md:max-w-[25em]" open={openPromoModal} onOpenChange={setOpenPromoModal}>
             <div>
                 <div className="flex justify-center items-center flex-col text-center">
-                    <DialogTitle className="font-semibold text-secondary-9">Create Promo Code</DialogTitle>
-                    <p className="text-sm text-secondary-6 mt-2">Fill out the form to create a new Promo Code</p>
+                    <DialogTitle className="font-semibold text-brand-secondary-9">Create Promo Code</DialogTitle>
+                    <p className="text-sm text-brand-secondary-6 mt-2">Fill out the form to create a new Promo Code</p>
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="mt-5 space-y-5">
@@ -70,7 +70,7 @@ export default function CreatePromoCodeForm({
                                 {...register('discount', { valueAsNumber: true })}
                                 placeholder="10"
                             />
-                            <div className="absolute -right-px bottom-0 my-auto top-[2em] h-11.25 w-10 bg-neutral-6 rounded-e-md flex items-center justify-center text-neutral-7 font-medium text-sm">
+                            <div className="absolute -right-px bottom-0 my-auto top-[2em] h-11.25 w-10 bg-brand-neutral-6 rounded-e-md flex items-center justify-center bg-brand-neutral-7 font-medium text-sm">
                                 %
                             </div>
                         </div>
@@ -89,7 +89,7 @@ export default function CreatePromoCodeForm({
 
                     {/* Valid Until */}
                     <div className="space-y-3">
-                        <label className="text-sm font-medium text-secondary-9">
+                        <label className="text-sm font-medium text-brand-secondary-9">
                             Valid until
                         </label>
                         <Controller
@@ -101,12 +101,12 @@ export default function CreatePromoCodeForm({
                                         <Button
                                             variant="outline"
                                             className={cn(
-                                                "w-full h-11.25 justify-between text-left font-normal bg-neutral-3 border-neutral-3 hover:bg-neutral-3",
-                                                !field.value && "text-neutral-6"
+                                                "w-full h-11.25 justify-between text-left font-normal bg-brand-neutral-3 border-neutral-3 hover:bg-brand-neutral-3",
+                                                !field.value && "bg-brand-neutral-6"
                                             )}
                                         >
                                             {field.value ? format(field.value, "dd/MM/yyyy") : "DD/MM/YY"}
-                                            <CalendarIcon className="h-4 w-4 text-neutral-6" />
+                                            <CalendarIcon className="h-4 w-4 bg-brand-neutral-6" />
                                         </Button>
                                     </PopoverTrigger>
                                     <PopoverContent className="w-auto p-0" align="start">
@@ -129,14 +129,14 @@ export default function CreatePromoCodeForm({
                         control={control}
                         render={({ field }) => (
                             <div className="w-full">
-                                <Label className="block text-sm font-medium text-neutral-9 mb-2">
+                                <Label className="block text-sm font-medium bg-brand-neutral-9 mb-2">
                                     Events Applicable
                                 </Label>
                                 
                                 <Select value={field.value} onValueChange={field.onChange}>
                                     <SelectTrigger
                                         className={cn(
-                                            "w-full px-4 py-3 text-sm rounded-lg min-h-11.25 h-11.25 outline-none bg-[#F2F2F2] text-neutral-9 transition-all",
+                                            "w-full px-4 py-3 text-sm rounded-lg min-h-11.25 h-11.25 outline-none bg-[#F2F2F2] bg-brand-neutral-9 transition-all",
                                             errors.event_id 
                                                 ? 'border border-red-400 focus:ring-red-500' 
                                                 : 'border-transparent focus:border-[1.5px] focus:border-neutral-6 hover:border-neutral-5 border'
@@ -150,7 +150,7 @@ export default function CreatePromoCodeForm({
                                             <SelectItem 
                                                 key={option.id} 
                                                 value={option.id} 
-                                                className='cursor-pointer focus:bg-neutral-4 my-1 py-1 focus:text-white'
+                                                className='cursor-pointer focus:bg-brand-neutral-4 my-1 py-1 focus:text-white'
                                             >
                                                 <EventInfo 
                                                     variant="mobile"
@@ -176,14 +176,14 @@ export default function CreatePromoCodeForm({
                         <button
                             type="button"
                             onClick={() => setOpenPromoModal(false)}
-                            className="flex-1 text-secondary-8 bg-white hover:shadow flex items-center gap-2 justify-center px-6 py-3.5 rounded-[30px] border-2 border-secondary-3 font-medium text-sm hover:bg-neutral-2 hover:border-secondary-5 active:bg-neutral-3 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-neutral-4 focus:ring-offset-2 transition-all duration-150"
+                            className="flex-1 text-brand-secondary-8 bg-white hover:shadow flex items-center gap-2 justify-center px-6 py-3.5 rounded-[30px] border-2 border-brand-secondary-3 font-medium text-sm hover:bg-brand-neutral-2 hover:border-brand-secondary-5 active:bg-brand-neutral-3 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-neutral-4 focus:ring-offset-2 transition-all duration-150"
                         >
                             Cancel
                         </button>
 
                         <button
                             type="submit"
-                            className="flex-1 px-6 py-3.5 rounded-[30px] bg-primary hover:bg-primary-7 active:bg-primary-8 hover:shadow-md active:scale-[0.98] disabled:bg-neutral-5 disabled:cursor-not-allowed disabled:opacity-60 text-white font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-150 flex items-center justify-center gap-2"
+                            className="flex-1 px-6 py-3.5 rounded-[30px] bg-brand-primary hover:bg-brand-primary-7 active:bg-brand-primary-8 hover:shadow-md active:scale-[0.98] disabled:bg-brand-neutral-5 disabled:cursor-not-allowed disabled:opacity-60 text-white font-medium text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 transition-all duration-150 flex items-center justify-center gap-2"
                         >
                             Confirm
                         </button>

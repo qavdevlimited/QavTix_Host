@@ -27,7 +27,7 @@ export default function ScanResultModal({
                 Scan Result
             </DialogTitle>
 
-            <DialogClose className="absolute top-4 right-4 text-neutral-6 hover:text-neutral-7 transition-colors z-10">
+            <DialogClose className="absolute top-4 right-4 bg-brand-neutral-6 hover:bg-brand-neutral-7 transition-colors z-10">
                 <Icon icon="material-symbols:cancel" width="24" height="24" />
             </DialogClose>
 
@@ -44,12 +44,12 @@ export default function ScanResultModal({
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl font-bold text-secondary-9 mb-3 animate-in slide-in-from-bottom-4 fade-in-0 duration-500 delay-200">
+                <h2 className="text-xl font-bold text-brand-secondary-9 mb-3 animate-in slide-in-from-bottom-4 fade-in-0 duration-500 delay-200">
                     {config.title}
                 </h2>
 
                 {/* Message */}
-                <p className="text-sm text-secondary-8 leading-relaxed max-w-xs animate-in slide-in-from-bottom-4 fade-in-0 duration-500 delay-300">
+                <p className="text-sm text-brand-secondary-8 leading-relaxed max-w-xs animate-in slide-in-from-bottom-4 fade-in-0 duration-500 delay-300">
                     {config.message}
                 </p>
             </div>

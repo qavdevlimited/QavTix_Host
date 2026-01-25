@@ -38,7 +38,7 @@ export default function UserMetricCard({
             className
         )}>
             <div className="flex justify-between w-full items-center gap-3">
-                <p className="text-xs text-secondary-9">
+                <p className="text-xs text-brand-secondary-9">
                     {label}
                 </p>
                 {showPercentage && (
@@ -52,7 +52,7 @@ export default function UserMetricCard({
                 )}
             </div>
             <div className="flex w-full justify-between items-center gap-3">
-                <h3 className={cn(space_grotesk.className, "md:text-xl font-bold text-secondary-9 mb-2")}>
+                <h3 className={cn(space_grotesk.className, "md:text-xl font-bold text-brand-secondary-9 mb-2")}>
                     {value}
                 </h3>
                 <div>

@@ -21,15 +21,15 @@ export default function AffiliateLeaderboardTable() {
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Rank</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Affiliate</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Clicks</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Revenue</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Commission</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Conv. Rate</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Rank</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Affiliate</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Clicks</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Revenue</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Commission</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Conv. Rate</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-5 bg-white">
@@ -38,7 +38,7 @@ export default function AffiliateLeaderboardTable() {
                                     <tr
                                         key={affiliate.id}
                                         className={cn(
-                                            "hover:bg-neutral-3/70 transition-colors cursor-pointer",
+                                            "hover:bg-brand-neutral-3/70 transition-colors cursor-pointer",
                                         )}
                                     >
                                         <td className="py-4 px-5">
@@ -50,27 +50,27 @@ export default function AffiliateLeaderboardTable() {
                                             <UserInfo user={affiliate.affiliate as any} variant="desktop" />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-9 font-medium whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-9 font-medium whitespace-nowrap">
                                                 {affiliate.clicks.toLocaleString()}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 {affiliate.tickets_sold}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{affiliate.revenue.toLocaleString()}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{affiliate.commission.toLocaleString()}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-center text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs text-center text-brand-secondary-9 whitespace-nowrap">
                                                 {affiliate.conversion_rate}%
                                             </p>
                                         </td>
@@ -93,15 +93,15 @@ export default function AffiliateLeaderboardTable() {
                             <div className="space-y-3">
                                 {/* Top Row - Stats */}
                                 <div className="flex justify-between gap-2 items-center text-[11px] pb-3 border-b border-neutral-2">
-                                    <div className="flex gap-1 text-secondary-9">
+                                    <div className="flex gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Sold:</span>
                                         <span className="">{affiliate.tickets_sold}</span>
                                     </div>
-                                    <div className="flex gap-1 text-secondary-9">
+                                    <div className="flex gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Revenue:</span>
                                         <span className="">₦{affiliate.revenue.toLocaleString()}</span>
                                     </div>
-                                    <div className="flex gap-1 text-secondary-9">
+                                    <div className="flex gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Commission:</span>
                                         <span className="">₦{affiliate.commission.toLocaleString()}</span>
                                     </div>
@@ -119,11 +119,11 @@ export default function AffiliateLeaderboardTable() {
 
                                     {/* Clicks & Conv Rate */}
                                     <div className="flex flex-col text-right text-[11px] shrink-0">
-                                        <div className="flex gap-1 text-secondary-9">
+                                        <div className="flex gap-1 text-brand-secondary-9">
                                             <span className="font-bold">Clicks:</span>
                                             <span className="">{affiliate.clicks.toLocaleString()}</span>
                                         </div>
-                                        <div className="flex gap-1 text-secondary-9">
+                                        <div className="flex gap-1 text-brand-secondary-9">
                                             <span className="font-bold">Conv.Rate:</span>
                                             <span className="">{affiliate.conversion_rate}%</span>
                                         </div>

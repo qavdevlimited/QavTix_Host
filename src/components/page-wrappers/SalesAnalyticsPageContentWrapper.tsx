@@ -84,7 +84,7 @@ export default function SalesAnalyticsPageContentWrapper(){
 
 
             <section className="mt-10">
-                <h3 className={cn(space_grotesk.className, "text-secondary-8 font-bold text-lg mb-4")}>Transaction History</h3>
+                <h3 className={cn(space_grotesk.className, "text-brand-secondary-8 font-bold text-lg mb-4")}>Transaction History</h3>
                 <DataDisplayTableWrapper 
                     filters={filters}
                     setFilters={setFilters}

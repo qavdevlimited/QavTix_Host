@@ -65,10 +65,10 @@ export default function RevenueGrowthChart() {
             const data = payload[0].payload as ChartDataPoint;
             return (
                 <div className="bg-white px-3 py-2 text-xs border border-neutral-3 rounded-lg shadow-sm">
-                    <p className="font-medium text-neutral-8">
+                    <p className="font-medium bg-brand-neutral-8">
                         {data.displayLabel}
                     </p>
-                    <p className="text-accent-6 font-semibold">
+                    <p className="text-brand-accent-6 font-semibold">
                         ${(payload[0].value ?? 0).toLocaleString()}
                     </p>
                 </div>
@@ -81,11 +81,11 @@ export default function RevenueGrowthChart() {
         <div className="w-full bg-white rounded-2xl p-6 shadow-sm border border-neutral-2">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                    <h2 className="text-xs text-secondary-5">
+                    <h2 className="text-xs text-brand-secondary-5">
                         Revenue Growth Chart
                     </h2>
                     <Select value={selectedYear} onValueChange={setSelectedYear}>
-                        <SelectTrigger className="w-20 text-xs h-9 border-neutral-3 font-bold text-secondary-9 rounded-lg">
+                        <SelectTrigger className="w-20 text-xs h-9 border-neutral-3 font-bold text-brand-secondary-9 rounded-lg">
                             <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
@@ -98,14 +98,14 @@ export default function RevenueGrowthChart() {
                     </Select>
                 </div>
 
-                <div className="flex items-center gap-2 bg-primary-1 rounded-lg py-1 px-2">
+                <div className="flex items-center gap-2 bg-brand-primary-1 rounded-lg py-1 px-2">
                     <button
                         onClick={() => setTimeFilter('annual')}
                         className={cn(
                             'px-4 py-2 rounded-lg text-xs font-medium transition-all',
                             timeFilter === 'annual'
-                                ? 'bg-primary-6 text-white shadow-sm'
-                                : 'text-neutral-7 hover:text-neutral-9'
+                                ? 'bg-brand-primary-6 text-white shadow-sm'
+                                : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
                         )}
                     >
                         Annual
@@ -115,8 +115,8 @@ export default function RevenueGrowthChart() {
                         className={cn(
                             'px-4 py-2 rounded-lg text-xs font-medium transition-all',
                             timeFilter === 'month'
-                                ? 'bg-primary-6 text-white shadow-sm'
-                                : 'text-neutral-7 hover:text-neutral-9'
+                                ? 'bg-brand-primary-6 text-white shadow-sm'
+                                : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
                         )}
                     >
                         Month
@@ -126,8 +126,8 @@ export default function RevenueGrowthChart() {
                         className={cn(
                             'px-4 py-2 rounded-lg text-xs font-medium transition-all',
                             timeFilter === 'week'
-                                ? 'bg-primary-6 text-white shadow-sm'
-                                : 'text-neutral-7 hover:text-neutral-9'
+                                ? 'bg-brand-primary-6 text-white shadow-sm'
+                                : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
                         )}
                     >
                         Week

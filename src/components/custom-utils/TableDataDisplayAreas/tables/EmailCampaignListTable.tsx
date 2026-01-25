@@ -17,15 +17,15 @@ export default function EmailCampaignListTable() {
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
                             <tr>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Campaign</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Event</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Recipients</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Sent Date</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Open Rate</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Click Rate</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Campaign</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Recipients</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Sent Date</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Open Rate</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Click Rate</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-5 bg-white">
@@ -34,11 +34,11 @@ export default function EmailCampaignListTable() {
                                     <tr
                                         key={campaign.id}
                                         className={cn(
-                                            "hover:bg-neutral-3/70 transition-colors cursor-pointer",
+                                            "hover:bg-brand-neutral-3/70 transition-colors cursor-pointer",
                                         )}
                                     >
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 max-w-[12em]">{campaign.campaign}</p>
+                                            <p className="text-xs text-brand-secondary-8 max-w-[12em]">{campaign.campaign}</p>
                                         </td>
                                         <td className="py-4 px-5">
                                             <div className="flex items-center gap-3">
@@ -51,28 +51,28 @@ export default function EmailCampaignListTable() {
                                                     />
                                                 </div>
                                                 <div>
-                                                    <p className="font-bold text-xs text-secondary-9">{campaign.event.title}</p>
-                                                    <p className="text-[11px] text-secondary-8">{campaign.event.category}</p>
+                                                    <p className="font-bold text-xs text-brand-secondary-9">{campaign.event.title}</p>
+                                                    <p className="text-[11px] text-brand-secondary-8">{campaign.event.category}</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-medium text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-medium text-brand-secondary-9 whitespace-nowrap">
                                                 {campaign.recipients.toLocaleString()}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-8 whitespace-nowrap">
                                                 {formatDateTime(campaign.sent_date)}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 {campaign.open_rate !== null ? `${campaign.open_rate}%` : '---'}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 {campaign.click_rate !== null ? `${campaign.click_rate}%` : '---'}
                                             </p>
                                         </td>
@@ -105,8 +105,8 @@ export default function EmailCampaignListTable() {
                                 {/* Campaign Name & Status */}
                                 <div className="flex justify-between items-start gap-2">
                                     <div>
-                                        <span className="text-xs font-bold text-secondary-8">Campaign: </span>
-                                        <span className="text-xs text-secondary-9">{campaign.campaign}</span>
+                                        <span className="text-xs font-bold text-brand-secondary-8">Campaign: </span>
+                                        <span className="text-xs text-brand-secondary-9">{campaign.campaign}</span>
                                     </div>
                                     <Badge className={cn(
                                         "px-2 py-1 text-[11px] rounded-sm border-[0.8px] capitalize border-neutral-4 shrink-0",
@@ -128,23 +128,23 @@ export default function EmailCampaignListTable() {
                                         />
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                        <h3 className="font-bold text-xs text-secondary-9">
+                                        <h3 className="font-bold text-xs text-brand-secondary-9">
                                             {campaign.event.title}
                                         </h3>
-                                        <p className="text-[11px] text-secondary-8">
+                                        <p className="text-[11px] text-brand-secondary-8">
                                             {campaign.event.category}
                                         </p>
                                     </div>
                                     <div className="flex flex-col text-right text-[11px] shrink-0">
                                         <div>
-                                            <span className="font-bold text-secondary-8">Open Rate: </span>
-                                            <span className="text-secondary-9">
+                                            <span className="font-bold text-brand-secondary-8">Open Rate: </span>
+                                            <span className="text-brand-secondary-9">
                                                 {campaign.open_rate !== null ? `${campaign.open_rate}%` : '---'}
                                             </span>
                                         </div>
                                         <div>
-                                            <span className="font-bold text-secondary-8">Click Rate: </span>
-                                            <span className="text-secondary-9">
+                                            <span className="font-bold text-brand-secondary-8">Click Rate: </span>
+                                            <span className="text-brand-secondary-9">
                                                 {campaign.click_rate !== null ? `${campaign.click_rate}%` : '---'}
                                             </span>
                                         </div>
@@ -154,14 +154,14 @@ export default function EmailCampaignListTable() {
                                 {/* Sent Date & Recipients */}
                                 <div className="flex justify-between items-center text-[11px] border-t border-neutral-2 pt-2">
                                     <div>
-                                        <span className="font-bold text-secondary-8">Sent Date: </span>
-                                        <span className="text-secondary-9">
+                                        <span className="font-bold text-brand-secondary-8">Sent Date: </span>
+                                        <span className="text-brand-secondary-9">
                                             {formatDateTime(campaign.sent_date)}
                                         </span>
                                     </div>
                                     <div>
-                                        <span className="font-bold text-secondary-8">Recipients: </span>
-                                        <span className="text-secondary-9">
+                                        <span className="font-bold text-brand-secondary-8">Recipients: </span>
+                                        <span className="text-brand-secondary-9">
                                             {campaign.recipients.toLocaleString()}
                                         </span>
                                     </div>

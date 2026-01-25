@@ -17,9 +17,9 @@ export default function WeekAnalysisChart() {
     <div className="w-full max-w-md bg-white rounded-3xl p-6 shadow-sm border border-neutral-100">
       <div className="flex justify-between items-start mb-8">
         <div>
-          <h2 className="text-sm font-bold text-secondary-9">Week-Based Analysis:</h2>
-          <p className="text-xs text-secondary-5">Report from the last 7 days</p>
-          <p className="text-xs text-secondary-5 mt-2.5 font-medium">Sales from 1-7 Dec, 2025</p>
+          <h2 className="text-sm font-bold text-brand-secondary-9">Week-Based Analysis:</h2>
+          <p className="text-xs text-brand-secondary-5">Report from the last 7 days</p>
+          <p className="text-xs text-brand-secondary-5 mt-2.5 font-medium">Sales from 1-7 Dec, 2025</p>
         </div>
         <div className="flex items-center gap-1 text-rose-500 font-bold text-xs">
           <span>↓ 2.1%</span>

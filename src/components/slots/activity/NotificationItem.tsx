@@ -27,7 +27,7 @@ export default function NotificationItem({
         <div 
         className={cn(
             "flex items-start gap-3 py-4 border-b border-neutral-2 last:border-0 px-4 -mx-4 rounded-lg transition-colors cursor-pointer",
-            isUnread ? "bg-blue-50/50 hover:bg-blue-50" : "hover:bg-neutral-1"
+            isUnread ? "bg-blue-50/50 hover:bg-blue-50" : "hover:bg-brand-neutral-1"
         )}
         onClick={() => onMarkAsRead?.(notification.id)}
         >
@@ -38,19 +38,19 @@ export default function NotificationItem({
             </div>
 
             <div className="flex-1 min-w-0">
-                <p className="text-[11px] text-neutral-7 mb-1">
+                <p className="text-[11px] bg-brand-neutral-7 mb-1">
                     {notification.subtitle}
                 </p>
 
                 <p className={cn(
                 "text-xs mb-0.5",
-                isUnread ? "text-secondary-9 font-medium" : "text-neutral-7 font-normal"
+                isUnread ? "text-brand-secondary-9 font-medium" : "bg-brand-neutral-7 font-normal"
                 )}>
                     {notification.title}
                 </p>
             </div>
 
-            <div className="flex items-center gap-1 text-xs text-neutral-6 shrink-0">
+            <div className="flex items-center gap-1 text-xs bg-brand-neutral-6 shrink-0">
                 <Icon icon="hugeicons:clock-01" className="w-3.5 h-3.5 text-orange-400" />
                 <span>{notification.timestamp}</span>
             </div>

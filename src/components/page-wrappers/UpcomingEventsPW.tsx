@@ -21,7 +21,6 @@ export default function UpcomingEventsPW(){
 
     return (
         <section>
-            <h3 className={cn(space_grotesk.className, "text-secondary-8 font-bold text-lg mb-4")}>Upcoming Events</h3>
             <DataDisplayTableWrapper 
                 activeTab={activeTab}
                 tabs={tabListData}

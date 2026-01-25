@@ -29,7 +29,7 @@ export const dashboardCards: IDashboardStat[] = [
   },
   {
     icon: "hugeicons:calendar-check-out-02",
-    iconBg: "bg-primary-5",
+    iconBg: "bg-brand-primary-5",
     cardBg: "bg-[#E6EEFA]",
     number: 12,
     label: "Active Events",
@@ -279,7 +279,7 @@ export const mockMetrics: MetricCardData[] = [
             label: 'New this month',
             description: 'Latest ticket buyers.',
             icon: "famicons:gift-outline",
-            iconColor: 'text-accent-5',
+            iconColor: 'text-brand-accent-5',
         },
         {
             id: 'repeat-buyers',
@@ -287,7 +287,7 @@ export const mockMetrics: MetricCardData[] = [
             label: 'Repeat Buyers',
             description: 'Customers who returned',
             icon: "uil:repeat",
-            iconColor: 'text-accent-9',
+            iconColor: 'text-brand-accent-9',
         },
         {
             id: 'average-spend',
@@ -323,7 +323,7 @@ export const mockMetrics2: MetricCardData[] = [
             label: 'All-time Payouts',
             description: 'Customers who returned',
             icon: "hugeicons:wallet-done-01",
-            iconColor: 'text-accent-5',
+            iconColor: 'text-brand-accent-5',
         },
         {
             id: 'average-spend',
@@ -331,7 +331,7 @@ export const mockMetrics2: MetricCardData[] = [
             label: 'Next Payout Date',
             description: 'Scheduled payment date',
             icon: "hugeicons:calendar-03",
-            iconColor: 'text-primary-4'
+            iconColor: 'text-brand-primary-4'
         }
     ]
 
@@ -343,7 +343,7 @@ export const mockMetrics3: MetricCardData[] = [
             label: 'Affiliates',
             description: "Partners driving referrals",
             icon: "famicons:people-outline",
-            iconColor: 'text-accent-9',
+            iconColor: 'text-brand-accent-9',
         },
         {
             id: 'new-month',
@@ -351,7 +351,7 @@ export const mockMetrics3: MetricCardData[] = [
             label: 'New this month',
             description: 'Recently added affiliates',
             icon: "hugeicons:discount-01",
-            iconColor: 'text-accent-5',
+            iconColor: 'text-brand-accent-5',
         },
         {
             id: 'tickets-sold',
@@ -359,7 +359,7 @@ export const mockMetrics3: MetricCardData[] = [
             label: 'Tickets Sold',
             description: 'Units sold by affiliates',
             icon: "hugeicons:ticket-02",
-            iconColor: 'text-primary-4'
+            iconColor: 'text-brand-primary-4'
         },
         {
             id: 'commission-paid',
@@ -367,7 +367,7 @@ export const mockMetrics3: MetricCardData[] = [
             label: 'Commission Paid',
             description: 'Total earnings distributed.',
             icon: "hugeicons:dollar-square",
-            iconColor: 'text-accent-5',
+            iconColor: 'text-brand-accent-5',
         },
     ]
 
@@ -381,7 +381,7 @@ export const mockMetrics4: MetricCardData[] = [
         label: 'Tickets Sold',
         description: 'All tickets issued out',
         icon: "hugeicons:ticket-02",
-        iconColor: 'text-primary-4'
+        iconColor: 'text-brand-primary-4'
     },
     {
         id: 'checked-in',
@@ -397,7 +397,7 @@ export const mockMetrics4: MetricCardData[] = [
         label: 'Not Arrived',
         description: 'Tickets not yet scanned',
         icon: "mingcute:sandglass-line",
-        iconColor: 'text-accent-4'
+        iconColor: 'text-brand-accent-4'
     },
     {
         id: 'issues-duplicates',

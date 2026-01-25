@@ -21,7 +21,7 @@ export default function CustomersList(){
 
     return (
         <section>
-            <h3 className={cn(space_grotesk.className, "text-secondary-8 font-bold text-lg mb-4")}>Customer List</h3>
+            <h3 className={cn(space_grotesk.className, "text-brand-secondary-8 font-bold text-lg mb-4")}>Customer List</h3>
             <DataDisplayTableWrapper 
                 tabs={tabListData}
                 filters={filters}

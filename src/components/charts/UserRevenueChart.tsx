@@ -37,7 +37,7 @@ export function UserRevenueChart({ className }: RevenueChartProps) {
         if (active && payload && payload.length > 0) {
             const value = payload[0].value
             return (
-                <div className="bg-accent-6 text-white px-3 py-2 rounded-lg shadow-lg text-sm font-semibold">
+                <div className="bg-brand-accent-6 text-white px-3 py-2 rounded-lg shadow-lg text-sm font-semibold">
                     ₦{(value / 1000).toFixed(1)}k
                 </div>
             )
@@ -48,9 +48,9 @@ export function UserRevenueChart({ className }: RevenueChartProps) {
     return (
         <div className={cn('bg-white rounded-2xl border border-neutral-2 p-6', className)}>
             <div className="flex items-center gap-4 mb-8">
-                <h3 className="text-xs font-medium text-secondary-5">Revenue Chart</h3>
+                <h3 className="text-xs font-medium text-brand-secondary-5">Revenue Chart</h3>
                 <Select value={timeFilter} onValueChange={setTimeFilter}>
-                    <SelectTrigger className="w-fit font-medium h-9 text-xs border-neutral-3 text-secondary-8">
+                    <SelectTrigger className="w-fit font-medium h-9 text-xs border-neutral-3 text-brand-secondary-8">
                         <SelectValue />
                     </SelectTrigger>
                     <SelectContent>

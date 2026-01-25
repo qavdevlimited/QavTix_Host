@@ -21,7 +21,7 @@ export const myEventsStatusConfig = {
     'live': { color: 'text-green-600', label: 'Live' },
     'ended': { color: 'text-red-600', label: 'Ended' },
     'draft': { color: 'text-orange-600', label: 'Draft' },
-    'cancelled': { color: 'text-neutral-600', label: 'Cancelled' }
+    'cancelled': { color: 'bg-brand-neutral-600', label: 'Cancelled' }
 }
 
 export const draftStatusConfig = {

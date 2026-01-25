@@ -14,7 +14,7 @@ export default function MetricCard({ data, className }: MetricCardProps) {
             className
         )}>
             <div className="">
-                <h3 className={cn(space_grotesk.className, "text-xl font-bold text-secondary-9 mb-2")}>
+                <h3 className={cn(space_grotesk.className, "text-xl font-bold text-brand-secondary-9 mb-2")}>
                     {data.value}
                 </h3>
                 <div className="flex items-center gap-2 md:gap-3">
@@ -23,10 +23,10 @@ export default function MetricCard({ data, className }: MetricCardProps) {
                         className={cn('size-6 md:size-7 shrink-0', data.iconColor)} 
                     />
                     <div>
-                        <p className="text-xs font-medium md:text-sm text-secondary-8 mb-0.5">
+                        <p className="text-xs font-medium md:text-sm text-brand-secondary-8 mb-0.5">
                             {data.label}
                         </p>
-                        <p className="text-[11px] md:text-xs text-neutral-6">
+                        <p className="text-[11px] md:text-xs bg-brand-neutral-6">
                             {data.description}
                         </p>
                     </div>

@@ -20,7 +20,7 @@ function DesktopSideNav() {
     }
 
     return (
-        <nav className="hidden lg:flex fixed left-0 top-0 h-screen w-60 flex-col justify-between gap-8 bg-accent-1 p-4 py-6 text-sm font-medium text-primary-dark_slate overflow-y-auto">
+        <nav className="hidden lg:flex fixed left-0 top-0 h-screen w-60 flex-col justify-between gap-8 bg-brand-accent-1 p-4 py-6 text-sm font-medium text-brand-primary-dark_slate overflow-y-auto">
             <div>
                 <Logo width={120} />
                 <ul className="mt-5 flex flex-col gap-4">
@@ -31,8 +31,8 @@ function DesktopSideNav() {
                                 <Link
                                     className={cn(
                                         isActive 
-                                            ? "bg-accent-4 text-white font-medium" 
-                                            : "hover:bg-accent-3 text-secondary-9 font-normal",
+                                            ? "bg-brand-accent-4 text-white font-medium" 
+                                            : "hover:bg-brand-accent-3 text-brand-secondary-9 font-normal",
                                         "relative flex items-center gap-2 text-sm pe-3 min-h-12 ps-2 py-2 rounded-md transition-all ease-linear duration-200"
                                     )}
                                     href={v.href}

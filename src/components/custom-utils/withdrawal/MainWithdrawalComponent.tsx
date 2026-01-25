@@ -54,7 +54,7 @@ export default function MainWithdrawalComponent() {
         <div className="w-full h-fit">
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
-                <h1 className={cn(space_grotesk.className, "text-lg font-bold text-secondary-8")}>Withdrawal</h1>
+                <h1 className={cn(space_grotesk.className, "text-lg font-bold text-brand-secondary-8")}>Withdrawal</h1>
                 <AddAccountBtn />
             </div>
 
@@ -77,14 +77,14 @@ export default function MainWithdrawalComponent() {
             {/* Amount Input */}
             <div className="mb-6 flex gap-2 border-b border-b-neutral-5">
                 <div className="border-e pe-3 pb-2 border-e-neutral-5">
-                    <Icon icon="mdi:currency-ngn" className="text-secondary-8 text-xl" />
+                    <Icon icon="mdi:currency-ngn" className="text-brand-secondary-8 text-xl" />
                 </div>
                 <input
                     type="text"
                     value={amount}
                     onChange={handleAmountChange}
                     placeholder="Enter Amount to Withdraw"
-                    className="flex-1 text-base pb-2 ps-5 text-gray-700 placeholder:text-secondary-3 outline-none bg-transparent"
+                    className="flex-1 text-base pb-2 ps-5 text-gray-700 placeholder:text-brand-secondary-3 outline-none bg-transparent"
                 />
             </div>
 
@@ -97,8 +97,8 @@ export default function MainWithdrawalComponent() {
                         className={cn(
                             "px-4 py-3 rounded-sm text-xs transition-all",
                             amount === quickAmount.toString()
-                                ? "bg-primary-6 text-white shadow-md"
-                                : "bg-neutral-4 text-secondary-4 hover:bg-neutral-5"
+                                ? "bg-brand-primary-6 text-white shadow-md"
+                                : "bg-brand-neutral-4 text-brand-secondary-4 hover:bg-brand-neutral-5"
                         )}
                     >
                         ₦{quickAmount.toLocaleString()}
@@ -108,14 +108,14 @@ export default function MainWithdrawalComponent() {
 
             {/* Bank Account Selection */}
             <div className="mb-6">
-                <label className="block text-sm font-medium text-secondary-9 mb-3">
+                <label className="block text-sm font-medium text-brand-secondary-9 mb-3">
                     Choose withdrawal account
                 </label>
                 <Select 
                     value={selectedAccount}
                     onValueChange={(value) => setSelectedAccount(value)}
                 >
-                    <SelectTrigger className="w-full border-neutral-3 p-3 h-12! bg-neutral-4">
+                    <SelectTrigger className="w-full border-neutral-3 p-3 h-12! bg-brand-neutral-4">
                         <SelectValue className="text-xs" placeholder="Select Bank Account" />
                     </SelectTrigger>
                     <SelectContent>
@@ -123,11 +123,11 @@ export default function MainWithdrawalComponent() {
                             <SelectItem 
                                 key={acct.accountNumber} 
                                 value={acct.id}
-                                className="text-xs hover:bg-neutral-3! w-full block"
+                                className="text-xs hover:bg-brand-neutral-3! w-full block"
                             >
                                 <div className="flex items-center justify-between gap-3 py-1 w-full">
-                                    <div className="w-5 h-5 rounded-full border-2 border-primary-6 flex items-center justify-center">
-                                        <div className={cn(acct.id === selectedAccount ? "block" : "hidden" ,"w-2.5 h-2.5 rounded-full bg-primary-6")} />
+                                    <div className="w-5 h-5 rounded-full border-2 border-brand-primary-6 flex items-center justify-center">
+                                        <div className={cn(acct.id === selectedAccount ? "block" : "hidden" ,"w-2.5 h-2.5 rounded-full bg-brand-primary-6")} />
                                     </div>
 
                                     <div className="flex gap-1 items-center flex-1 min-w-0">
@@ -142,10 +142,10 @@ export default function MainWithdrawalComponent() {
 
                                         {/* Account Details */}
                                         <div className="min-w-0">
-                                            <p className="font-semibold text-xs text-secondary-9 truncate">
+                                            <p className="font-semibold text-xs text-brand-secondary-9 truncate">
                                                 {acct.accountName}
                                             </p>
-                                            <p className="text-[11px] text-secondary-8">
+                                            <p className="text-[11px] text-brand-secondary-8">
                                                 {acct.bankName}
                                             </p>
                                         </div>
@@ -171,7 +171,7 @@ export default function MainWithdrawalComponent() {
             <button
                 onClick={handleContinue}
                 disabled={!amount || !selectedAccount}
-                className="w-full py-3 bg-primary-6 hover:bg-primary-7 hover:shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium rounded-md transition-colors"
+                className="w-full py-3 bg-brand-primary-6 hover:bg-brand-primary-7 hover:shadow-md disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium rounded-md transition-colors"
             >
                 Continue
             </button>

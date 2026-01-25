@@ -55,7 +55,7 @@ export default function ExportButton1({
     }
 
     return (
-        <div className={cn('flex items-center gap-2', className, showFormatSelector ? 'bg-primary-1 p-1.5 rounded-md' : '')}>
+        <div className={cn('flex items-center gap-2', className, showFormatSelector ? 'bg-brand-primary-1 p-1.5 rounded-md' : '')}>
             <motion.button
                 onClick={handleExport}
                 disabled={disabled}
@@ -63,12 +63,12 @@ export default function ExportButton1({
                 whileTap={!disabled ? { scale: 0.97 } : {}}
                 className={cn(
                     'flex items-center justify-between text-xs font-bold gap-2 transition-opacity',
-                    disabled ? 'opacity-50 cursor-not-allowed' : 'text-primary-6 hover:text-primary-7'
+                    disabled ? 'opacity-50 cursor-not-allowed' : 'text-brand-primary-6 hover:text-brand-primary-7'
                 )}
             >
                 <span className={cn(
                     'w-6 aspect-square rounded flex justify-center items-center text-white',
-                    disabled ? 'bg-neutral-4' : 'bg-primary-3'
+                    disabled ? 'bg-brand-neutral-4' : 'bg-brand-primary-3'
                 )}>
                     <Icon icon="pajamas:export" width="16" height="16" />
                 </span>
@@ -90,7 +90,7 @@ export default function ExportButton1({
                             <SelectItem 
                                 key={format.value} 
                                 value={format.value}
-                                className="text-xs hover:bg-accent-4!"
+                                className="text-xs hover:bg-brand-accent-4!"
                             >
                                 <div className="flex items-center gap-1">
                                     <Icon icon={format.icon} className="w-4 h-4" />

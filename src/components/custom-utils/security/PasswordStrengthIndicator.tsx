@@ -42,7 +42,7 @@ export default function PasswordStrengthIndicator({ password }: PasswordStrength
             {/* Requirements Checklist */}
             {strength !== 'strong' && (
                 <div className="space-y-2">
-                    <p className="text-sm font-medium text-neutral-7 my-5">
+                    <p className="text-sm font-medium bg-brand-neutral-7 my-5">
                         {label}
                     </p>
                     <ul className="space-y-1.5">
@@ -51,9 +51,9 @@ export default function PasswordStrengthIndicator({ password }: PasswordStrength
                                 {req.met ? (
                                     <Icon icon="ph:seal-check-fill" width="24" height="24" className='text-[#3EC596]' />
                                 ) : (
-                                    <Icon icon="ph:seal-check-fill" width="24" height="24"  className='text-neutral-5' />
+                                    <Icon icon="ph:seal-check-fill" width="24" height="24"  className='bg-brand-neutral-5' />
                                 )}
-                                <span className="text-sm text-neutral-7">
+                                <span className="text-sm bg-brand-neutral-7">
                                     {req.label}
                                 </span>
                             </li>

@@ -21,8 +21,8 @@ export default function AddBankAccountForm({ openAddAccountModal, setOpenAddAcco
         <AnimatedDialog className="md:max-w-[25em]" open={openAddAccountModal} onOpenChange={setOpenAddAccountModal}>
             <div>
                 <div className="flex justify-center items-center flex-col text-center">
-                    <DialogTitle className="font-semibold text-secondary-9">Add Bank Account</DialogTitle>
-                    <p className="text-sm text-secondary-6 mt-2">Fill out the form to add a new Bank Account</p>
+                    <DialogTitle className="font-semibold text-brand-secondary-9">Add Bank Account</DialogTitle>
+                    <p className="text-sm text-brand-secondary-6 mt-2">Fill out the form to add a new Bank Account</p>
                 </div>
 
                 <form className="mt-8 space-y-5">
@@ -58,14 +58,14 @@ export default function AddBankAccountForm({ openAddAccountModal, setOpenAddAcco
                     <div className="flex justify-between gap-4">
                         <button
                             type="button"
-                            className="flex-1 text-secondary-8 bg-white hover:shadow flex items-center gap-2 justify-center px-6 py-3.5 rounded-[30px] border-2 border-secondary-3 font-medium text-sm hover:bg-neutral-2 hover:border-secondary-5 active:bg-neutral-3 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-neutral-4 focus:ring-offset-2 transition-all duration-150"
+                            className="flex-1 text-brand-secondary-8 bg-white hover:shadow flex items-center gap-2 justify-center px-6 py-3.5 rounded-[30px] border-2 border-brand-secondary-3 font-medium text-sm hover:bg-brand-neutral-2 hover:border-brand-secondary-5 active:bg-brand-neutral-3 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-neutral-4 focus:ring-offset-2 transition-all duration-150"
                         >
                             Cancel
                         </button>
 
                         <button
                             type="submit"
-                            className="flex-1 px-6 py-3.5 rounded-[30px] bg-primary hover:bg-primary-7 active:bg-primary-8 hover:shadow-md active:scale-[0.98] disabled:bg-neutral-5 disabled:cursor-not-allowed disabled:opacity-60 text-white font-medium text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all duration-150 flex items-center justify-center gap-2"
+                            className="flex-1 px-6 py-3.5 rounded-[30px] bg-brand-primary hover:bg-brand-primary-7 active:bg-brand-primary-8 hover:shadow-md active:scale-[0.98] disabled:bg-brand-neutral-5 disabled:cursor-not-allowed disabled:opacity-60 text-white font-medium text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary focus:ring-offset-2 transition-all duration-150 flex items-center justify-center gap-2"
                         >
                             Confirm
                         </button>

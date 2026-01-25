@@ -39,7 +39,7 @@ export default function FinancialsPageContentWrapper(){
             <div className="grid grid-cols-1 md:grid-cols-[22em_1fr] gap-6 mt-10 shadow-[0px_5.8px_23.17px_0px_#3326AE14] bg-white rounded-xl p-4 md:p-5">
                 <MainWithdrawalComponent />
                 <div className="min-w-0 border-t-[1.5px] md:border-t-0 md:border-l-[1.5px] border-dashed border-neutral-5 pt-6 md:pt-0 md:ps-4">
-                    <h3 className={cn(space_grotesk.className, "text-secondary-8 font-bold text-lg mb-4")}>Payment History</h3>
+                    <h3 className={cn(space_grotesk.className, "text-brand-secondary-8 font-bold text-lg mb-4")}>Payment History</h3>
                     <PayoutHistoryTable />
                 </div>
             </div>

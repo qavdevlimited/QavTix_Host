@@ -52,7 +52,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
             <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-neutral-2 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-2 border-b border-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -60,12 +60,12 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                         onCheckedChange={handleSelectAll}
                                     />
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Status</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Profile Info</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Address</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Attended</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Total Spend</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-secondary-8 capitalize whitespace-nowrap">Last Purchase</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Profile Info</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Address</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Attended</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Total Spend</th>
+                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Last Purchase</th>
                                 <th className="w-12 py-4 px-4"></th>
                             </tr>
                         </thead>
@@ -78,8 +78,8 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                     <tr 
                                         key={customer.id} 
                                         className={cn(
-                                            "hover:bg-neutral-3/70 transition-colors",
-                                            isSelected && "bg-primary-1 hover:bg-primary-1"
+                                            "hover:bg-brand-neutral-3/70 transition-colors",
+                                            isSelected && "bg-brand-primary-1 hover:bg-brand-primary-1"
                                         )}
                                         onClick={() => handleSelectCustomer(customer.id)}
                                     >
@@ -101,22 +101,22 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                             <UserInfo user={customer} variant="desktop"  />
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-6 min-w-37 max-w-37">
+                                            <p className="text-xs text-brand-secondary-6 min-w-37 max-w-37">
                                                 {customer.address}
                                             </p>
                                         </td>
                                         <td className="py-4 px-4 text-center">
-                                            <p className="text-sm font-medium text-secondary-9 whitespace-nowrap">
+                                            <p className="text-sm font-medium text-brand-secondary-9 whitespace-nowrap">
                                                 {customer.attended}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs font-semibold text-secondary-9 whitespace-nowrap">
+                                            <p className="text-xs font-semibold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{customer.totalSpend.toLocaleString()}
                                             </p>
                                         </td>
                                         <td className="py-4 px-5">
-                                            <p className="text-xs text-secondary-8 whitespace-nowrap">
+                                            <p className="text-xs text-brand-secondary-8 whitespace-nowrap">
                                                 {formatDateTime(customer.lastPurchaseDate)}
                                             </p>
                                         </td>
@@ -142,7 +142,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                             key={customer.id} 
                             className={cn(
                                 "border-b border-neutral-5 p-4",
-                                isSelected && "bg-primary-1"
+                                isSelected && "bg-brand-primary-1"
                             )}
                         >
                             {/* Header with checkbox and status */}
@@ -168,20 +168,20 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                             {/* Details */}
                             <div className="space-y-2 text-xs">
                                 <div className="flex justify-between">
-                                    <span className="text-neutral-6">Address:</span>
-                                    <span className="text-neutral-8 text-right max-w-[60%]">{customer.address}</span>
+                                    <span className="bg-brand-neutral-6">Address:</span>
+                                    <span className="bg-brand-neutral-8 text-right max-w-[60%]">{customer.address}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-neutral-6">Attended:</span>
-                                    <span className="font-medium text-secondary-9">{customer.attended}</span>
+                                    <span className="bg-brand-neutral-6">Attended:</span>
+                                    <span className="font-medium text-brand-secondary-9">{customer.attended}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-neutral-6">Total Spend:</span>
-                                    <span className="font-bold text-secondary-9">₦{customer.totalSpend.toLocaleString()}</span>
+                                    <span className="bg-brand-neutral-6">Total Spend:</span>
+                                    <span className="font-bold text-brand-secondary-9">₦{customer.totalSpend.toLocaleString()}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="text-neutral-6">Last Purchase:</span>
-                                    <span className="text-secondary-8">{formatDateTime(customer.lastPurchaseDate)}</span>
+                                    <span className="bg-brand-neutral-6">Last Purchase:</span>
+                                    <span className="text-brand-secondary-8">{formatDateTime(customer.lastPurchaseDate)}</span>
                                 </div>
                             </div>
                         </div>

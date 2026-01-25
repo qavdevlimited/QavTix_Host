@@ -37,14 +37,14 @@ export default function UserInfo({
             <div className={cn(isDesktop ? "whitespace-nowrap" : "flex-1 min-w-0")}>
                 <p
                     className={cn(
-                        "text-secondary-9 text-xs",
+                        "text-brand-secondary-9 text-xs",
                     )}
                 >
                     {user.name}
                 </p>
                 <p
                     className={cn(
-                        "text-[11px] text-secondary-9 font-bold",
+                        "text-[11px] text-brand-secondary-9 font-bold",
                         isDesktop
                         ? ""
                         : " truncate"

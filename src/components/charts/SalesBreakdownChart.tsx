@@ -14,7 +14,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     return (
       <div className="bg-[#001D4A] text-white p-4 rounded-lg shadow-xl border-none">
         <p className="text-sm font-semibold">{data.time || 'Afternoon'}</p>
-        <p className="text-[10px] text-neutral-400 mb-1">1pm - 4pm</p>
+        <p className="text-[10px] bg-brand-neutral-400 mb-1">1pm - 4pm</p>
         <p className="text-sm font-bold">{data.purchases || '890'} Purchases</p>
         {/* Tooltip Arrow */}
         <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#001D4A] rotate-45" />
@@ -28,8 +28,8 @@ export default function SalesBreakdownChart() {
   return (
     <div className="w-full max-w-md bg-white rounded-3xl p-6 shadow-[0px_5.8px_23.17px_0px_#3326AE14] border border-neutral-100">
       <div className="mb-2">
-        <h2 className="text-sm font-bold text-secondary-9">Sales Breakdown</h2>
-        <p className="text-sm text-secondary-5">Sales by Ticket Type</p>
+        <h2 className="text-sm font-bold text-brand-secondary-9">Sales Breakdown</h2>
+        <p className="text-sm text-brand-secondary-5">Sales by Ticket Type</p>
       </div>
 
       <div className="h-50 w-full relative">
