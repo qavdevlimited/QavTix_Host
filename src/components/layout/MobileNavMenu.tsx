@@ -23,13 +23,12 @@ export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
         const routeSegment = route.split('/')[1];
         const currentSegment = pathName.split('/')[1];
         return currentSegment?.startsWith(routeSegment) ?? false;
-    }
+    };
 
     return (
         <AnimatePresence>
             {isOpen && (
                 <>
-                    {/* Backdrop Overlay */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -38,13 +37,12 @@ export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
                         className="fixed inset-0 bg-black/40 backdrop-blur-sm z-99"
                     />
 
-                    {/* Sidebar Panel */}
                     <motion.div
-                        initial={{ x: "100%" }}
+                        initial={{ x: "-100%" }}
                         animate={{ x: 0 }}
-                        exit={{ x: "100%" }}
+                        exit={{ x: "-100%" }} 
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed right-0 top-0 h-full w-70 bg-brand-accent-1 z-100 shadow-2xl flex flex-col justify-between p-6 overflow-y-auto"
+                        className="fixed left-0 top-0 h-full w-70 bg-brand-accent-1 z-100 shadow-2xl flex flex-col justify-between p-6 overflow-y-auto"
                     >
                         <div>
                             <div className="flex items-center justify-between mb-8">
@@ -83,7 +81,7 @@ export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
                                                 )}
                                             </Link>
                                         </li>
-                                    )
+                                    );
                                 })}
                             </ul>
                         </div>

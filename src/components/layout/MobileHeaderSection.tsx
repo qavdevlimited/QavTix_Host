@@ -1,21 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Icon } from "@iconify/react";
 import Logo from "./Logo";
 import MobileNavMenu from "./MobileNavMenu";
-import { usePathname } from "next/navigation";
 
 export default function MobileHeaderSection() {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const pathName = usePathname()
 
-    useEffect(() => {
-        if (isMenuOpen){
-            setIsMenuOpen(false)
+    const handleOpenMenu = (e: React.MouseEvent) => {
+        e.stopPropagation()
+        if (!isMenuOpen) {
+            setIsMenuOpen(true)
         }
-    },[isMenuOpen, pathName])
+    }
 
     return (
         <header className="pt-6 px-4 bg-white md:px-8 flex lg:hidden border-b justify-center items-center">
@@ -29,8 +27,8 @@ export default function MobileHeaderSection() {
 
                 <button
                     aria-label="Toggle menu"
-                    onClick={() => setIsMenuOpen(true)}
-                    className="text-brand-secondary-9 active:scale-90 transition-transform"
+                    onClick={handleOpenMenu}
+                    className="text-brand-secondary-9 active:scale-95 transition-transform p-1"
                 >
                     <Icon
                         icon="lineicons:menu-hamburger-1"
@@ -39,5 +37,5 @@ export default function MobileHeaderSection() {
                 </button>
             </div>
         </header>
-    );
+    )
 }
