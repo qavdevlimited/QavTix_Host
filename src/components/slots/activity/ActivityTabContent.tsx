@@ -44,7 +44,7 @@ export default function RecentActivityTab({ activities }: RecentActivityTabProps
                     </SelectTrigger>
                     <SelectContent>
                         {filterTypes.map((v) => (
-                            <SelectItem key={v.value} value={v.value}>
+                            <SelectItem key={v.value} value={v.value} className='text-xs'>
                                 <span>{v.name}</span>
                             </SelectItem>
                         ))}

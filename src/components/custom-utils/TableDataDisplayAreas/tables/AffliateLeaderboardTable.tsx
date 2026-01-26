@@ -18,10 +18,10 @@ export default function AffiliateLeaderboardTable() {
     return (
         <div className="w-full space-y-4 mt-5">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Rank</th>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Affiliate</th>
@@ -92,7 +92,7 @@ export default function AffiliateLeaderboardTable() {
                         >
                             <div className="space-y-3">
                                 {/* Top Row - Stats */}
-                                <div className="flex justify-between gap-2 items-center text-[11px] pb-3 border-b border-neutral-2">
+                                <div className="flex justify-between gap-2 items-center text-[11px] pb-3 border-b border-brand-neutral-2">
                                     <div className="flex gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Sold:</span>
                                         <span className="">{affiliate.tickets_sold}</span>

@@ -25,8 +25,8 @@ export default function ActivitySectionPW({
     const [activeTab, setActiveTab] = useState<TabType>('activity')
 
     return (
-        <div className="bg-white rounded-2xl shadow-sm border border-neutral-2 overflow-hidden w-full">
-            <div className="border-b border-neutral-3">
+        <div className="bg-white rounded-2xl shadow-sm border border-brand-neutral-2 overflow-hidden w-full">
+            <div className="border-b border-brand-neutral-3">
                 <div className="flex">
                     <button
                         onClick={() => setActiveTab('activity')}
@@ -34,12 +34,12 @@ export default function ActivitySectionPW({
                         "flex-1 px-6 py-4 text-sm md:text-[13px] font-bold transition-colors relative",
                         activeTab === 'activity'
                             ? "text-brand-primary-6"
-                            : "bg-brand-neutral-6 hover:bg-brand-neutral-8"
+                            : "text-brand-neutral-6 hover:text-neutral-8"
                         )}
                     >
                         Recent Activity
                         {activeTab === 'activity' && (
-                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-primary-6" />
+                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
                         )}
                     </button>
 
@@ -49,7 +49,7 @@ export default function ActivitySectionPW({
                         "flex-1 px-6 py-4 text-sm md:text-[13px] font-bold transition-colors relative",
                         activeTab === 'notifications'
                             ? "text-brand-primary-6"
-                            : "bg-brand-neutral-6 hover:bg-brand-neutral-8"
+                            : "text-brand-neutral-6 hover:text-neutral-8"
                         )}
                     >
                         Notifications

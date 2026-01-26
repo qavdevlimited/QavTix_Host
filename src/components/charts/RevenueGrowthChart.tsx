@@ -64,8 +64,8 @@ export default function RevenueGrowthChart() {
         if (active && payload && payload.length > 0) {
             const data = payload[0].payload as ChartDataPoint;
             return (
-                <div className="bg-white px-3 py-2 text-xs border border-neutral-3 rounded-lg shadow-sm">
-                    <p className="font-medium bg-brand-neutral-8">
+                <div className="bg-white px-3 py-2 text-xs border border-brand-neutral-3 rounded-lg shadow-sm">
+                    <p className="font-medium text-brand-neutral-8">
                         {data.displayLabel}
                     </p>
                     <p className="text-brand-accent-6 font-semibold">
@@ -78,14 +78,14 @@ export default function RevenueGrowthChart() {
     }
 
     return (
-        <div className="w-full bg-white rounded-2xl p-6 shadow-sm border border-neutral-2">
+        <div className="w-full bg-white rounded-2xl p-6 shadow-sm border border-brand-neutral-2">
             <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
                 <div className="flex items-center gap-3">
                     <h2 className="text-xs text-brand-secondary-5">
                         Revenue Growth Chart
                     </h2>
                     <Select value={selectedYear} onValueChange={setSelectedYear}>
-                        <SelectTrigger className="w-20 text-xs h-9 border-neutral-3 font-bold text-brand-secondary-9 rounded-lg">
+                        <SelectTrigger className="w-20 text-xs h-9 border-brand-neutral-3 font-bold text-brand-secondary-9 rounded-lg">
                             <SelectValue />
                         </SelectTrigger>
                         <SelectContent>
@@ -105,7 +105,7 @@ export default function RevenueGrowthChart() {
                             'px-4 py-2 rounded-lg text-xs font-medium transition-all',
                             timeFilter === 'annual'
                                 ? 'bg-brand-primary-6 text-white shadow-sm'
-                                : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
+                                : 'text-brand-neutral-7 hover:text-brand-neutral-9'
                         )}
                     >
                         Annual
@@ -116,7 +116,7 @@ export default function RevenueGrowthChart() {
                             'px-4 py-2 rounded-lg text-xs font-medium transition-all',
                             timeFilter === 'month'
                                 ? 'bg-brand-primary-6 text-white shadow-sm'
-                                : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
+                                : 'text-brand-neutral-7 hover:text-brand-neutral-9'
                         )}
                     >
                         Month
@@ -127,7 +127,7 @@ export default function RevenueGrowthChart() {
                             'px-4 py-2 rounded-lg text-xs font-medium transition-all',
                             timeFilter === 'week'
                                 ? 'bg-brand-primary-6 text-white shadow-sm'
-                                : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
+                                : 'text-brand-neutral-7 hover:text-brand-neutral-9'
                         )}
                     >
                         Week

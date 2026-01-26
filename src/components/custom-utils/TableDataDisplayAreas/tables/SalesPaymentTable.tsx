@@ -45,10 +45,10 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
     return (
         <div className="w-full space-y-4">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -134,13 +134,13 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                         <div 
                             key={payment.id} 
                             className={cn(
-                                "border border-neutral-3 rounded-lg p-4 bg-white",
+                                "border border-brand-neutral-3 rounded-lg p-4 bg-white",
                                 isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >
                             <div className="space-y-3">
                                 {/* First Row - Payment ID, Amount, Quantity */}
-                                <div className="flex justify-between gap-2 flex-wrap items-center text-xs text-brand-secondary-9 pb-2 border-b border-neutral-2">
+                                <div className="flex justify-between gap-2 flex-wrap items-center text-xs text-brand-secondary-9 pb-2 border-b border-brand-neutral-2">
                                     <div className="flex items-center gap-2">
                                         <Checkbox
                                             checked={isSelected}
@@ -174,7 +174,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                                 </div>
 
                                 {/* Third Row - Event Info & Purchase Date */}
-                                <div className="flex items-start justify-between gap-3 pt-2 border-t border-neutral-2">
+                                <div className="flex items-start justify-between gap-3 pt-2 border-t border-brand-neutral-2">
                                     <EventInfo {...payment.event} variant="mobile" />
                                     <div className="flex flex-col text-right text-xs text-brand-secondary-9 shrink-0">
                                         <span className="font-bold">Purchase Date:</span>

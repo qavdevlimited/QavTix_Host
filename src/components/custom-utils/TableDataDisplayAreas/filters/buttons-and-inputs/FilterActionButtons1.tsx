@@ -40,7 +40,7 @@ export default function FilterButtonsActions1({
                 disabled={applyDisabled || isApplying}
                 className={`flex-1 h-12 max-w-36 rounded-full font-medium text-sm transition-all shadow-lg active:scale-[0.98] 
                     ${isApplying || applyDisabled
-                        ? 'bg-brand-neutral-4 bg-brand-neutral-6 cursor-not-allowed'
+                        ? 'bg-brand-neutral-4 text-brand-neutral-6 cursor-not-allowed'
                         : 'bg-brand-primary-6 text-white hover:bg-brand-primary-7'
                     }
                 `}

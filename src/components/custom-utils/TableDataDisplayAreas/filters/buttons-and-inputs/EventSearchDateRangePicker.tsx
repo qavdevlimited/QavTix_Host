@@ -133,7 +133,7 @@ export function EventSearchDateRangePicker({
                 id="from-date"
             />
 
-            <div className="flex text-xs items-center justify-center gap-1 bg-brand-neutral-6 pb-2 sm:pb-0">
+            <div className="flex text-xs items-center justify-center gap-1 text-brand-neutral-6 pb-2 sm:pb-0">
                 <span aria-hidden="true">—</span>
                 <span className="">to</span>
                 <span aria-hidden="true">—</span>

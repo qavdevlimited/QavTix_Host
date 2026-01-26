@@ -80,7 +80,7 @@ export function FeaturedImageUpload({
         <div className={cn('w-full', className)}>
             {preview ? (
                 // Image Preview
-                <div className="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-neutral-3 bg-neutral-1">
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden border-2 border-brand-neutral-3 bg-neutral-1">
                     <Image
                         src={preview}
                         alt="Featured preview"

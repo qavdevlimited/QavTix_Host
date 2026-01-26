@@ -105,7 +105,7 @@ export function TicketTypeFilter({ value = [], onChange, icon }: TicketTypeFilte
                                     <p className={cn('font-semibold', isSelected ? 'text-brand-primary-8' : 'text-brand-secondary-9')}>
                                         {type.label}
                                     </p>
-                                    <p className="text-sm bg-brand-neutral-6">{type.description}</p>
+                                    <p className="text-sm text-brand-neutral-6">{type.description}</p>
                                 </div>
                                 {isSelected && (
                                     <Icon icon="mdi:check-circle" className="w-6 h-6 text-brand-primary-6" />

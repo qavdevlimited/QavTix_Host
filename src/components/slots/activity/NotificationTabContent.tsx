@@ -41,7 +41,7 @@ export default function NotificationsTab({
                     ) : (
                     <div className="py-12 text-center">
                         <Icon icon="hugeicons:notification-02" className="w-12 h-12 bg-brand-neutral-4 mx-auto mb-3" />
-                        <p className="text-sm bg-brand-neutral-6">No notifications</p>
+                        <p className="text-sm text-brand-neutral-6">No notifications</p>
                     </div>
                 )}
             </div>

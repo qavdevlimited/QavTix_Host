@@ -74,17 +74,17 @@ export function StatusFilter({ value = [], onChange, icon }: StatusFilterProps) 
                 'w-full flex items-center gap-3 p-3 rounded-xl border-2 transition-all text-sm',
                 isSelected
                   ? 'border-brand-primary-6 bg-brand-primary-1/50 shadow-sm'
-                  : 'border-neutral-3 hover:border-neutral-4'
+                  : 'border-brand-neutral-3 hover:border-brand-neutral-5'
               )}
             >
               <div className={cn('w-2.5 h-2.5 rounded-full shrink-0', status.color)} />
-              <Icon icon={status.icon} className="w-4 h-4 bg-brand-neutral-7 shrink-0" />
+              <Icon icon={status.icon} className="w-4 h-4 text-brand-neutral-7 shrink-0" />
               <div className="flex-1 text-left min-w-0">
                 <p className="font-medium text-brand-secondary-9 truncate">{status.label}</p>
-                <p className="text-xs bg-brand-neutral-6 truncate">{status.description}</p>
+                <p className="text-xs text-brand-neutral-6 truncate">{status.description}</p>
               </div>
               {isSelected && (
-                <Icon icon="mdi:check-circle" className="w-5 h-5 text-brand-primary-6 shrink-0" />
+                <Icon icon="mdi:check-circle" className="w-5 h-5 text-primary-6 shrink-0" />
               )}
             </button>
           )

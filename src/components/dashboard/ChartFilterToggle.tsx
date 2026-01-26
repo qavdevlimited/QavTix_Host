@@ -33,7 +33,7 @@ export function ChartFilterToggle({ chartFilter, setChartFilter }: ChartFilterTo
                         onClick={() => setChartFilter('revenue')}
                         className={cn(
                         'relative z-10 px-5 py-2.5 rounded-lg text-xs font-medium transition-colors min-w-20',
-                        chartFilter === 'revenue' ? 'text-white' : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
+                        chartFilter === 'revenue' ? 'text-white' : 'text-brand-neutral-7 hover:text-brand-neutral-9'
                         )}
                     >
                         Revenue
@@ -43,7 +43,7 @@ export function ChartFilterToggle({ chartFilter, setChartFilter }: ChartFilterTo
                         onClick={() => setChartFilter('tickets')}
                         className={cn(
                         'relative z-10 px-5 py-2.5 rounded-lg text-xs font-medium transition-colors min-w-20',
-                        chartFilter === 'tickets' ? 'text-white' : 'bg-brand-neutral-7 hover:bg-brand-neutral-9'
+                        chartFilter === 'tickets' ? 'text-white' : 'text-brand-neutral-7 hover:text-brand-neutral-9'
                         )}
                     >
                         Tickets

@@ -14,10 +14,10 @@ export default function OrderListTable() {
     return (
         <div className="w-full space-y-4">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-2 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-2 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event ID</th>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event</th>
@@ -97,13 +97,13 @@ export default function OrderListTable() {
                             >
                                 <div className="space-y-2.5">
                                     <div className="flex justify-between items-center">
-                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 text-[11px] border-t border-neutral-2">
+                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 text-[11px] border-t border-brand-neutral-2">
                                             <span className="font-bold">Amount:</span>
                                             <span>
                                                 ₦{order.amount.toLocaleString()}
                                             </span>
                                         </div>
-                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 text-[11px] border-t border-neutral-2">
+                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 text-[11px] border-t border-brand-neutral-2">
                                             <span className="font-bold">Quantity:</span>
                                             <span>
                                                 {order.quantity}
@@ -131,7 +131,7 @@ export default function OrderListTable() {
                                                 <h3 className="font-bold text-xs text-brand-secondary-9 mb-1">
                                                     {order.event.title}
                                                 </h3>
-                                                <p className="text-xs bg-brand-neutral-6 mb-1">
+                                                <p className="text-xs text-brand-neutral-6 mb-1">
                                                     {order.event.category}
                                                 </p>
 

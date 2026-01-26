@@ -1,7 +1,7 @@
 "use client";
 
 import { EventCreationData, StepNumber } from '@/types/create-event';
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 
 interface EventCreationContextType {
     eventData: Partial<EventCreationData>;
@@ -22,8 +22,8 @@ const EventCreationContext = createContext<EventCreationContextType | undefined>
 
 export function EventCreationProvider({ children }: { children: ReactNode }) {
     const [eventData, setEventData] = useState<Partial<EventCreationData>>({})
-    const [currentStep, setCurrentStep] = useState<StepNumber>(3)
-    const [completedSteps, setCompletedSteps] = useState<StepNumber[]>([1,2])
+    const [currentStep, setCurrentStep] = useState<StepNumber>(5)
+    const [completedSteps, setCompletedSteps] = useState<StepNumber[]>([1,2,3,4])
 
     const updateStep = useCallback(<K extends keyof EventCreationData>(
         step: K,

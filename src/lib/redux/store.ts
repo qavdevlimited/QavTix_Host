@@ -3,11 +3,13 @@ import alertReducer from "./slices/alertSlice"
 import authUserReducer from "./slices/authUserSlice"
 import confirmationReducer from './slices/confirmationSlice'
 import successModalReducer from './slices/successModalSlice'
+import popupAlertReducer from './slices/popupAlertSlice'
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       alert: alertReducer,
+      popupAlert: popupAlertReducer,
       authUser: authUserReducer,
       confirmation: confirmationReducer,
       successModal: successModalReducer

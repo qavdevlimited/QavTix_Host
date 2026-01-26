@@ -64,16 +64,16 @@ export default function DataDisplayTableWrapper({
                                 key={tab.value}
                                 onClick={() => setActiveTab(tab.value)}
                                 className={cn(
-                                    'relative pb-4 px-1 text-sm md:text-base font-bold transition-colors whitespace-nowrap',
+                                    'relative pb-4 px-1 text-sm font-semibold transition-colors whitespace-nowrap',
                                     activeTab === tab.value
-                                        ? 'text-[#0052CC]'
-                                        : 'bg-brand-neutral-6 hover:bg-brand-neutral-8'
+                                        ? 'text-brand-primary-6'
+                                        : 'text-brand-neutral-6 hover:text-brand-neutral-8'
                                 )}
                             >
                                 <DataCountIndicator label={tab.label} />
                                 
                                 {activeTab === tab.value && (
-                                    <span className="absolute bottom-0 left-0 right-0 h-0.75 bg-brand-primary-6" />
+                                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-primary-6" />
                                 )}
                             </button>
                         ))}
@@ -90,7 +90,7 @@ export default function DataDisplayTableWrapper({
                     />
                 )}
                 {setFilters && filters && filterOptions && filterOptions.length > 0 && (
-                    <div className="flex flex-wrap gap-4 mt-4 mb-10">
+                    <div className="flex flex-wrap gap-4 my-4">
                         {filterOptions.map((filter) => (
                             <FilterRenderer
                                 key={filter.value}

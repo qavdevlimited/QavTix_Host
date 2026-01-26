@@ -83,7 +83,7 @@ export default function MultiSelectTags({
                 {remainingCount > 0 && (
                   <Badge
                     variant="secondary"
-                    className="px-2 py-1 text-xs bg-neutral-2 border-brand-neutral-7 border-neutral-3"
+                    className="px-2 py-1 text-xs bg-neutral-2 border-brand-neutral-7 border-brand-neutral-3"
                   >
                     +{remainingCount}
                   </Badge>

@@ -62,10 +62,10 @@ export default function CreateEventStep1() {
 
 
     return (
-        <form className="space-y-10 pb-20" onSubmit={handleSubmit(handleStep1Submit)}>
+        <form className="space-y-10 md:pb-20" onSubmit={handleSubmit(handleStep1Submit)}>
             {/* Event Basics */}
             <section>
-                <h3 className="text-secondary-8 mb-5 font-bold">Event Basics</h3>
+                <h3 className="text-brand-secondary-8 mb-5 font-bold text-sm md:text-base">Event Basics</h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                     <CustomInput2
@@ -112,7 +112,7 @@ export default function CreateEventStep1() {
 
             {/* Date and Time Section */}
             <section className="space-y-5">
-                <h3 className="text-brand-secondary-8 font-bold">Date & Time</h3>
+                <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Date & Time</h3>
 
                 {/* Radio Group */}
                 <Controller
@@ -125,13 +125,18 @@ export default function CreateEventStep1() {
                             className="w-fit flex gap-6"
                         >
                             <div className="flex items-center gap-3">
-                                <RadioGroupItem 
-                                    value="single" 
-                                    id="eventType-r1" 
-                                    className="size-5 border-2 cursor-pointer"
-                                    circleIconClass="size-3 text-brand-primary-6" 
-                                />
-                                <Label htmlFor="eventType-r1" className="cursor-pointer font-medium text-brand-secondary-9">
+                            <RadioGroupItem 
+                                value="single" 
+                                id="eventType-r1" 
+                                className={cn(
+                                    "size-5 border-2 cursor-pointer transition-colors",
+                                    "border-brand-secondary-3", 
+                                    "data-[state=checked]:border-brand-primary-6",
+                                    "focus-visible:ring-brand-primary-6"
+                                )}
+                                circleIconClass="size-3 text-brand-primary-6 fill-brand-primary-6" 
+                            />
+                                <Label htmlFor="eventType-r1" className="cursor-pointer text-sm font-medium text-brand-secondary-9">
                                     Single Event
                                 </Label>
                             </div>
@@ -139,7 +144,12 @@ export default function CreateEventStep1() {
                                 <RadioGroupItem 
                                     value="recurring" 
                                     id="eventType-r2" 
-                                    className="size-5 border-2 cursor-pointer" 
+                                    className={cn(
+                                        "size-5 border-2 cursor-pointer transition-colors",
+                                        "border-brand-secondary-3", 
+                                        "data-[state=checked]:border-brand-primary-6",
+                                        "focus-visible:ring-brand-primary-6"
+                                    )}
                                     circleIconClass="size-3 text-brand-primary-6"
                                 />
                                 <Label htmlFor="eventType-r2" className="cursor-pointer font-medium text-brand-secondary-9">
@@ -252,7 +262,7 @@ export default function CreateEventStep1() {
 
 
             <section className="space-y-5">
-                <h3 className="text-brand-secondary-8 font-bold">Location</h3>
+                <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Location</h3>
 
                 {/* Location Radio Group */}
                 <Controller
@@ -265,16 +275,46 @@ export default function CreateEventStep1() {
                             className="w-fit flex gap-6"
                         >
                             <div className="flex items-center gap-3">
-                                <RadioGroupItem value="physical" id="loc-physical" className="size-5 border-2 cursor-pointer" />
-                                <Label htmlFor="loc-physical" className="cursor-pointer font-medium text-brand-secondary-9">Physical Venue</Label>
+                                <RadioGroupItem 
+                                    value="physical" 
+                                    id="loc-physical" 
+                                    className={cn(
+                                        "size-5 border-2 cursor-pointer transition-colors",
+                                        "border-brand-secondary-3", 
+                                        "data-[state=checked]:border-brand-primary-6",
+                                        "focus-visible:ring-brand-primary-6"
+                                    )} 
+                                    circleIconClass="size-3 text-brand-primary-6"
+                                />
+                                <Label htmlFor="loc-physical" className="cursor-pointer font-medium text-brand-secondary-9 text-sm">Physical Venue</Label>
                             </div>
                             <div className="flex items-center gap-3">
-                                <RadioGroupItem value="online" id="loc-online" className="size-5 border-2 cursor-pointer" />
-                                <Label htmlFor="loc-online" className="cursor-pointer font-medium text-brand-secondary-9">Online Event</Label>
+                                <RadioGroupItem 
+                                    value="online" 
+                                    id="loc-online" 
+                                    className={cn(
+                                        "size-5 border-2 cursor-pointer transition-colors",
+                                        "border-brand-secondary-3", 
+                                        "data-[state=checked]:border-brand-primary-6",
+                                        "focus-visible:ring-brand-primary-6"
+                                    )} 
+                                    circleIconClass="size-3 text-brand-primary-6"
+                                />
+                                <Label htmlFor="loc-online" className="cursor-pointer font-medium text-brand-secondary-9 text-sm">Online Event</Label>
                             </div>
                             <div className="flex items-center gap-3">
-                                <RadioGroupItem value="tba" id="loc-tba" className="size-5 border-2 cursor-pointer" />
-                                <Label htmlFor="loc-tba" className="cursor-pointer font-medium text-brand-secondary-9">To Be Announced</Label>
+                                <RadioGroupItem 
+                                    value="tba" 
+                                    id="loc-tba" 
+                                    className={cn(
+                                        "size-5 border-2 cursor-pointer transition-colors",
+                                        "border-brand-secondary-3", 
+                                        "data-[state=checked]:border-brand-primary-6",
+                                        "focus-visible:ring-brand-primary-6"
+                                    )} 
+                                    circleIconClass="size-3 text-brand-primary-6"
+                                />
+                                <Label htmlFor="loc-tba" className="cursor-pointer font-medium text-brand-secondary-9 text-sm">To Be Announced</Label>
                             </div>
                         </RadioGroup>
                     )}

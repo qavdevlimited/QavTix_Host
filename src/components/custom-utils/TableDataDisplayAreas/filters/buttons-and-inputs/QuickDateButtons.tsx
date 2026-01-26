@@ -61,8 +61,8 @@ export function QuickDateButtons({ selectedRange, onSelect }: QuickDateButtonsPr
                     className={cn(
                         'px-4 py-3 rounded-lg h-10 flex justify-center items-center text-xs font-medium transition-all',
                         isSelected(option.getValue)
-                        ? 'bg-brand-primary-1 bg-brand-neutral-8 border border-brand-primary-6'
-                        : 'bg-white bg-brand-neutral-7 border border-neutral-4 hover:border-neutral-6'
+                        ? 'bg-brand-primary-1 text-brand-neutral-8 border border-brand-primary-6'
+                        : 'bg-white text-brand-neutral-7 border border-brand-neutral-4 hover:border-brand-neutral-6'
                     )}
                 >
                     {option.label}

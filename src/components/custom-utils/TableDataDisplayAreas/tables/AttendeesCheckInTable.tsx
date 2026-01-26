@@ -15,10 +15,10 @@ export default function AttendeeCheckInTable() {
     return (
         <div className="w-full space-y-4">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-2 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-2 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Attendee</th>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Ticket ID</th>
@@ -83,11 +83,11 @@ export default function AttendeeCheckInTable() {
                     return (
                         <div 
                             key={attendee.id} 
-                            className="border border-neutral-3 rounded-lg p-4 bg-white"
+                            className="border border-brand-neutral-3 rounded-lg p-4 bg-white"
                         >
                             <div className="space-y-3">
                                 {/* Top Row - Ticket ID & Ticket Type */}
-                                <div className="flex justify-between items-center text-xs pb-2 border-b border-neutral-2">
+                                <div className="flex justify-between items-center text-xs pb-2 border-b border-brand-neutral-2">
                                     <div>
                                         <span className="font-bold text-brand-secondary-8">Ticket ID: </span>
                                         <span className="text-brand-secondary-6">{attendee.ticketId}</span>
@@ -110,7 +110,7 @@ export default function AttendeeCheckInTable() {
                                 </div>
 
                                 {/* Third Row - Event Info & Check-in Time */}
-                                <div className="flex justify-between items-start gap-3 pt-2 border-t border-neutral-2">
+                                <div className="flex justify-between items-start gap-3 pt-2 border-t border-brand-neutral-2">
                                     <EventInfo {...attendee.event} />
                                     <div className="text-right text-xs shrink-0">
                                         <span className="font-bold text-brand-secondary-8 block">Check-In Time:</span>

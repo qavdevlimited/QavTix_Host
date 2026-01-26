@@ -1,4 +1,4 @@
-import { CHARACTER_LIMITS, VALIDATION_MESSAGES } from '@/lib/features/create-event/resources/constants';
+import { CHARACTER_LIMITS, ROLE_IDS, VALIDATION_MESSAGES } from '@/lib/features/create-event/resources/constants';
 import { z } from 'zod';
 
 
@@ -208,9 +208,9 @@ export const step3Schema = z.object({
 const collaboratorSchema = z.object({
     id: z.string(),
     name: z.string(),
-    email: z.string().email(),
+    email: z.email(),
     avatar: z.string().optional(),
-    role: z.enum(['host', 'collaborator']),
+    role: z.enum([...ROLE_IDS, "host"]),
     permissions: z.array(z.string()),
     status: z.enum(['active', 'disabled', 'pending']),
 })
@@ -273,9 +273,7 @@ export const step4Schema = z.object({
     path: ['affiliateProgram', 'percentageCommission'],
 })
 
-// ============================================
-// Combined Schema (All Steps)
-// ============================================
+
 
 export const completeEventSchema = z.object({
     basicInformation: step1Schema,

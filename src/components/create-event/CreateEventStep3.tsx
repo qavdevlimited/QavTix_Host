@@ -30,10 +30,10 @@ export default function CreateEventStep3() {
 
     return (
         <FormProvider {...methods}>
-            <div className="flex flex-col lg:flex-row gap-10 items-start mt-10">
+            <div className="flex flex-col lg:flex-row gap-10 items-start pb-10">
                 <form className="flex-1 w-full space-y-12">
                     <section className="space-y-6">
-                        <h3 className="text-brand-secondary-8 font-bold text-lg">Ticket Info</h3>
+                        <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Ticket Info</h3>
                         
                         {fields.map((field, index) => (
                             <div key={field.id} className="space-y-6 relative border-b last-of-type:border-b-0 border-brand-neutral-5 pb-12 mb-12 last-of-type:pb-0 last-of-type:mb-6">
@@ -92,7 +92,7 @@ export default function CreateEventStep3() {
 
                                 {/* Promo Code Section */}
                                 <div className="pt-6 border-t border-dashed border-brand-secondary-2 space-y-4">
-                                    <h4 className="text-brand-secondary-8 font-bold text-sm">Promo Code</h4>
+                                    <h4 className="text-brand-secondary-8 font-bold md:text-base text-sm">Promo Code</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                                         <CustomInput2 
                                             label="Code Word" 
@@ -134,7 +134,7 @@ export default function CreateEventStep3() {
                         <button 
                             type="button" 
                             onClick={() => append({ id: crypto.randomUUID(), ticketType: '', price: 0, currency: 'NGN', quantity: 1 })}
-                            className="w-59 h-14 rounded-[6px] border-[1.4px] border-dashed border-brand-secondary-5 bg-transparent hover:border-brand-neutral-5 hover:bg-brand-accent-1 text-brand-secondary-5 transition-all"
+                            className="w-59 h-14 text-sm rounded-[6px] border-[1.4px] border-dashed border-brand-secondary-5 bg-transparent hover:bg-brand-primary-1 hover:border-brand-primary-7 text-brand-secondary-5 transition-all"
                         >
                             <span className="flex items-center text-sm justify-center gap-2">
                                 <Icon icon="lucide:plus" className="w-4 h-4" />
@@ -147,7 +147,7 @@ export default function CreateEventStep3() {
 
                     {/* Sales Period */}
                     <section className="space-y-6 md:max-w-md">
-                        <h3 className="text-brand-secondary-8 font-bold">Sales Period</h3>
+                        <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Sales Period</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <Controller
                                 name="salesPeriod.startDateTime"
@@ -184,7 +184,7 @@ export default function CreateEventStep3() {
 
                     {/* Refund Policy */}
                     <section className='space-y-6'>
-                        <h3 className="text-brand-secondary-8 font-bold">Refund Policy</h3>
+                        <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Refund Policy</h3>
                         <Controller
                             control={control}
                             name="refundPolicy"
@@ -192,7 +192,7 @@ export default function CreateEventStep3() {
                                 <RadioGroup 
                                     {...field}
                                     onValueChange={field.onChange}
-                                    className="w-fit flex gap-6"
+                                    className="w-fit flex flex-wrap gap-6"
                                 >
                                     <div className="flex items-center gap-3">
                                         <RadioGroupItem 

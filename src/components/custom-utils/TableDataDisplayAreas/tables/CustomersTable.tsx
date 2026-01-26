@@ -49,10 +49,10 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
     return (
         <div className="w-full space-y-4">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-2 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-2 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -168,19 +168,19 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                             {/* Details */}
                             <div className="space-y-2 text-xs">
                                 <div className="flex justify-between">
-                                    <span className="bg-brand-neutral-6">Address:</span>
-                                    <span className="bg-brand-neutral-8 text-right max-w-[60%]">{customer.address}</span>
+                                    <span className="text-brand-neutral-6">Address:</span>
+                                    <span className="text-brand-neutral-8 text-right max-w-[60%]">{customer.address}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="bg-brand-neutral-6">Attended:</span>
+                                    <span className="text-brand-neutral-6">Attended:</span>
                                     <span className="font-medium text-brand-secondary-9">{customer.attended}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="bg-brand-neutral-6">Total Spend:</span>
+                                    <span className="text-brand-neutral-6">Total Spend:</span>
                                     <span className="font-bold text-brand-secondary-9">₦{customer.totalSpend.toLocaleString()}</span>
                                 </div>
                                 <div className="flex justify-between">
-                                    <span className="bg-brand-neutral-6">Last Purchase:</span>
+                                    <span className="text-brand-neutral-6">Last Purchase:</span>
                                     <span className="text-brand-secondary-8">{formatDateTime(customer.lastPurchaseDate)}</span>
                                 </div>
                             </div>

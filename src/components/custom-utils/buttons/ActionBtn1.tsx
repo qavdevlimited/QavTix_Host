@@ -29,7 +29,8 @@ export default function ActionButton1({
             disabled={isButtonDisabled}
             onClick={action}
             className={`
-                text-sm
+                text-xs
+                md:text-sm
                 bg-brand-primary
                 hover:bg-brand-primary-7
                 active:bg-brand-primary-8
@@ -39,7 +40,7 @@ export default function ActionButton1({
                 py-3.5
                 px-6
                 rounded-[3em]
-                h-14
+                h-12 md:h-14
                 font-medium
                 transition-colors
                 inline-flex

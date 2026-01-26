@@ -19,7 +19,7 @@ export default function PayoutHistoryTable() {
             <div className="hidden md:block overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full min-h-[20em]">
-                        <thead className="bg-brand-neutral-3 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">
                                     Payment ID
@@ -113,7 +113,7 @@ export default function PayoutHistoryTable() {
                         >
                             <div className="space-y-2">
                                 {/* Header - Payment ID and Status */}
-                                <div className="flex justify-between items-center border-b border-neutral-2">
+                                <div className="flex justify-between items-center border-b border-brand-neutral-2">
                                     <span className="text-xs font-bold text-brand-secondary-9">
                                         Payment ID: <span className="font-normal">{payout.paymentId}</span>
                                     </span>
@@ -148,7 +148,7 @@ export default function PayoutHistoryTable() {
                                 </div>
 
                                 {/* Amount and Date */}
-                                <div className="flex justify-between items-center border-t border-neutral-2">
+                                <div className="flex justify-between items-center border-t border-brand-neutral-2">
                                     <div className="flex gap-1 text-xs text-brand-secondary-9">
                                         <Icon icon="hugeicons:sale-tag-02" width="18" height="18" className="text-brand-primary-6" />
                                         <p className="font-bold">Amount: <span className="font-normal">₦{payout.amount.toLocaleString()}</span></p>

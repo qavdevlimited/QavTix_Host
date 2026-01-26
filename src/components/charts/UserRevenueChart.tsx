@@ -46,11 +46,11 @@ export function UserRevenueChart({ className }: RevenueChartProps) {
     }
 
     return (
-        <div className={cn('bg-white rounded-2xl border border-neutral-2 p-6', className)}>
+        <div className={cn('bg-white rounded-2xl border border-brand-neutral-2 p-6', className)}>
             <div className="flex items-center gap-4 mb-8">
                 <h3 className="text-xs font-medium text-brand-secondary-5">Revenue Chart</h3>
                 <Select value={timeFilter} onValueChange={setTimeFilter}>
-                    <SelectTrigger className="w-fit font-medium h-9 text-xs border-neutral-3 text-brand-secondary-8">
+                    <SelectTrigger className="w-fit font-medium h-9 text-xs border-brand-neutral-3 text-brand-secondary-8">
                         <SelectValue />
                     </SelectTrigger>
                     <SelectContent>

@@ -20,6 +20,7 @@ const CustomInput2 = forwardRef<HTMLInputElement, FormInputProps>(
                     ref={ref}
                     className={`
                         w-full px-4 py-3 text-sm rounded-lg h-14 transition-all
+                        [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
                         ${error 
                             ? 'border border-red-400 focus:border-red-500' 
                             : 'border border-brand-secondary-5 focus:border-[1.5px] focus:border-brand-accent-4 hover:border-brand-secondary-6'

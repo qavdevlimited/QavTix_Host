@@ -2,8 +2,8 @@ import { Skeleton } from "../ui/skeleton";
 
 export default function TableLoader() {
     return (
-        <div className="w-full bg-white rounded-xl border border-neutral-2 overflow-hidden my-8">
-            <div className="hidden md:grid md:grid-cols-5 gap-4 bg-brand-neutral-2 p-4 border-b border-neutral-3">
+        <div className="w-full bg-white rounded-xl border border-brand-neutral-2 overflow-hidden my-8">
+            <div className="hidden md:grid md:grid-cols-5 gap-4 bg-brand-neutral-2 p-4 border-b border-brand-neutral-3">
                 <Skeleton className="h-4 w-20 bg-brand-neutral-4" />
                 <Skeleton className="h-4 w-24 bg-brand-neutral-4" />
                 <Skeleton className="h-4 w-16 bg-brand-neutral-4" />

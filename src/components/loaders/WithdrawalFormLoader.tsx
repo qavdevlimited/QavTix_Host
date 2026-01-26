@@ -8,7 +8,7 @@ export default function WithdrawalFormLoader() {
                 <Skeleton className="h-10 w-48 bg-white/30" />
             </div>
 
-            <div className="flex items-center gap-4 py-2 border-b border-neutral-2">
+            <div className="flex items-center gap-4 py-2 border-b border-brand-neutral-2">
                 <Skeleton className="h-6 w-6 bg-brand-neutral-3" />
                 <Skeleton className="h-8 flex-1 bg-brand-neutral-2" />
             </div>
@@ -24,7 +24,7 @@ export default function WithdrawalFormLoader() {
 
             <div className="space-y-3">
                 <Skeleton className="h-4 w-40 bg-brand-neutral-3" />
-                <div className="p-4 border border-neutral-2 rounded-xl flex justify-between items-center">
+                <div className="p-4 border border-brand-neutral-2 rounded-xl flex justify-between items-center">
                 <Skeleton className="h-5 w-32 bg-brand-neutral-2" />
                 <Skeleton className="h-4 w-4 bg-brand-neutral-3" />
                 </div>

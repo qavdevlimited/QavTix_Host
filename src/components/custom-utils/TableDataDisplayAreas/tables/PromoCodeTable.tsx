@@ -15,10 +15,10 @@ export default function PromoCodeListTable() {
     return (
         <div className="w-full space-y-4 mt-5">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Promo Code</th>
@@ -95,13 +95,13 @@ export default function PromoCodeListTable() {
                                                 {promo.status}
                                             </span>
                                         </div>
-                                        <div className="flex gap-1 items-center text-brand-secondary-9 border-t border-neutral-2">
+                                        <div className="flex gap-1 items-center text-brand-secondary-9 border-t border-brand-neutral-2">
                                             <span className="font-bold">Revenue Impact:</span>
                                             <span>
                                                 ₦{Math.abs(promo.revenue_impact).toLocaleString()}
                                             </span>
                                         </div>
-                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 border-t border-neutral-2">
+                                        <div className="flex gap-1 items-center text-brand-secondary-9 pt-2 border-t border-brand-neutral-2">
                                             <span className="font-bold">Usage:</span>
                                             <span>
                                                 {promo.usage}

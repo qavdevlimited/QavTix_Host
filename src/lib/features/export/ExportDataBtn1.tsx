@@ -82,7 +82,7 @@ export default function ExportButton1({
                     onValueChange={handleFormatChange}
                     disabled={disabled}
                 >
-                    <SelectTrigger className="w-fit text-[10px] border-neutral-3 bg-white px-1">
+                    <SelectTrigger className="w-fit text-[10px] border-brand-neutral-3 bg-white px-1">
                         <SelectValue className="text-xs" />
                     </SelectTrigger>
                     <SelectContent>

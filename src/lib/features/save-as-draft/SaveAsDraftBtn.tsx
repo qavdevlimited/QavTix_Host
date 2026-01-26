@@ -10,7 +10,7 @@ export default function SaveAsDraftBtn(){
             )}
             aria-label="Save as Draft"
         >
-            <span className="size-10 md:size-7 rounded-sm flex justify-center items-center bg-brand-primary-4  text-white">
+            <span className="size-9 md:size-7 rounded-sm flex justify-center items-center bg-brand-primary-4  text-white">
                 <Icon icon="ri:draft-line" width="21" height="21" className="size-4" />
             </span>
             <span className="hidden md:inline">Save as Draft</span>

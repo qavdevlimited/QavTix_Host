@@ -42,10 +42,10 @@ export default function RecentActivityItem({ activity }: RecentActivityItemProps
     const iconConfig = activityIcons[activity.type] || activityIcons.new_sale
 
     return (
-        <div className="shadow-[0px_5.8px_23.17px_0px_#3326AE14] py-2 space-y-1 border-b border-neutral-2 last:border-0 px-4 rounded-lg">
+        <div className="shadow-[0px_5.8px_23.17px_0px_#3326AE14] py-2 space-y-1 border-b border-brand-neutral-2 last:border-0 px-4 rounded-lg">
             <div className='flex w-full justify-between gap-4'>
-                <span className='text-[11px] bg-brand-neutral-7'>{getActivityTypeText(activity.type)}</span>
-                <div className="flex items-center gap-1 text-[11px] bg-brand-neutral-7">
+                <span className='text-[11px] text-brand-neutral-7'>{getActivityTypeText(activity.type)}</span>
+                <div className="flex items-center gap-1 text-[11px] text-brand-neutral-7">
                     <Timer02 />
                     <span>{activity.timestamp}</span>
                 </div>

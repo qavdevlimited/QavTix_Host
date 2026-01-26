@@ -62,7 +62,7 @@ export default function PaginationControls({
               "p-2.5 rounded-md text-xs font-medium transition-all flex items-center gap-1",
               hasPreviousPage 
                   ? "bg-brand-primary-6 text-white hover:bg-brand-primary-7" 
-                  : "bg-brand-neutral-3 bg-brand-neutral-5 cursor-not-allowed"
+                  : "bg-brand-neutral-3 text-brand-neutral-5 cursor-not-allowed"
           )}
           aria-label="Previous page"
         >
@@ -77,7 +77,7 @@ export default function PaginationControls({
               return (
                 <span 
                   key={`ellipsis-${index}`}
-                    className="min-w-9 h-9 px-3 flex items-center justify-center text-xs bg-brand-neutral-6"
+                    className="min-w-9 h-9 px-3 flex items-center justify-center text-xs text-brand-neutral-6"
                 >
                   ...
                 </span>
@@ -94,7 +94,7 @@ export default function PaginationControls({
                     "min-w-7 h-7 px-3 rounded-sm text-xs font-medium flex items-center justify-center transition-colors",
                     isActive
                         ? "bg-brand-primary-6 text-white"
-                        : "bg-white bg-brand-neutral-8 border border-neutral-3"
+                        : "bg-white text-neutral-8 border border-brand-neutral-3"
                 )}
               >
                 {pageNum}
@@ -111,7 +111,7 @@ export default function PaginationControls({
             "p-2.5 rounded-md text-xs font-medium transition-all flex items-center gap-1",
             hasNextPage 
               ? "bg-brand-primary-6 text-white hover:bg-brand-primary-7" 
-              : "bg-brand-neutral-3 bg-brand-neutral-5 cursor-not-allowed"
+              : "bg-brand-neutral-3 text-brand-neutral-5 cursor-not-allowed"
           )}
           aria-label="Next page"
         >

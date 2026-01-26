@@ -71,7 +71,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                             >
                                 <div className={cn('w-8 h-2 rounded-full', level.color)} />
                                 <span className="text-xs font-medium text-brand-secondary-9">{level.label}</span>
-                                <span className="text-xs bg-brand-neutral-6">{level.value[0]}-{level.value[1]}%</span>
+                                <span className="text-xs text-brand-neutral-6">{level.value[0]}-{level.value[1]}%</span>
                             </button>
                         ))}
                     </div>
@@ -93,7 +93,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                         step={5}
                         className="w-full"
                     />
-                    <div className="flex justify-between text-xs bg-brand-neutral-6">
+                    <div className="flex justify-between text-xs text-brand-neutral-6">
                         <span>0%</span>
                         <span>50%</span>
                         <span>100%</span>
@@ -108,7 +108,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                             <p className="text-sm font-medium text-brand-secondary-9">
                                 Filtering: {range[0]}% - {range[1]}%
                             </p>
-                            <p className="text-xs bg-brand-neutral-6">
+                            <p className="text-xs text-brand-neutral-6">
                                 Shows events with ticket sales in this range
                             </p>
                         </div>

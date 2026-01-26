@@ -13,7 +13,7 @@ interface CustomerCardProps {
 
 export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, className }: CustomerCardProps) {
     return (
-        <div className={cn('bg-white rounded-2xl h-full border border-neutral-2 p-6', className)}>
+        <div className={cn('bg-white rounded-2xl h-full border border-brand-neutral-2 p-6', className)}>
             <div className="flex flex-col items-center text-center mb-6">
                 <CustomAvatar name={customer.name} profileImg={customer.profileImg} id={customer.id} size="16" />
                 
@@ -76,7 +76,7 @@ export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, c
                     </div>
                     <div className="flex-1">
                         <p className="text-[13px] font-semibold text-brand-secondary-9 mb-1">Latest Purchase</p>
-                        <p className="text-xs bg-brand-neutral-6">
+                        <p className="text-xs text-brand-neutral-6">
                              {formatDateTime(customer.lastPurchaseDate, "")}
                         </p>
                     </div>

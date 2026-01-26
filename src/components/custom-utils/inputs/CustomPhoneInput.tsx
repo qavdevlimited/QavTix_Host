@@ -63,7 +63,7 @@ export default function PhoneNumberInput({
                     value={value ?? ''}
                     onChange={onChange}
                     placeholder={placeholder}
-                    autoComplete="new-password" // I know it looks stupid, but it works man
+                    autoComplete="off"
                     className="flex w-full h-full custom-phone-input"
                     
                     countrySelectComponent={({ value: country, onChange: onCountryChange, options }: CountrySelectProps) => {
@@ -90,23 +90,31 @@ export default function PhoneNumberInput({
                                 </div>
                                 <div className="ml-2 h-8 w-px bg-brand-secondary-4" />
                             </div>
-                        );
+                        )
                     }}
 
                     numberInputComponent={React.forwardRef<HTMLInputElement, NumberInputProps>(
-                        ({ country, international, withCountryCallingCode, ...rest }, ref) => (
-                            <input
-                                {...rest}
-                                ref={ref}
-                                autoComplete="new-password" // I know it looks stupid, but it works man
-                                data-lpignore="true"
-                                name="ignore-phone-autofill"
-                                className={cn(
-                                    inter.className,
-                                    "flex-1 bg-transparent px-4 py-3 text-sm outline-none text-brand-neutral-9 placeholder:text-brand-secondary-5 h-full"
-                                )}
-                            />
-                        )
+                        ({ country, international, withCountryCallingCode, ...rest }, ref) => {
+                            const { value, onChange, ...inputProps } = rest;
+                            
+                            return (
+                                <input
+                                    {...inputProps}
+                                    value={value}
+                                    onChange={onChange}
+                                    ref={ref}
+                                    autoComplete="off"
+                                    data-lpignore="true"
+                                    data-form-type="other"
+                                    data-1p-ignore="true"
+                                    name={`phone-${Math.random()}`} 
+                                    className={cn(
+                                        inter.className,
+                                        "flex-1 bg-transparent px-4 py-3 text-sm outline-none text-brand-neutral-9 placeholder:text-brand-secondary-5 h-full"
+                                    )}
+                                />
+                            )
+                        }
                     )}
                 />
             </div>

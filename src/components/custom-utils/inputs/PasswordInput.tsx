@@ -33,7 +33,7 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
                     <input
                         ref={ref}
                         type={showPassword ? 'text' : 'password'}
-                        className={`flex-1 outline-none text-sm bg-brand-neutral-9 placeholder:bg-brand-neutral-6 bg-transparent ${className}`}
+                        className={`flex-1 outline-none text-sm text-brand-neutral-9 placeholder:text-brand-neutral-6 bg-transparent ${className}`}
                         {...props}
                     />
 

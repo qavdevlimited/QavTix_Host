@@ -70,7 +70,7 @@ export default function CreatePromoCodeForm({
                                 {...register('discount', { valueAsNumber: true })}
                                 placeholder="10"
                             />
-                            <div className="absolute -right-px bottom-0 my-auto top-[2em] h-11.25 w-10 bg-brand-neutral-6 rounded-e-md flex items-center justify-center bg-brand-neutral-7 font-medium text-sm">
+                            <div className="absolute -right-px bottom-0 my-auto top-[2em] h-11.25 w-10 text-brand-neutral-6 rounded-e-md flex items-center justify-center bg-brand-neutral-7 font-medium text-sm">
                                 %
                             </div>
                         </div>
@@ -101,12 +101,12 @@ export default function CreatePromoCodeForm({
                                         <Button
                                             variant="outline"
                                             className={cn(
-                                                "w-full h-11.25 justify-between text-left font-normal bg-brand-neutral-3 border-neutral-3 hover:bg-brand-neutral-3",
-                                                !field.value && "bg-brand-neutral-6"
+                                                "w-full h-11.25 justify-between text-left font-normal bg-brand-neutral-3 border-brand-neutral-3 hover:bg-brand-neutral-3",
+                                                !field.value && "text-brand-neutral-6"
                                             )}
                                         >
                                             {field.value ? format(field.value, "dd/MM/yyyy") : "DD/MM/YY"}
-                                            <CalendarIcon className="h-4 w-4 bg-brand-neutral-6" />
+                                            <CalendarIcon className="h-4 w-4 text-brand-neutral-6" />
                                         </Button>
                                     </PopoverTrigger>
                                     <PopoverContent className="w-auto p-0" align="start">

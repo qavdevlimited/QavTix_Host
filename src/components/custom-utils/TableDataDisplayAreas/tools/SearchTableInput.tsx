@@ -57,8 +57,8 @@ export default function SearchTableInput1({
                 'relative flex flex-row-reverse  w-full items-center gap-2 px-4 py-3',
                 'rounded-lg border h-11 text-sm transition-all duration-200 bg-brand-secondary-1',
                 isFocused
-                    ? 'border-[1.6px] border-brand-primary-6'
-                    : 'border-[0.5px] border-brand-secondary-3 hover:border-neutral-4'
+                    ? 'border-[1.6px] border-brand-secondary-5'
+                    : 'border-[0.5px] border-brand-secondary-3 hover:border-brand-secondary-4'
                 )}
             >
                 <input
@@ -70,24 +70,24 @@ export default function SearchTableInput1({
                     onFocus={() => setIsFocused(true)}
                     onBlur={() => setIsFocused(false)}
                     className={cn(
-                    'flex-1 outline-none h-full bg-transparent text-xs bg-brand-neutral-9',
-                    'placeholder:bg-brand-neutral-7'
-                )}
+                        'flex-1 outline-none h-full bg-transparent text-sm text-brand-neutral-9',
+                        'placeholder:text-neutral-6'
+                    )}
                 />
 
                 {isSearching ? (
-                <Icon
-                    icon="lucide:loader-2"
-                    className="size-6 shrink-0 text-brand-primary-6 animate-spin"
-                />
-                ) : (
-                <Icon
-                    icon="lucide:search"
-                    className={cn(
-                    'size-6 shrink-0 transition-colors',
-                    isFocused ? 'text-brand-primary-6' : 'bg-brand-neutral-6'
-                    )}
-                />
+                    <Icon
+                        icon="lucide:loader-2"
+                        className="size-6 shrink-0 text-brand-primary-6 animate-spin"
+                    />
+                    ) : (
+                    <Icon
+                        icon="lucide:search"
+                        className={cn(
+                        'size-6 shrink-0 transition-colors',
+                        isFocused ? 'text-brand-secondary-5' : 'text-brand-neutral-6'
+                        )}
+                    />
                 )}
             </div>
         </div>

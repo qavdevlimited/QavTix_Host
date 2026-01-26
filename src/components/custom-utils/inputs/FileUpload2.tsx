@@ -118,7 +118,7 @@ export default function AdditionalImagesUpload({
                     {previews.map((preview, index) => (
                         <div
                             key={index}
-                            className="relative size-20 rounded-lg overflow-hidden border-2 border-neutral-3 bg-neutral-1 group"
+                            className="relative size-20 rounded-lg overflow-hidden border-2 border-brand-neutral-3 bg-neutral-1 group"
                         >
                             <Image
                                 src={preview}

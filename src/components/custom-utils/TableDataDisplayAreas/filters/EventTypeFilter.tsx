@@ -78,7 +78,7 @@ export function EventTypeFilter({ value = [], onChange, icon }: EventTypeFilterP
                                     <p className={cn('font-medium text-sm', isSelected ? 'text-brand-primary-8' : 'text-brand-secondary-9')}>
                                         {type.label}
                                     </p>
-                                    <p className="text-xs bg-brand-neutral-6">{type.description}</p>
+                                    <p className="text-xs text-brand-neutral-6">{type.description}</p>
                                 </div>
                                 {isSelected && (
                                     <Icon icon="mdi:check-circle" className="w-6 h-6 text-brand-primary-6" />

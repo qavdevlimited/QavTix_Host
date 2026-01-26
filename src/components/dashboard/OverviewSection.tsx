@@ -15,7 +15,7 @@ export default function OverviewSection() {
                 <CreateEventBtn />
             </div>
 
-            <div className="relative mt-12 grid grid-cols-1 xsm:grid-cols-2 items-center gap-6 px-6 md:px-10 bg-linear-to-br from-primary-5.2 to-primary min-h-47 h-49 w-full rounded-xl overflow-hidden">
+            <div className="relative mt-12 grid grid-cols-1 xsm:grid-cols-2 items-center gap-6 px-6 md:px-10 bg-linear-to-br from-brand-primary-5.2 to-brand-primary min-h-47 h-49 w-full rounded-xl overflow-hidden">
                 
                 <div className="text-white relative z-10 py-6">
                     <h3 className={cn(space_grotesk.className, 'capitalize text-lg md:text-2xl leading-tight font-bold')}>
@@ -25,7 +25,7 @@ export default function OverviewSection() {
                         You have 3 active events and 156 tickets sold today
                     </p>
 
-                    <Button className="mt-3 md:mt-6 bg-white text-brand-primary-6 font-semibold text-xs md:text-sm hover:bg-brand-neutral-100 border-none">
+                    <Button className="mt-3 md:mt-6 bg-white text-brand-primary-6 font-semibold text-xs md:text-sm hover:bg-neutral-100 border-none">
                         <span>View All Events</span>
                         <Icon icon="stash:arrow-right" width="24" height="24" />
                     </Button>

@@ -1,3 +1,4 @@
+import { ConfirmationActionType } from '@/components/modals/resources/confirmationActions';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface ConfirmationState {
@@ -6,7 +7,9 @@ interface ConfirmationState {
     description: string;
     confirmText?: string;
     cancelText?: string;
-    onConfirm?: () => void;
+    actionType?: ConfirmationActionType;
+    isConfirmed: boolean;
+    lastConfirmedAction: ConfirmationActionType | null; // Track the specific action name
 }
 
 const initialState: ConfirmationState = {
@@ -15,7 +18,9 @@ const initialState: ConfirmationState = {
     description: '',
     confirmText: 'Yes, I am',
     cancelText: 'Cancel',
-    onConfirm: undefined
+    actionType: undefined,
+    isConfirmed: false,
+    lastConfirmedAction: null
 };
 
 export const confirmationSlice = createSlice({
@@ -27,21 +32,37 @@ export const confirmationSlice = createSlice({
             description: string;
             confirmText?: string;
             cancelText?: string;
-            onConfirm: () => void;
+            actionType: ConfirmationActionType;
         }>) => {
             state.isOpen = true;
+            state.isConfirmed = false;
+            // Clear previous confirmation records when a new one starts
+            state.lastConfirmedAction = null; 
             state.title = action.payload.title;
             state.description = action.payload.description;
             state.confirmText = action.payload.confirmText || 'Yes, I am';
             state.cancelText = action.payload.cancelText || 'Cancel';
-            state.onConfirm = action.payload.onConfirm;
+            state.actionType = action.payload.actionType;
+        },
+        confirmAction: (state) => {
+            state.isConfirmed = true;
+            state.isOpen = false;
+            // Record exactly what was confirmed before clearing actionType
+            state.lastConfirmedAction = state.actionType || null; 
         },
         closeConfirmation: (state) => {
             state.isOpen = false;
-            state.onConfirm = undefined;
+            state.isConfirmed = false;
+            state.actionType = undefined;
+            // Make Ur Mind De: We don't clear lastConfirmedAction here so the component can still read it
+        },
+        resetConfirmationStatus: (state) => {
+            state.isConfirmed = false;
+            state.lastConfirmedAction = null;
+            state.actionType = undefined;
         }
     }
 })
 
-export const { openConfirmation, closeConfirmation } = confirmationSlice.actions;
+export const { openConfirmation, confirmAction, closeConfirmation, resetConfirmationStatus } = confirmationSlice.actions;
 export default confirmationSlice.reducer;

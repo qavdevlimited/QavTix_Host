@@ -34,7 +34,7 @@ export default function UserMetricCard({
     
     return (
         <div className={cn(
-            'bg-white rounded-2xl border h-27 flex flex-col gap-2 justify-center items-center border-neutral-2 p-3 md:py-4 md:px-6 shadow-[0px_5.8px_23.17px_0px_#3326AE14] transition-transform hover:scale-103 ease-linear',
+            'bg-white rounded-2xl border h-27 flex flex-col gap-2 justify-center items-center border-brand-neutral-2 p-3 md:py-4 md:px-6 shadow-[0px_5.8px_23.17px_0px_#3326AE14] transition-transform hover:scale-103 ease-linear',
             className
         )}>
             <div className="flex justify-between w-full items-center gap-3">

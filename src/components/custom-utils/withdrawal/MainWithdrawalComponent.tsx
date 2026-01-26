@@ -115,7 +115,7 @@ export default function MainWithdrawalComponent() {
                     value={selectedAccount}
                     onValueChange={(value) => setSelectedAccount(value)}
                 >
-                    <SelectTrigger className="w-full border-neutral-3 p-3 h-12! bg-brand-neutral-4">
+                    <SelectTrigger className="w-full border-brand-neutral-3 p-3 h-12! bg-brand-neutral-4">
                         <SelectValue className="text-xs" placeholder="Select Bank Account" />
                     </SelectTrigger>
                     <SelectContent>

@@ -47,10 +47,10 @@ export default function AllEventsTable({
     return (
         <div className="w-full space-y-4 mt-5">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden!">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -155,7 +155,7 @@ export default function AllEventsTable({
                         >
                             <div className="space-y-3">
                                 {/* First Row - Status, Saves, Views, Menu */}
-                                <div className="flex items-center justify-between text-xs pb-2 border-b border-neutral-2">
+                                <div className="flex items-center justify-between text-xs pb-2 border-b border-brand-neutral-2">
                                     <div className="flex items-center gap-3">
                                         <Checkbox
                                             checked={isSelected}
@@ -194,7 +194,7 @@ export default function AllEventsTable({
                                 </div>
 
                                 {/* Third Row - Tickets Sold & Revenue */}
-                                <div className="flex justify-between items-center text-xs pt-2 border-t border-neutral-2">
+                                <div className="flex justify-between items-center text-xs pt-2 border-t border-brand-neutral-2">
                                     <div className="flex items-center gap-1 text-brand-secondary-9">
                                         <span className="font-bold">Tickets Sold:</span>
                                         <span className="font-normal">{event.ticketsSold}/{event.totalTickets}</span>

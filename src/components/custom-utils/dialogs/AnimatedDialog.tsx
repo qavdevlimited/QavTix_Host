@@ -66,8 +66,8 @@ export function AnimatedDialog({
 
           {
             showCloseButton &&
-            <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 hover:bg-brand-neutral-2 transition-colors z-10 bg-white/80 backdrop-blur-sm">
-              <X className="h-5 w-5 bg-brand-neutral-7" />
+            <DialogPrimitive.Close className="absolute right-4 top-4 rounded-full p-2 hover:bg-brand-neutral-3 transition-colors z-10 bg-white/80 backdrop-blur-sm">
+              <X className="h-5 w-5 text-brand-neutral-7" />
             </DialogPrimitive.Close>
           }
         </DialogPrimitive.Content>

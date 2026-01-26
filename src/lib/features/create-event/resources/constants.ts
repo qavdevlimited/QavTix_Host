@@ -70,14 +70,21 @@ export const REFUND_POLICIES = [
     { value: 'custom', label: 'Custom Percentage' },
 ] as const;
 
+
+
 // Collaborator Permissions
-export const COLLABORATOR_PERMISSIONS = [
-    { value: 'customers', label: 'Customers' },
-    { value: 'financials', label: 'Financials' },
-    { value: 'analytics', label: 'Analytics' },
-    { value: 'settings', label: 'Settings' },
-    { value: 'checkin', label: 'Check-in' },
+export const COLLABORATOR_ROLES = [
+  { id: 'manager', title: 'Manager', description: 'Can oversee all platform operations, manage attendees, monitor financials, access sales and analytics, manage marketing tools, supervise check-in activities, assign roles and permissions etc.' },
+  { id: 'financials', title: 'Financials', description: 'Can view financial data, manage payouts, track revenue, and access transaction reports.' },
+  { id: 'customers', title: 'Customers', description: 'Can view customer details, manage attendees, and handle customer-related actions.' },
+  { id: 'marketing', title: 'Marketing Tools', description: 'Can access promotions, create campaigns, and manage referral or discount tools.' },
+  { id: 'sales', title: 'Sales & Analytics', description: 'Can track sales performance, view analytics, and generate reports.' },
+  { id: 'checkin', title: 'Check-in System', description: 'Can manage attendee check-ins, validate tickets, and monitor entry status.' },
 ] as const;
+
+
+export const ROLE_IDS = COLLABORATOR_ROLES.map(v => v.id)
+
 
 // Social Media Platforms
 export const SOCIAL_PLATFORMS = [

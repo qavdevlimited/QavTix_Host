@@ -2,12 +2,12 @@ import "./globals.css"
 import DesktopHeaderSection from "@/components/layout/DesktopHeaderSection"
 import DesktopSideNav from "@/components/layout/DesktopSideNav"
 import MobileHeaderSection from "@/components/layout/MobileHeaderSection"
-import ConfirmationModal from "@/components/modals/ConfirmationModal"
-import SuccessModal from "@/components/modals/SuccessModal"
 import { inter } from "@/lib/fonts"
 import ReduxStoreProvider from "@/lib/redux/ReduxStoreProvider"
 import { Metadata } from "next"
 import { ReactNode } from "react"
+import PopUpsRenderer from "@/components/modals/"
+
 
 type LayoutProps = {
   children: ReactNode
@@ -39,10 +39,7 @@ export default function Layout({ children }: LayoutProps) {
               </div>
             </div>
           </div>
-
-
-          <ConfirmationModal />
-          <SuccessModal />
+          <PopUpsRenderer />
         </ReduxStoreProvider>
       </body>
     </html>

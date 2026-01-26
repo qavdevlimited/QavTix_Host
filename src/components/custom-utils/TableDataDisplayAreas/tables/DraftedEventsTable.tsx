@@ -21,10 +21,10 @@ export default function DraftedEventsTable() {
     return (
         <div className="w-full space-y-4 mt-5">
             {/* Desktop Table */}
-            <div className="hidden md:block border border-neutral-2 rounded-xl overflow-hidden">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-neutral-3">
+                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event Name</th>
@@ -116,11 +116,11 @@ export default function DraftedEventsTable() {
                     return (
                         <div 
                             key={event.id} 
-                            className="border border-neutral-3 rounded-lg p-4 bg-white"
+                            className="border border-brand-neutral-3 rounded-lg p-4 bg-white"
                         >
                             <div className="space-y-3">
                                 {/* First Row - Status, Tickets Sold, Revenue, Delete */}
-                                <div className="flex items-center gap-2 flex-wrap justify-between text-xs pb-2 border-b border-neutral-2">
+                                <div className="flex items-center gap-2 flex-wrap justify-between text-xs pb-2 border-b border-brand-neutral-2">
                                     <div className="flex items-center gap-1">
                                         <Icon icon={status.icon} className={cn('w-2 h-2', status.color)} />
                                         <span className={cn('font-medium', status.color)}>

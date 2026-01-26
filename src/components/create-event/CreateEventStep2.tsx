@@ -33,13 +33,13 @@ export default function CreateEventStep2() {
     })
 
     return (
-        <form className="relative flex flex-col min-h-full pb-32">
+        <form className="relative flex flex-col min-h-full md:pb-20">
             {/* The Responsive Grid Container */}
             <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-14 lg:gap-20">
                 {/* Left Column: Descriptions and Media */}
                 <section className="space-y-12">
                     <div className="space-y-6">
-                        <h3 className="text-brand-secondary-8 font-bold text-lg">Event Description</h3>
+                        <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Event Description</h3>
                         <CustomInput2
                             label="Short Description"
                             placeholder="Enter Short Description"
@@ -72,7 +72,7 @@ export default function CreateEventStep2() {
                                         onChange={field.onChange} 
                                         error={errors.featuredImage?.message as string}
                                     />
-                                )}
+                            )}
                             />
                         </div>
 
@@ -116,7 +116,7 @@ export default function CreateEventStep2() {
                 {/* Right Column: Organizer Information */}
                 <section className="space-y-12">
                     <div className="space-y-6">
-                        <h3 className="text-brand-secondary-8 font-bold text-lg">Organizer Information</h3>
+                        <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Organizer Information</h3>
                         
                         <CustomInput2 
                             label="Display Name"

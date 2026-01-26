@@ -1,13 +1,19 @@
 export const POPUP_MESSAGE_ALERT_CONFIG = {
     verification: {
         icon: "noto:hourglass-with-flowing-sand",
-        gradient: "from-blue-400 to-purple-500",
         bgColor: "bg-blue-50"
     },
     payout: {
         icon: "noto:money-bag",
-        gradient: "from-green-400 to-emerald-500",
         bgColor: "bg-green-50"
+    },
+    schedule_success: {
+        icon: "noto:hourglass-with-flowing-sand",
+        bgColor: "bg-amber-50"
+    },
+    success: {
+        icon: "noto:check-mark-button",
+        bgColor: "bg-emerald-50"
     }
 } as const;
 
@@ -20,5 +26,6 @@ export interface PopUpMessageAlert {
     description: string;
     subtitle?: string;
     buttonText?: string;
-    buttonAction?: () => void;
+    navigateTo?: string; 
+    actionType?: 'RETRY_PAYMENT' | 'VERIFY_DOCS'; 
 }

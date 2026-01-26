@@ -94,7 +94,7 @@ export default function SystemCheckInScanCodeInputArea() {
                                     w-full h-14 pl-12 pr-4 
                                     text-sm bg-brand-neutral-800 placeholder:bg-brand-neutral-400
                                     bg-brand-neutral-100 
-                                    border-[1.5px] border-neutral-200
+                                    border-[1.5px] border-brand-neutral-200
                                     rounded-xl
                                     outline-none
                                     transition-all duration-300

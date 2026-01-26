@@ -21,7 +21,7 @@ export function CreateEventStepperHeader() {
         activeLine: "var(--color-brand-accent-3)",
         completed: "var(--color-brand-primary-5)",
         pending: "var(--color-brand-neutral-6)",
-        lineBackground: "var(--color-brand-neutral-200)"
+        lineBackground: "var(--color-brand-neutral-7)"
     }
 
     return (
@@ -82,7 +82,7 @@ export function CreateEventStepperHeader() {
 
                                         {/* Connector Line */}
                                         {index < STEPS_CONFIG.length - 1 && (
-                                            <div className="flex-1 h-0.5 mx-2 sm:mx-4 bg-brand-neutral-200 rounded-full overflow-hidden">
+                                            <div className="flex-1 h-0.5 mx-2 sm:mx-4 bg-brand-neutral-6 rounded-full overflow-hidden">
                                                 <motion.div
                                                     initial={{ width: "0%" }}
                                                     animate={{ 
@@ -96,7 +96,7 @@ export function CreateEventStepperHeader() {
                                                     className="h-full"
                                                 />
                                             </div>
-                                        )}
+                                    )}
                                     </div>
 
                                     {/* Labels: Hidden on mobile (hidden), shown on desktop (sm:flex) */}

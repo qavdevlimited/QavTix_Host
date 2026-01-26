@@ -130,7 +130,7 @@ export function SortBy_Filter({ value = 'date-newest', onChange, icon }: SortByF
                                         <p className={cn('font-medium', isSelected ? 'text-brand-primary-8' : 'text-brand-secondary-9')}>
                                             {option.label}
                                         </p>
-                                        <p className="text-xs bg-brand-neutral-6">{option.description}</p>
+                                        <p className="text-xs text-brand-neutral-6">{option.description}</p>
                                     </div>
                                 </label>
                             )
