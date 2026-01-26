@@ -49,9 +49,9 @@ export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
                                 <Logo width={100} />
                                 <button 
                                     onClick={onClose}
-                                    className="p-1 rounded-full bg-brand-accent-3/20 text-brand-secondary-9"
+                                    className="p-2 rounded-full bg-brand-accent-3/50 text-brand-secondary-9"
                                 >
-                                    <Icon icon="lineicons:close" className="size-6" />
+                                    <Icon icon="lineicons:close" className="size-3" />
                                 </button>
                             </div>
 
