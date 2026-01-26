@@ -20,7 +20,7 @@ export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, c
                 <h3 className="text-[13px] font-bold text-brand-secondary-9 mb-1">
                     {customer.name}
                 </h3>
-                <p className="text-[13px] bg-brand-neutral-7">
+                <p className="text-[13px] text-brand-neutral-7">
                     {customer.email}
                 </p>
             </div>
@@ -50,7 +50,7 @@ export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, c
                     </div>
                     <div className="flex-1">
                         <p className="text-[13px] font-semibold text-brand-secondary-9 mb-1">Address</p>
-                        <p className="text-xs bg-brand-neutral-7 leading-relaxed">
+                        <p className="text-xs text-brand-neutral-7 leading-relaxed">
                             {customer.address}
                         </p>
                     </div>
@@ -63,8 +63,8 @@ export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, c
                     </div>
                     <div className="flex-1">
                         <p className="text-[13px] font-semibold text-brand-secondary-9 mb-1">First Purchase</p>
-                        <p className="text-xs bg-brand-neutral-7">
-                            {formatDateTime(customer.firstPurchaseDate, "")}
+                        <p className="text-xs text-brand-neutral-7">
+                            {formatDateTime(customer.firstPurchaseDate)}
                         </p>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, c
                     <div className="flex-1">
                         <p className="text-[13px] font-semibold text-brand-secondary-9 mb-1">Latest Purchase</p>
                         <p className="text-xs text-brand-neutral-6">
-                             {formatDateTime(customer.lastPurchaseDate, "")}
+                             {formatDateTime(customer.lastPurchaseDate)}
                         </p>
                     </div>
                 </div>

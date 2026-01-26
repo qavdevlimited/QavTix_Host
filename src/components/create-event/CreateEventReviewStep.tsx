@@ -83,12 +83,11 @@ export default function CreateEventReviewStep() {
             
             dispatch(resetConfirmationStatus())
         }
-    }, [isConfirmed, lastConfirmedAction])
+    }, [isConfirmed, lastConfirmedAction, dispatch])
 
     return (
         <div className="mt-8 md:pb-16">
-            {/* ... Existing UI Sections ... */}
-            <section className="space-y-6 mb-20">
+    <section className="space-y-6 mb-20">
                 <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Sections Filled</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-5 gap-x-4">
                     {sections.map((item, i) => (
@@ -104,10 +103,11 @@ export default function CreateEventReviewStep() {
                 </div>
             </section>
 
-            {/* Preview Card Section */}
+            {/* Preview Card */}
             <section className="space-y-6">
                 <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Preview</h3>
                 <div className="bg-white border border-brand-neutral-3 rounded-[32px] overflow-hidden flex flex-col md:flex-row drop-shadow-xs">
+                    
                     <div className="w-full md:w-[30%] h-64 md:h-auto relative">
                         <Image 
                             src="/images/demo-images/event-detail-img.png" 
@@ -118,13 +118,17 @@ export default function CreateEventReviewStep() {
                         />
                     </div>
 
+                    {/* Content Wrapper*/}
                     <div className="flex-1 p-6 md:p-8 flex flex-col md:flex-row gap-8">
+                        
+                        {/* Event Summary */}
                         <div className="flex-1 space-y-4 border-r-0 md:border-r border-dashed border-brand-neutral-3 pr-0 md:pr-8">
                             <div>
                                 <span className="text-brand-primary-3 text-xs uppercase tracking-widest mb-4 block">Event Summary</span>
                                 <h2 className={cn(space_grotesk.className, "text-xl md:text-2xl font-bold text-[#0046AD]")}>5ive Tour Concert</h2>
-                                <p className={cn(space_grotesk.className, "text-brand-secondary-9 font-light text-sm md:text-base")}>Music Festival</p>
+                                <p className={cn(space_grotesk, "text-brand-secondary-9 font-light text-sm md:text-base")}>Music Festival</p>
                             </div>
+
                             <div className="flex items-center gap-1 mt-3">
                                 <div className="flex items-center gap-0.5">
                                     <Icon icon="hugeicons:calendar-04" className="size-4 shrink-0 text-brand-accent-6" />
@@ -173,6 +177,7 @@ export default function CreateEventReviewStep() {
 
                         <div className="hidden md:block w-px border-l-[1.5px] border-dashed border-brand-neutral-5" />
 
+                        {/* Pricing Structure */}
                         <div className="flex-1">
                             <span className="text-brand-primary-3 text-[10px] uppercase tracking-widest font-bold mb-4 block">Pricing Structure</span>
                             <PricingBreakdown 
@@ -193,11 +198,12 @@ export default function CreateEventReviewStep() {
                     <span>Back</span>
                 </button>
 
+
                 <div className='mt-12 flex gap-4'>
                     <button
                         type="button"
                         onClick={() => setOpenScheduleLaterModal(true)}
-                        className="h-12 md:h-14 text-brand-primary-6 bg-white hover:shadow flex items-center gap-2 justify-center px-6 py-3 rounded-[30px] border border-brand-primary-6 font-medium text-xs md:text-sm transition-all duration-150"
+                        className="h-12 md:h-14 text-brand-primary-6 bg-white hover:shadow flex items-center gap-2 justify-center px-6 py-3 rounded-[30px] border border-brand-primary-6 font-medium text-xs md:text-sm hover:bg-brand-primary-1 hover:border-brand-primary-7 active:bg-brand-primary-1 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-brand-primary-4 focus:ring-offset-2 transition-all duration-150"
                     >
                         Schedule for Later
                     </button>
@@ -210,8 +216,6 @@ export default function CreateEventReviewStep() {
                     />
                 </div>
             </div>
-
-
 
 
 

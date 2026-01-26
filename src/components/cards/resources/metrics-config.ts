@@ -291,9 +291,9 @@ export const analyticsMetricStatCardsConfig2: MetricStatCardConfig[] = [
 export const analyticsMetricStatCardsConfig2VariantStyles = {
     primary: {
         container: 'bg-brand-primary-1 border-brand-primary-2',
-        value: 'text-brand-primary-6',
-        label: 'text-brand-primary-7',
-        description: 'text-brand-primary-5'
+        value: 'text-brand-primary-4',
+        label: 'text-brand-primary-4',
+        description: 'text-brand-primary-4'
     },
     accent: {
         container: 'bg-brand-accent-1 border-brand-accent-2',

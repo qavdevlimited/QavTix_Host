@@ -37,7 +37,7 @@ export default function ShareEventModal({ isOpen, onClose, shareUrl }: ShareModa
         <AnimatedDialog 
             open={isOpen} 
             showCloseButton={false}
-            className="md:max-w-md p-8"
+            className="md:max-w-md py-5"
         >
             <button
                 onClick={onClose}

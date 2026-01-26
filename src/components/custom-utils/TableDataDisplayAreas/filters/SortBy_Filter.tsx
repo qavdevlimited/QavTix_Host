@@ -123,7 +123,7 @@ export function SortBy_Filter({ value = 'date-newest', onChange, icon }: SortByF
                                     )}>
                                         <Icon
                                             icon={option.icon}
-                                            className={cn('w-5 h-5', isSelected ? 'text-white' : 'bg-brand-neutral-7')}
+                                            className={cn('w-5 h-5', isSelected ? 'text-white' : 'text-brand-neutral-7')}
                                         />
                                     </div>
                                     <div className="flex-1">
@@ -145,7 +145,7 @@ export function SortBy_Filter({ value = 'date-newest', onChange, icon }: SortByF
                             <Icon icon={currentSort?.icon || 'mdi:sort'} className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                            <p className="text-xs bg-brand-neutral-7">Sorting by</p>
+                            <p className="text-xs text-brand-neutral-7">Sorting by</p>
                             <p className="font-semibold text-brand-secondary-9">{currentSort?.label}</p>
                         </div>
                     </div>

@@ -56,7 +56,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
             <div className="space-y-6">
                 {/* Quick Presets */}
                 <div className="space-y-3">
-                    <p className="text-sm font-medium bg-brand-neutral-7">Quick Select</p>
+                    <p className="text-sm font-medium text-brand-neutral-7">Quick Select</p>
                     <div className="grid grid-cols-3 gap-2">
                         {performanceLevels.map((level) => (
                             <button
@@ -80,7 +80,7 @@ export function SalePerformanceFilter({ value, onChange, icon }: SalePerformance
                 {/* Range Slider */}
                 <div className="space-y-4 pt-4">
                     <div className="flex justify-between items-center">
-                        <p className="text-sm font-medium bg-brand-neutral-7">Custom Range</p>
+                        <p className="text-sm font-medium text-brand-neutral-7">Custom Range</p>
                         <p className="text-sm font-semibold text-brand-primary-6">
                             {range[0]}% - {range[1]}%
                         </p>

@@ -65,7 +65,7 @@ export default function SalesAnalyticsPageContentWrapper(){
 
             <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_23em] gap-6 py-10">
                 <div className="min-w-0 space-y-6">
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap gap-4">
                         {analyticsMetricStatCardsConfig2.map(config => (
                             <AnalyticsMetricStatCard2 key={config.id} config={config} />
                         ))}

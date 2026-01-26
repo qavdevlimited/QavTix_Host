@@ -117,7 +117,7 @@ export default function PayoutHistoryTable() {
                                     <span className="text-xs font-bold text-brand-secondary-9">
                                         Payment ID: <span className="font-normal">{payout.paymentId}</span>
                                     </span>
-                                    <span className="text-xs bg-brand-neutral-7">Status</span>
+                                    <span className="text-xs text-brand-neutral-7">Status</span>
                                 </div>
 
                                 {/* Bank Account Info */}

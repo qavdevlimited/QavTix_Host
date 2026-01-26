@@ -64,7 +64,7 @@ export default function PopUpMessageAlertModal() {
 
     return (
         <Dialog open={isOpen}>
-            <DialogContent showCloseButton={false} className="sm:max-w-160 max-h-[30em] p-0! overflow-x-hidden overflow-y-auto border-none rounded-4xl">
+            <DialogContent showCloseButton={false} className="sm:max-w-160 max-h-[30em] p-0 overflow-x-hidden overflow-y-auto border-none rounded-4xl">
                 <DialogTitle className="sr-only">{currentAlert.title}</DialogTitle>
 
                 <div className="bg-[url('/images/vectors/logo-bg-element3.svg')] -right-8 md:-right-[10em] opacity-90 h-full w-[70%] bottom-0 absolute bg-contain bg-no-repeat object-bottom" />
@@ -117,8 +117,8 @@ export default function PopUpMessageAlertModal() {
                         </div>
 
                         {/* Content */}
-                        <div className="pb-8 px-8 text-center">
-                            <h2 className={cn(space_grotesk.className, "text-2xl md:text-3xl font-bold text-brand-secondary-9 mb-2")}>
+                        <div className="pb-8 px-4 text-center">
+                            <h2 className={cn(space_grotesk.className, "text-xl md:text-3xl font-bold text-brand-secondary-9 mb-2")}>
                                 {currentAlert.title}
                             </h2>
                             

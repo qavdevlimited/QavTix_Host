@@ -98,7 +98,7 @@ export function TicketTypeFilter({ value = [], onChange, icon }: TicketTypeFilte
                                 )}>
                                     <Icon
                                         icon={type.icon}
-                                        className={cn('w-6 h-6', isSelected ? 'text-white' : 'bg-brand-neutral-7')}
+                                        className={cn('w-6 h-6', isSelected ? 'text-white' : 'text-brand-neutral-7')}
                                     />
                                 </div>
                                 <div className="flex-1 text-left">

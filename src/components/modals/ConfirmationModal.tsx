@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
-import { closeConfirmation, resetConfirmationStatus } from '@/lib/redux/slices/confirmationSlice';
+import { closeConfirmation, confirmAction, resetConfirmationStatus } from '@/lib/redux/slices/confirmationSlice';
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { AnimatedDialog } from '../custom-utils/dialogs/AnimatedDialog';
 import { usePathname, useRouter } from 'next/navigation';
@@ -19,10 +19,14 @@ export default function ConfirmationModal() {
 
     const handleConfirm = () => {
         if (actionType) {
-            const action = getConfirmationAction(actionType, router)
+            const action = getConfirmationAction(actionType, router);
+            
             action()
+
+            dispatch(confirmAction())
+        } else {
+            dispatch(closeConfirmation())
         }
-        dispatch(closeConfirmation())
     }
 
     useEffect(() => {
@@ -43,7 +47,7 @@ export default function ConfirmationModal() {
                 </DialogDescription>
             </DialogHeader>
 
-            <DialogFooter className="px-6 mt-6 justify-center flex-row gap-3 sm:gap-3">
+            <DialogFooter className="md:px-6 mt-6 justify-center flex-row gap-3 sm:gap-3">
                 <button
                     onClick={() => dispatch(closeConfirmation())}
                     className="w-full px-6 py-3 text-sm font-medium text-brand-secondary-9 bg-white border-2 border-gray-300 rounded-full hover:bg-brand-neutral-100 transition-all"

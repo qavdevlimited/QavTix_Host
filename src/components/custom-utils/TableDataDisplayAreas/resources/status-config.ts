@@ -7,7 +7,7 @@ export const upcomingEventsStatusConfig = {
 
 export const customerListStatusConfig = {
     'top-spender': { label: 'Top Spender', color: 'text-orange-600' },
-    'repeat-buyer': { label: 'Repeat Buyer', color: 'text-blue-600' },
+    'repeat-buyer': { label: 'Repeat Buyer', color: 'text-brand-primary-4' },
     'first-timer': { label: 'First Timer', color: 'text-green-600' }
 }
 

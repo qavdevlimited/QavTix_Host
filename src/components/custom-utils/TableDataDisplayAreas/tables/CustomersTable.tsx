@@ -138,52 +138,66 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                     const isSelected = selectedCustomers.includes(customer.id)
                     
                     return (
-                        <div 
+                       <div 
                             key={customer.id} 
                             className={cn(
-                                "border-b border-neutral-5 p-4",
+                                "border-b border-neutral-5 p-4 transition-colors",
                                 isSelected && "bg-brand-primary-1"
                             )}
                         >
-                            {/* Header with checkbox and status */}
-                            <div className="flex items-center justify-between mb-3">
-                                <div className="flex items-center gap-2">
+                            {/* Row 1: Status, Stats, and Actions */}
+                            <div className="flex items-center justify-between gap-2 mb-4">
+                                <div className="flex flex-wrap items-center gap-2 sm:gap-3 flex-1">
                                     <Checkbox
                                         checked={isSelected}
                                         onCheckedChange={() => handleSelectCustomer(customer.id)}
                                     />
-                                    <div className="flex items-center gap-1">
-                                        <Icon icon="mdi:circle" className={cn('w-2 h-2', status.color)} />
-                                        <span className={cn('text-xs font-medium', status.color)}>
+
+                                    <div className={cn(
+                                        "flex items-center gap-1 px-2 py-0.5 rounded-full bg-opacity-10",
+                                        status.color
+                                    )}>
+                                        <Icon icon="mdi:circle" className={cn('w-1.5 h-1.5', status.color)} />
+                                        <span className={cn('text-xs font-medium capitalize', status.color)}>
                                             {status.label}
                                         </span>
                                     </div>
+
+                                    <div className="flex items-center gap-2 text-[11px] text-brand-secondary-9">
+                                        <span className="flex items-center gap-1">
+                                            <span className="font-bold capitalize">Spent:</span>
+                                            ₦{customer.totalSpend.toLocaleString()}
+                                        </span>
+                                        <span className="flex text-brand-secondary-9 items-center gap-1">
+                                            <span className="capitalize font-bold">Attended:</span>
+                                            {customer.attended}
+                                        </span>
+                                    </div>
                                 </div>
-                                <CustomerItemAction />
+
+                                <div className="shrink-0">
+                                    <CustomerItemAction />
+                                </div>
                             </div>
 
-                            {/* Profile */}
-                            <UserInfo user={customer} variant="mobile" className="mb-4"  />
-
-                            {/* Details */}
-                            <div className="space-y-2 text-xs">
-                                <div className="flex justify-between">
-                                    <span className="text-brand-neutral-6">Address:</span>
-                                    <span className="text-brand-neutral-8 text-right max-w-[60%]">{customer.address}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-brand-neutral-6">Attended:</span>
-                                    <span className="font-medium text-brand-secondary-9">{customer.attended}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-brand-neutral-6">Total Spend:</span>
-                                    <span className="font-bold text-brand-secondary-9">₦{customer.totalSpend.toLocaleString()}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-brand-neutral-6">Last Purchase:</span>
-                                    <span className="text-brand-secondary-8">{formatDateTime(customer.lastPurchaseDate)}</span>
+                            {/* Row 2: User Profile & Last Purchase */}
+                            <div className="flex items-start flex-wrap justify-between gap-3 mb-4">
+                                <UserInfo 
+                                    user={customer} 
+                                    variant="mobile" 
+                                    className="shrink-0" 
+                                />
+                                
+                                <div className="flex flex-col gap-1 text-[11px] text-brand-secondary-9">
+                                    <span className="font-bold mr-1">Last Purchase:</span>
+                                    <span>
+                                        {formatDateTime(customer.lastPurchaseDate)}
+                                    </span>
                                 </div>
                             </div>
+
+                            {/* Row 3: Location */}
+                            <p className="text-[11px] text-brand-secondary-6">{customer.address}</p> 
                         </div>
                     )
                 })}

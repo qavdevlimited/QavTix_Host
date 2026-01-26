@@ -65,7 +65,7 @@ export default function RevenueGrowthChart() {
             const data = payload[0].payload as ChartDataPoint;
             return (
                 <div className="bg-white px-3 py-2 text-xs border border-brand-neutral-3 rounded-lg shadow-sm">
-                    <p className="font-medium bg-brand-neutral-8">
+                    <p className="font-medium text-brand-neutral-8">
                         {data.displayLabel}
                     </p>
                     <p className="text-brand-accent-6 font-semibold">

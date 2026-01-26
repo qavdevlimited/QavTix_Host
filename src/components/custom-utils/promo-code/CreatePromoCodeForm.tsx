@@ -129,14 +129,14 @@ export default function CreatePromoCodeForm({
                         control={control}
                         render={({ field }) => (
                             <div className="w-full">
-                                <Label className="block text-sm font-medium bg-brand-neutral-9 mb-2">
+                                <Label className="block text-sm font-medium text-brand-neutral-9 mb-2">
                                     Events Applicable
                                 </Label>
                                 
                                 <Select value={field.value} onValueChange={field.onChange}>
                                     <SelectTrigger
                                         className={cn(
-                                            "w-full px-4 py-3 text-sm rounded-lg min-h-11.25 h-11.25 outline-none bg-[#F2F2F2] bg-brand-neutral-9 transition-all",
+                                            "w-full px-4 py-3 text-sm rounded-lg min-h-11.25 h-11.25 outline-none bg-[#F2F2F2] text-brand-neutral-9 transition-all",
                                             errors.event_id 
                                                 ? 'border border-red-400 focus:ring-red-500' 
                                                 : 'border-transparent focus:border-[1.5px] focus:border-neutral-6 hover:border-neutral-5 border'

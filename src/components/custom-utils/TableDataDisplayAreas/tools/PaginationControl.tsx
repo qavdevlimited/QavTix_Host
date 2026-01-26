@@ -62,7 +62,7 @@ export default function PaginationControls({
               "p-2.5 rounded-md text-xs font-medium transition-all flex items-center gap-1",
               hasPreviousPage 
                   ? "bg-brand-primary-6 text-white hover:bg-brand-primary-7" 
-                  : "bg-brand-neutral-3 text-brand-neutral-5 cursor-not-allowed"
+                  : "bg-brand-neutral-3 text-brand-neutral-6 cursor-not-allowed"
           )}
           aria-label="Previous page"
         >
