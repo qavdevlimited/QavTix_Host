@@ -1,3 +1,13 @@
+export interface PasswordStrengthCheck {
+    atLeastOneUppercase: boolean;
+    atLeastOneNumber: boolean;
+    atLeastEightCharacters: boolean;
+    score: number;
+    strength: 'weak' | 'medium' | 'strong';
+    color: string;
+    label: string;
+}
+
 export function checkPasswordStrength(password: string): PasswordStrengthCheck {
     const checks = {
         atLeastOneUppercase: /[A-Z]/.test(password),

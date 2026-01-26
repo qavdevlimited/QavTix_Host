@@ -8,6 +8,7 @@ import { NAVIGATION_LINKS } from "@/enums/navigation";
 import { cn } from "@/lib/utils";
 import Logo from "./Logo";
 import AuthUserDetails from "./AuthUserDetails";
+import { useEffect } from "react";
 
 interface MobileNavMenuProps {
     isOpen: boolean;
@@ -15,7 +16,7 @@ interface MobileNavMenuProps {
 }
 
 export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
-    const pathName = usePathname();
+    const pathName = usePathname()
 
     const isActiveRoute = (route: string) => {
         if (!pathName) return false;
@@ -23,7 +24,21 @@ export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
         const routeSegment = route.split('/')[1];
         const currentSegment = pathName.split('/')[1];
         return currentSegment?.startsWith(routeSegment) ?? false;
-    };
+    }
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+            document.body.style.paddingRight = "var(--scrollbar-width, 0px)";
+        } else {
+            document.body.style.overflow = "unset";
+            document.body.style.paddingRight = "0px";
+        }
+        return () => {
+            document.body.style.overflow = "unset";
+            document.body.style.paddingRight = "0px";
+        }
+    }, [isOpen])
 
     return (
         <AnimatePresence>

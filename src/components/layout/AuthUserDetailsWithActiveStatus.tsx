@@ -20,7 +20,7 @@ export default function AuthUserDetailsWithActiveStatus(){
         <div className="flex items-center gap-2">
             <div className="relative w-fit">
                 <Avatar>
-                    <AvatarImage src={profile_img} />
+                    <AvatarImage src={profile_img || ""} />
                     <AvatarFallback className="uppercase">{full_name && getInitialsFromName(full_name)}</AvatarFallback>
                 </Avatar>
 
