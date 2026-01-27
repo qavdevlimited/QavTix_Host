@@ -93,7 +93,7 @@ export function DatePickerInput({
                     onFocus={() => setOpen(true)}
                     readOnly
                     placeholder={placeholder}
-                    className="pl-9 h-12 text-xs rounded-2xl border border-neutral-6 focus:border-brand-primary bg-background"
+                    className="pl-9 h-12 text-xs! rounded-2xl border border-neutral-6 focus:border-brand-primary bg-background"
                     onKeyDown={(e) => {
                         if (e.key === "ArrowDown") {
                             e.preventDefault()
@@ -124,7 +124,7 @@ export function EventSearchDateRangePicker({
     toPlaceholder = "Select end date"
 }: DateRangePickerProps) {
     return (
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs">
             <DatePickerInput
                 label={fromLabel}
                 value={value.from}

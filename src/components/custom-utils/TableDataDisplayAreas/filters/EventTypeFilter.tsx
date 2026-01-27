@@ -1,12 +1,17 @@
-import { useState } from "react"
-import { AnimatedDialog } from "../../dialogs/AnimatedDialog"
-import EventFilterTypeBtn from "./buttons-and-inputs/EventFilterTypeBtn"
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Icon } from "@iconify/react"
-import FilterButtonsActions1 from "./buttons-and-inputs/FilterActionButtons1"
 import { cn } from "@/lib/utils"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import EventFilterTypeBtn from './buttons-and-inputs/EventFilterTypeBtn'
 import { eventTypeOptions } from "../resources/event-type-filter"
-
-
+import FilterButtonsActions1 from "./buttons-and-inputs/FilterActionButtons1"
 
 interface EventTypeFilterProps {
     value?: string[]
@@ -15,8 +20,16 @@ interface EventTypeFilterProps {
 }
 
 export function EventTypeFilter({ value = [], onChange, icon }: EventTypeFilterProps) {
+
     const [isOpen, setIsOpen] = useState(false)
     const [selectedTypes, setSelectedTypes] = useState<string[]>(value)
+
+    const handleOpenChange = (open: boolean) => {
+        setIsOpen(open)
+        if (open) {
+            setSelectedTypes(value)
+        }
+    }
 
     const handleToggle = (typeValue: string) => {
         setSelectedTypes((prev) =>
@@ -33,62 +46,83 @@ export function EventTypeFilter({ value = [], onChange, icon }: EventTypeFilterP
 
     const handleClear = () => {
         setSelectedTypes([])
-        onChange([])
     }
 
+    const hasActiveFilter = value.length > 0
+    const displayText = hasActiveFilter ? `${value.length} selected` : 'Event Type'
+
     return (
-        <AnimatedDialog
-            onOpenChange={setIsOpen}
-            open={isOpen}
-            title='Event Type'
-            trigger={
+        <DropdownMenu open={isOpen} onOpenChange={handleOpenChange}>
+            <DropdownMenuTrigger asChild>
                 <EventFilterTypeBtn
                     icon={icon}
-                    onClick={() => setIsOpen(true)}
-                    displayText="Event Type"
-                    hasActiveFilter={selectedTypes.length > 0}
+                    displayText={displayText}
+                    hasActiveFilter={hasActiveFilter}
                 />
-            }
-        >
-            <div className="space-y-6">
-                <div className="grid grid-cols-1 gap-3">
-                    {eventTypeOptions.map((type) => {
-                        const isSelected = selectedTypes.includes(type.value)
-                        return (
-                            <button
-                                key={type.value}
-                                onClick={() => handleToggle(type.value)}
-                                className={cn(
-                                    'flex items-center gap-4 p-3 rounded-2xl border-[1.5px] transition-all',
-                                    isSelected
-                                        ? 'border-brand-primary-6 shadow-md'
-                                        : 'border-neutral-3 hover:border-brand-primary-3 hover:bg-brand-neutral-1'
-                                )}
-                            >
-                                <div className={cn(
-                                    'w-12 h-12 rounded-xl flex items-center justify-center transition-colors',
-                                    isSelected ? 'bg-brand-primary-6' : 'bg-brand-neutral-2'
-                                )}>
-                                    <Icon
-                                        icon={type.icon}
-                                        className={cn('w-6 h-6', isSelected ? 'text-white' : 'text-brand-neutral-7')}
-                                    />
-                                </div>
-                                <div className="flex-1 text-left">
-                                    <p className={cn('font-medium text-sm', isSelected ? 'text-brand-primary-8' : 'text-brand-secondary-9')}>
+            </DropdownMenuTrigger>
+
+            <DropdownMenuContent
+                align="start"
+                sideOffset={8}
+                className="w-80 md:w-112.5 p-3 rounded-xl shadow-xl border border-brand-neutral-2 bg-white z-100"
+            >
+                <div className="space-y-3">
+                    {/* Header */}
+                    <div className="px-1">
+                        <h3 className="font-bold text-brand-secondary-9">Event Type</h3>
+                        <p className="text-xs text-brand-neutral-6 mt-0.5">
+                            Select one or more event types
+                        </p>
+                    </div>
+
+                    {/* Grid of Options */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5 max-h-100 overflow-y-auto">
+                        {eventTypeOptions.map((type) => {
+                            const isSelected = selectedTypes.includes(type.value)
+                            return (
+                                <DropdownMenuItem
+                                    key={type.value}
+                                    onSelect={(e) => {
+                                        e.preventDefault()
+                                        handleToggle(type.value)
+                                    }}
+                                    className={cn(
+                                        "flex items-center gap-2.5 p-2 rounded-lg cursor-pointer transition-all outline-none",
+                                        "focus:bg-brand-neutral-1",
+                                        isSelected
+                                            ? "bg-brand-accent-1 border border-brand-accent-6"
+                                            : "bg-brand-neutral-3 hover:bg-brand-neutral-4!"
+                                    )}
+                                >
+                                    <div className={cn(
+                                        "size-7 rounded-lg flex items-center justify-center shrink-0 transition-colors"
+                                    )}>
+                                        <Icon icon={type.icon} className="size-4 text-brand-neutral-7" />
+                                    </div>
+                                    
+                                    <span className={cn(
+                                        "text-xs md:text-sm font-medium flex-1 truncate",
+                                        isSelected ? "text-brand-accent-5" : "text-brand-secondary-8"
+                                    )}>
                                         {type.label}
-                                    </p>
-                                    <p className="text-xs text-brand-neutral-7">{type.description}</p>
-                                </div>
-                                {isSelected && (
-                                    <Icon icon="mdi:check-circle" className="w-6 h-6 text-brand-primary-6" />
-                                )}
-                            </button>
-                        )
-                    })}
+                                    </span>
+
+                                    {isSelected && 
+                                        <Icon 
+                                            icon="iconamoon:check-bold" 
+                                            className="size-3 text-brand-accent-5 shrink-0" 
+                                        />
+                                    }
+                                </DropdownMenuItem>
+                            )
+                        })}
+                    </div>
+
+                    <div className="pt-2 border-t border-brand-neutral-2">
+                        <FilterButtonsActions1 onApply={handleApply} onClear={handleClear} />
+                    </div>
                 </div>
-                <FilterButtonsActions1 onApply={handleApply} onClear={handleClear} />
-            </div>
-        </AnimatedDialog>
+            </DropdownMenuContent>
+        </DropdownMenu>
     )
 }
