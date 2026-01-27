@@ -85,7 +85,7 @@ export default function EventsItemDropdown({
                                         className="size-4" 
                                     />
                                 ) : (
-                                    <Icon icon={action.icon} className="size-4" />
+                                    <Icon icon={action.icon} className="size-4.5" />
                                 )}
                                 {action.label}
                             </button>

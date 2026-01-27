@@ -52,7 +52,7 @@ export default function DataDisplayTableWrapper({
 }: DataDisplayTableWrapperProps) {
     return (
         <div className={cn(
-            'py-8 bg-white rounded-3xl shadow-[0px_5.8px_23.17px_0px_#3326AE14] overflow-hidden',
+            'pt-8 pb-16 g-white rounded-3xl shadow-[0px_5.8px_23.17px_0px_#3326AE14] overflow-hidden',
             className
         )}>
             {/* Tabs */}
@@ -64,10 +64,10 @@ export default function DataDisplayTableWrapper({
                                 key={tab.value}
                                 onClick={() => setActiveTab(tab.value)}
                                 className={cn(
-                                    'relative pb-4 px-1 text-sm font-semibold transition-colors whitespace-nowrap',
+                                    'relative pb-4 px-1 text-sm transition-colors whitespace-nowrap',
                                     activeTab === tab.value
-                                        ? 'text-brand-primary-6'
-                                        : 'text-brand-neutral-6 hover:text-brand-neutral-8'
+                                        ? 'text-brand-primary-6 font-bold'
+                                        : 'font-medium text-brand-neutral-7 hover:text-brand-neutral-8'
                                 )}
                             >
                                 <DataCountIndicator label={tab.label} />
