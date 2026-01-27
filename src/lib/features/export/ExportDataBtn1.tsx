@@ -67,12 +67,12 @@ export default function ExportButton1({
                 )}
             >
                 <span className={cn(
-                    'w-6 aspect-square rounded flex justify-center items-center text-white',
+                    'size-9 md:size-7 aspect-square rounded flex justify-center items-center text-white',
                     disabled ? 'bg-brand-neutral-4' : 'bg-brand-primary-3'
                 )}>
-                    <Icon icon="pajamas:export" width="16" height="16" />
+                    <Icon icon="pajamas:export" width="16" height="16" className="" />
                 </span>
-                <span className={cn(showFormatSelector ? 'hidden' : 'block', "md:block")}>{label}</span>
+                <span className={cn(showFormatSelector ? 'hidden' : 'block', "hidden md:block")}>{label}</span>
             </motion.button>
 
             {/* Format Selector */}
