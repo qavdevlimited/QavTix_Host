@@ -93,7 +93,7 @@ export function DatePickerInput({
                     onFocus={() => setOpen(true)}
                     readOnly
                     placeholder={placeholder}
-                    className="pl-9 h-12 text-xs! rounded-2xl border border-neutral-6 focus:border-brand-primary bg-background"
+                    className="pl-9 h-12 text-xs! rounded-2xl border border-brand-neutral-6 focus:border-brand-primary bg-background"
                     onKeyDown={(e) => {
                         if (e.key === "ArrowDown") {
                             e.preventDefault()

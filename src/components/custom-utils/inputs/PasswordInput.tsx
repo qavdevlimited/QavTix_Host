@@ -25,7 +25,7 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
                         border-[1.5px]
                         ${error 
                             ? 'border-red-400 focus-within:border-red-500' 
-                            : 'border-brand-neutral-5 hover:border-neutral-6 focus-within:border-neutral'
+                            : 'border-brand-neutral-5 hover:border-brand-neutral-6 focus-within:border-neutral'
                         }
                         bg-white
                     `}

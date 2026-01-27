@@ -22,7 +22,7 @@ const CustomInput1 = forwardRef<HTMLInputElement, FormInputProps>(
                         w-full px-4 py-3 text-sm rounded-lg h-14 transition-all
                         ${error 
                             ? 'border border-red-400 focus:border-red-500' 
-                            : 'border border-brand-neutral-5 focus:border-[1.5px] focus:border-brand-primary-5 hover:border-neutral-6'
+                            : 'border border-brand-neutral-5 focus:border-[1.5px] focus:border-brand-primary-5 hover:border-brand-neutral-6'
                         }
                         outline-none bg-[#F2F2F2] text-brand-neutral-9 placeholder:text-brand-neutral-6
                         ${className}

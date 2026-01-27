@@ -33,7 +33,7 @@ const CustomSelect2 = ({
                         w-full px-4 py-3 text-sm rounded-lg shadow-none min-h-14 h-14 border
                         ${error 
                             ? 'border border-red-400 focus:border-red-500' 
-                            : 'border border-brand-neutral-5 focus:border-[1.5px] focus:border-brand-accent-4 hover:border-neutral-6'
+                            : 'border border-brand-neutral-5 focus:border-[1.5px] focus:border-brand-accent-4 hover:border-brand-neutral-6'
                         }
                         outline-none bg-white text-brand-neutral-9 placeholder:text-brand-secondary-5
                     `}
