@@ -16,7 +16,7 @@ const initialState: SuccessModalState = {
     title: '',
     description: '',
     variant: 'success',
-    autoClose: true,
+    autoClose: false,
     autoCloseDelay: 3000
 }
 
@@ -35,7 +35,7 @@ export const successModalSlice = createSlice({
             state.title = action.payload.title;
             state.description = action.payload.description;
             state.variant = action.payload.variant || 'success';
-            state.autoClose = action.payload.autoClose ?? true;
+            state.autoClose = action.payload.autoClose ?? false;
             state.autoCloseDelay = action.payload.autoCloseDelay || 3000;
         },
         closeSuccessModal: (state) => {

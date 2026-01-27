@@ -87,7 +87,7 @@ export default function CreateEventReviewStep() {
 
     return (
         <div className="mt-8 md:pb-16">
-    <section className="space-y-6 mb-20">
+            <section className="space-y-6 mb-20">
                 <h3 className="text-brand-secondary-8 font-bold text-sm md:text-base">Sections Filled</h3>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-5 gap-x-4">
                     {sections.map((item, i) => (

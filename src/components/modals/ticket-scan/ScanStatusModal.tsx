@@ -27,7 +27,7 @@ export default function ScanResultModal({
                 Scan Result
             </DialogTitle>
 
-            <DialogClose className="absolute top-4 right-4 bg-brand-neutral-6 hover:bg-brand-neutral-7 transition-colors z-10">
+            <DialogClose className="absolute top-4 right-4 text-brand-neutral-6 hover:text-brand-neutral-7 transition-colors z-10">
                 <Icon icon="material-symbols:cancel" width="24" height="24" />
             </DialogClose>
 

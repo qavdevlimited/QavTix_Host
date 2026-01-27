@@ -37,26 +37,26 @@ export default function ConfirmationModal() {
     }, [pathName])
 
     return (
-        <AnimatedDialog open={isOpen} showCloseButton={false} className='md:max-w-sm! py-4'>
+        <AnimatedDialog open={isOpen} showCloseButton={false} className='md:max-w-sm! py-2'>
             <DialogHeader className="text-center flex justify-center items-center">
                 <DialogTitle className="text-lg font-bold text-brand-secondary-9">
                     {title}
                 </DialogTitle>
-                <DialogDescription className="text-sm text-brand-secondary-9">
+                <DialogDescription className="text-sm text-center text-brand-secondary-9">
                     {description}
                 </DialogDescription>
             </DialogHeader>
 
-            <DialogFooter className="md:px-6 mt-6 justify-center flex-row gap-3 sm:gap-3">
+            <DialogFooter className="mt-6 justify-center flex-row gap-3 sm:gap-3">
                 <button
                     onClick={() => dispatch(closeConfirmation())}
-                    className="w-full px-6 py-3 text-sm font-medium text-brand-secondary-9 bg-white border-2 border-gray-300 rounded-full hover:bg-brand-neutral-100 transition-all"
+                    className="w-full px-6 py-4 text-sm font-medium text-brand-secondary-9 bg-white border-2 border-gray-300 rounded-full hover:bg-brand-neutral-100 transition-all"
                 >
                     {cancelText}
                 </button>
                 <button
                     onClick={handleConfirm}
-                    className="w-full px-6 py-3 text-sm font-medium text-white bg-brand-primary-6 rounded-full hover:bg-brand-primary-7 hover:shadow-md transition-all"
+                    className="w-full px-6 py-4 text-sm font-medium text-white bg-brand-primary-6 rounded-full hover:bg-brand-primary-7 hover:shadow-md transition-all"
                 >
                     {confirmText}
                 </button>
