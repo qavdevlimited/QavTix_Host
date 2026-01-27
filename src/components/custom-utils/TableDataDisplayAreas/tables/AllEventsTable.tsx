@@ -52,19 +52,19 @@ export default function AllEventsTable({
                     <table className="w-full">
                         <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
                             <tr>
-                                <th className="w-12 py-4 px-4">
+                                <th className="w-12 p-4">
                                     <Checkbox
                                         checked={isAllSelected}
                                         onCheckedChange={handleSelectAll}
                                     />
                                 </th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event Name</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Date & Time</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Location</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
-                                <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Revenue</th>
-                                <th className="w-12 py-4 px-4"></th>
+                                <th className="text-left p-4 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
+                                <th className="text-left p-4 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event Name</th>
+                                <th className="text-left p-4 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Date & Time</th>
+                                <th className="text-left p-4 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Location</th>
+                                <th className="text-left p-4 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Tickets Sold</th>
+                                <th className="text-left p-4 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Revenue</th>
+                                <th className="w-12 p-4"></th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-5 bg-white">
@@ -81,13 +81,13 @@ export default function AllEventsTable({
                                         )}
                                         onClick={() => handleSelectEvent(event.id)}
                                     >
-                                        <td className="py-4 px-4" onClick={(e) => e.stopPropagation()}>
+                                        <td className="p-4" onClick={(e) => e.stopPropagation()}>
                                             <Checkbox
                                                 checked={isSelected}
                                                 onCheckedChange={() => handleSelectEvent(event.id)}
                                             />
                                         </td>
-                                        <td className="py-4 px-5">
+                                        <td className="p-4">
                                             <div className="flex items-center gap-1 whitespace-nowrap">
                                                 <Icon icon="mdi:circle" className={cn('w-2 h-2', status.color)} />
                                                 <span className={cn('text-xs font-medium', status.color)}>
@@ -95,7 +95,7 @@ export default function AllEventsTable({
                                                 </span>
                                             </div>
                                         </td>
-                                        <td className="py-4 px-5">
+                                        <td className="p-4">
                                             <EventInfo 
                                                 variant="desktop"
                                                 category={event.category}
@@ -103,17 +103,17 @@ export default function AllEventsTable({
                                                 title={event.title}
                                             />
                                         </td>
-                                        <td className="py-4 px-5">
+                                        <td className="p-4">
                                             <div className="flex flex-col text-xs text-brand-secondary-9">
                                                 <span>{event.date} | {event.time}</span>
                                             </div>
                                         </td>
-                                        <td className="py-4 px-5">
+                                        <td className="p-4">
                                             <p className="text-[11px] text-brand-secondary-6 max-w-[15em]">
                                                 {event.location}
                                             </p>
                                         </td>
-                                        <td className="py-4 px-5 text-center">
+                                        <td className="p-4 text-center">
                                             <div className="flex flex-col text-[11px]">
                                                 <span className="text-brand-secondary-9">
                                                     {event.ticketsSold}/{event.totalTickets}
@@ -123,12 +123,12 @@ export default function AllEventsTable({
                                                 </span>
                                             </div>
                                         </td>
-                                        <td className="py-4 px-5">
+                                        <td className="p-4">
                                             <p className="text-xs font-bold text-brand-secondary-9 whitespace-nowrap">
                                                 ₦{event.revenue.toLocaleString()}
                                             </p>
                                         </td>
-                                        <td className="py-4 px-4" onClick={(e) => e.stopPropagation()}>
+                                        <td className="p-4" onClick={(e) => e.stopPropagation()}>
                                             <EventsItemDropdown actions={liveEventActions} eventId="" />
                                         </td>
                                     </tr>
