@@ -30,7 +30,7 @@ export default function CollaboratorRoleEditSelect({ value, onValueChange, optio
                 <SelectValue placeholder="Role" />
             </SelectTrigger>
 
-            <SelectContent className="rounded-xl border-neutral-5 shadow-lg">
+            <SelectContent className="rounded-xl border-brand-neutral-5 shadow-lg">
                 {options.map((role) => (
                     <SelectItem 
                         key={role.id} 

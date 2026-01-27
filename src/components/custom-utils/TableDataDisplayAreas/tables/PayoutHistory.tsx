@@ -109,7 +109,7 @@ export default function PayoutHistoryTable() {
                     return (
                         <div 
                             key={payout.id} 
-                            className="border-b border-neutral-5 p-4"
+                            className="border-b border-brand-neutral-5 p-4"
                         >
                             <div className="space-y-2">
                                 {/* Header - Payment ID and Status */}

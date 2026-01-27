@@ -93,7 +93,7 @@ export default function OrderListTable() {
                         return (
                             <div 
                                 key={order.order_id} 
-                                className="border-b border-neutral-5 p-4"
+                                className="border-b border-brand-neutral-5 p-4"
                             >
                                 <div className="space-y-2.5">
                                     <div className="flex justify-between items-center">

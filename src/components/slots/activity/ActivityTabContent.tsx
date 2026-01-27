@@ -36,7 +36,7 @@ export default function RecentActivityTab({ activities }: RecentActivityTabProps
                 >
                     <SelectTrigger
                         className={cn(
-                            "border-brand-neutral-8 font-medium disabled:cursor-not-allowed disabled:opacity-65 text-xs w-fit bg-white rounded-lg border-neutral-4 hover:border-neutral-5 focus:border-brand-primary-6",
+                            "border-brand-neutral-8 font-medium disabled:cursor-not-allowed disabled:opacity-65 text-xs w-fit bg-white rounded-lg border-neutral-4 hover:border-brand-neutral-5 focus:border-brand-primary-6",
                         )}
                     >
                         <Icon icon="hugeicons:sliders-horizontal" width="24" height="24" className='shrink-0' />

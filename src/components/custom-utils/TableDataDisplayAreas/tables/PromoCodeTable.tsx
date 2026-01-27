@@ -85,7 +85,7 @@ export default function PromoCodeListTable() {
                         return (
                             <div 
                                 key={promo.id} 
-                                className="border-b border-neutral-5 p-4"
+                                className="border-b border-brand-neutral-5 p-4"
                             >
                                 <div className="space-y-2.5">
                                     <div className="flex flex-wrap gap-x-2 justify-between items-center text-[11px]">

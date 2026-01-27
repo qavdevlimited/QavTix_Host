@@ -22,7 +22,7 @@ export function PurchaseDateFilter({ date, setDate, hasActiveFilter }:{ date: Da
     const variants = {
         compact: cn(
             'px-2 justify-between text-xs rounded-[11px] h-9 min-w-20 font-medium',
-            'bg-white border border-neutral-5',
+            'bg-white border border-brand-neutral-5',
             'hover:border-brand-primary hover:bg-brand-primary-1'
         )
     }

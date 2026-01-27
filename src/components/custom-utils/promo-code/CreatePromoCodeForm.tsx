@@ -139,7 +139,7 @@ export default function CreatePromoCodeForm({
                                             "w-full px-4 py-3 text-sm rounded-lg min-h-11.25 h-11.25 outline-none bg-[#F2F2F2] text-brand-neutral-9 transition-all",
                                             errors.event_id 
                                                 ? 'border border-red-400 focus:ring-red-500' 
-                                                : 'border-transparent focus:border-[1.5px] focus:border-neutral-6 hover:border-neutral-5 border'
+                                                : 'border-transparent focus:border-[1.5px] focus:border-neutral-6 hover:border-brand-neutral-5 border'
                                         )}
                                     >
                                         <SelectValue placeholder="Select Event" />

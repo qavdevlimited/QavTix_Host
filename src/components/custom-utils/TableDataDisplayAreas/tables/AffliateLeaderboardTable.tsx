@@ -88,7 +88,7 @@ export default function AffiliateLeaderboardTable() {
                     return (
                         <div
                             key={affiliate.id}
-                            className="border-b border-neutral-5 p-4"
+                            className="border-b border-brand-neutral-5 p-4"
                         >
                             <div className="space-y-3">
                                 {/* Top Row - Stats */}

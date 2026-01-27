@@ -61,7 +61,7 @@ export default function MultiSelectTags({
           role="combobox"
           aria-expanded={open}
           className={cn(
-            'w-full min-h-14 h-14 shadow-none justify-between px-3 py-2 bg-white border border-neutral-5 focus:border-[1.5px] focus:border-brand-accent-4 hover:text-brand-secondary-5 hover:border-neutral-6 hover:bg-white',
+            'w-full min-h-14 h-14 shadow-none justify-between px-3 py-2 bg-white border border-brand-neutral-5 focus:border-[1.5px] focus:border-brand-accent-4 hover:text-brand-secondary-5 hover:border-neutral-6 hover:bg-white',
             selected.length === 0 && 'text-brand-secondary-5',
             className
           )}

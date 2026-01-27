@@ -92,7 +92,7 @@ export default function AdditionalImagesUpload({
                 className={cn(
                     'w-full h-14 rounded-[6px] border-[1.4px] border-dashed transition-all text-sm',
                     canAddMore
-                        ? 'border-brand-secondary-5 bg-transparent hover:border-neutral-5 hover:bg-neutral-2 text-brand-secondary-5'
+                        ? 'border-brand-secondary-5 bg-transparent hover:border-brand-neutral-5 hover:bg-neutral-2 text-brand-secondary-5'
                         : 'border-brand-secondary-5 bg-brand-neutral-3 text-brand-neutral-5 cursor-not-allowed opacity-60'
                 )}
             >

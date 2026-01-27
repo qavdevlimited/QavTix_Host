@@ -105,7 +105,7 @@ export default function UpcomingEventsTable() {
                     const percentage = Math.round((event.ticketsSold / event.totalTickets) * 100)
                     
                     return (
-                        <div key={event.id} className="border-b border-neutral-5 w-full pb-4">
+                        <div key={event.id} className="border-b border-brand-neutral-5 w-full pb-4">
                             <div className="flex items-center gap-1 mb-3 justify-between text-[11px]">
                                 <span className="flex items-center gap-0.5">
                                     <Icon icon="mdi:circle" className={cn('w-2 h-2', status.color)} />

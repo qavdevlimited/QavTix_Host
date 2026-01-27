@@ -57,7 +57,7 @@ export default function DataDisplayTableWrapper({
         )}>
             {/* Tabs */}
             {tabs && activeTab && setActiveTab && (
-                <div className="px-4 w-full border-b border-neutral-5 mb-4">
+                <div className="px-4 w-full border-b border-brand-neutral-5 mb-4">
                     <div className="flex items-center gap-8 overflow-x-auto">
                         {tabs.map((tab) => (
                             <button

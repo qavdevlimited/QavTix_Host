@@ -40,7 +40,7 @@ export default function EventsItemDropdown({
             <DropdownMenuTrigger asChild disabled={disabled} className="h-fit flex justify-center items-center">
                 <button 
                     className={cn(
-                        "p-1 border border-neutral-5 rounded-md transition-colors",
+                        "p-1 border border-brand-neutral-5 rounded-md transition-colors",
                         disabled 
                             ? "opacity-50 cursor-not-allowed" 
                             : "hover:bg-brand-neutral-2"
