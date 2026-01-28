@@ -50,7 +50,7 @@ export default function ConfirmationModal() {
             <DialogFooter className="mt-6 justify-center flex-row gap-3 sm:gap-3">
                 <button
                     onClick={() => dispatch(closeConfirmation())}
-                    className="w-full px-6 py-4 text-sm font-medium text-brand-secondary-9 bg-white border-2 border-gray-300 rounded-full hover:bg-brand-neutral-100 transition-all"
+                    className="w-full px-6 py-4 text-sm font-medium text-brand-secondary-9 bg-white border-2 border-gray-300 rounded-full hover:bg-neutral-100 transition-all"
                 >
                     {cancelText}
                 </button>
