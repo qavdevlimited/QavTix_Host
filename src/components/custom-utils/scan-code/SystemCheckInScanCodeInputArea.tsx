@@ -134,11 +134,11 @@ export default function SystemCheckInScanCodeInputArea() {
                             className={`
                                 px-8 py-3.5 rounded-md font-medium text-sm
                                 transition-all duration-300 transform
-                                focus:outline-none focus:ring-2 focus:ring-primary-5 focus:ring-offset-2
+                                focus:outline-none focus:ring-2 focus:ring-brand-primary-5 focus:ring-offset-2
                                 disabled:cursor-not-allowed
                                 ${isProcessing 
-                                    ? 'bg-primary-4 text-white cursor-wait scale-95' 
-                                    : 'bg-primary-6 text-white hover:bg-primary-7 hover:shadow-lg active:scale-95'
+                                    ? 'bg-brand-primary-4 text-white cursor-wait scale-95' 
+                                    : 'bg-brand-primary-6 text-white hover:bg-brand-primary-7 hover:shadow-lg active:scale-95'
                                 }
                             `}
                         >

@@ -14,7 +14,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     return (
       <div className="bg-[#001D4A] text-white p-4 rounded-lg shadow-xl border-none">
         <p className="text-sm font-semibold">{data.time || 'Afternoon'}</p>
-        <p className="text-[10px] bg-brand-neutral-400 mb-1">1pm - 4pm</p>
+        <p className="text-[10px] text-neutral-400 mb-1">1pm - 4pm</p>
         <p className="text-sm font-bold">{data.purchases || '890'} Purchases</p>
         {/* Tooltip Arrow */}
         <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#001D4A] rotate-45" />

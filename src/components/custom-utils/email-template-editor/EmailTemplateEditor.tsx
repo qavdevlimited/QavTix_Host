@@ -57,12 +57,12 @@ export default function EmailTemplateEditor({
           {/* 2. Recipients & Subject */}
           <div className="px-4 py-1">
             <div className="flex items-center gap-2 border-b py-2 text-sm">
-              <span className="bg-brand-neutral-400 w-16">Recipients</span>
+              <span className="text-neutral-400 w-16">Recipients</span>
               <input type="text" className="flex-1 outline-none" />
-              <Icon icon="hugeicons:plus-01" className="bg-brand-neutral-400 cursor-pointer" />
+              <Icon icon="hugeicons:plus-01" className="text-neutral-400 cursor-pointer" />
             </div>
             <div className="flex items-center gap-2 border-b py-2 text-sm">
-              <span className="bg-brand-neutral-400 w-16">Subject</span>
+              <span className="text-neutral-400 w-16">Subject</span>
               <input type="text" className="flex-1 outline-none" />
             </div>
           </div>

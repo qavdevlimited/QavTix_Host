@@ -134,7 +134,7 @@ export default function SalesPaymentsTable({ setSelectedPayments, selectedPaymen
                         <div 
                             key={payment.id} 
                             className={cn(
-                                "border border-brand-neutral-3 rounded-lg p-4 bg-white",
+                                "border border-brand-neutral-3 rounded-lg p-2",
                                 isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >

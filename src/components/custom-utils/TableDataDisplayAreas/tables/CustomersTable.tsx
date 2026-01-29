@@ -141,8 +141,8 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                        <div 
                             key={customer.id} 
                             className={cn(
-                                "border-b border-brand-neutral-5 p-4 transition-colors",
-                                isSelected && "bg-brand-primary-1"
+                                "border border-brand-neutral-3 rounded-lg p-2",
+                                isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >
                             {/* Row 1: Status, Stats, and Actions */}

@@ -149,7 +149,7 @@ export default function MyLiveEventsTable({
                         <div 
                             key={event.id} 
                             className={cn(
-                                "border-b border-brand-neutral-5 py-3",
+                                "border border-brand-neutral-3 rounded-lg p-2",
                                 isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >
