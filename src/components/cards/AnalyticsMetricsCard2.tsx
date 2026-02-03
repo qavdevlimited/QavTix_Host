@@ -11,7 +11,7 @@ export default function AnalyticsMetricStatCard2({ config }: AnalyticsMetricStat
     
     return (
         <div className={cn(
-            "flex items-center gap-4 w-46 max-h-21 px-3 py-4 rounded-xl border-[1.5px] transition-all duration-200 hover:shadow-md",
+            "flex items-center gap-3 md:gap-4 w-41 md:w-46 max-h-21 px-2 md:px-4 py-4 rounded-xl border-[1.5px] transition-all duration-200 hover:shadow-md",
             styles.container
         )}>
             <div className="flex flex-col">

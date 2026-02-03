@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -23,6 +23,8 @@ interface CategoryFilterProps {
     value?: string[]
     onChange: (value: string[]) => void
     categories?: Category[]
+    icon?: string
+    label?: string 
 }
 
 const defaultCategories: Category[] = [
@@ -40,6 +42,8 @@ const defaultCategories: Category[] = [
 export default function CategoryFilter({
     value = [],
     onChange,
+    icon,
+    label = 'Event category',
     categories = defaultCategories,
 }: CategoryFilterProps) {
 
@@ -81,7 +85,7 @@ export default function CategoryFilter({
     const hasActiveFilter = value.length > 0
     const displayText = hasActiveFilter
         ? `${value.length} selected`
-        : 'Event category'
+        : label
     
 
     const categoryList = (
@@ -112,6 +116,7 @@ export default function CategoryFilter({
                     <EventFilterTypeBtn 
                         onClick={() => setIsOpen(true)}
                         displayText={displayText} 
+                        icon={icon}
                         hasActiveFilter={hasActiveFilter}
                     />
 
@@ -132,6 +137,7 @@ export default function CategoryFilter({
                     <DropdownMenuTrigger asChild>
                         <EventFilterTypeBtn 
                             displayText={displayText} 
+                            icon={icon}
                             hasActiveFilter={hasActiveFilter}
                         />
                     </DropdownMenuTrigger>

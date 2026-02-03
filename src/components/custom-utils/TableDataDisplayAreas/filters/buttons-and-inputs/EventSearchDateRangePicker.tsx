@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import {
     Popover,
     PopoverContent,
@@ -23,7 +22,6 @@ interface DatePickerInputProps {
 }
 
 export function DatePickerInput({
-    label,
     value,
     onChange,
     placeholder = "Select date",
@@ -64,14 +62,14 @@ export function DatePickerInput({
                                 icon="hugeicons:calendar-03"
                                 width="30"
                                 height="30"
-                                className="text-brand-secondary-9 size-5"
+                                className="text-secondary-9 size-5"
                             />
                             <span className="sr-only">Open calendar</span>
                         </Button>
                     </PopoverTrigger>
 
                     <PopoverContent
-                        className="w-auto p-0 overflow-hidden z-98"
+                        className="w-auto p-0 overflow-hidden text-xs z-100"
                         align="start"
                         sideOffset={8}
                     >
@@ -82,6 +80,9 @@ export function DatePickerInput({
                             onMonthChange={setMonth}
                             onSelect={handleSelect}
                             captionLayout="dropdown"
+                            classNames={{
+                                caption_dropdowns: "flex gap-1 font-medium! items-center text-xs",
+                            }}
                         />
                     </PopoverContent>
                 </Popover>
@@ -93,7 +94,7 @@ export function DatePickerInput({
                     onFocus={() => setOpen(true)}
                     readOnly
                     placeholder={placeholder}
-                    className="pl-9 h-12 text-xs! rounded-2xl border border-brand-neutral-6 focus:border-brand-primary bg-background"
+                    className="pl-9 h-12 text-xs! placeholder:text-xs! rounded-2xl border border-neutral-6 focus:border-primary bg-background"
                     onKeyDown={(e) => {
                         if (e.key === "ArrowDown") {
                             e.preventDefault()
@@ -124,7 +125,7 @@ export function EventSearchDateRangePicker({
     toPlaceholder = "Select end date"
 }: DateRangePickerProps) {
     return (
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs">
+        <div className="flex flex-col text-xs sm:flex-row sm:items-center gap-2">
             <DatePickerInput
                 label={fromLabel}
                 value={value.from}
@@ -133,7 +134,7 @@ export function EventSearchDateRangePicker({
                 id="from-date"
             />
 
-            <div className="flex text-xs items-center justify-center gap-1 text-brand-neutral-6 pb-2 sm:pb-0">
+            <div className="flex items-center justify-center gap-1 text-neutral-6 pb-2 sm:pb-0">
                 <span aria-hidden="true">—</span>
                 <span className="">to</span>
                 <span aria-hidden="true">—</span>

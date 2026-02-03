@@ -52,7 +52,7 @@ export default function DataDisplayTableWrapper({
 }: DataDisplayTableWrapperProps) {
     return (
         <div className={cn(
-            'pt-8 pb-16 g-white rounded-3xl shadow-[0px_5.8px_23.17px_0px_#3326AE14] overflow-hidden',
+            'pt-8 pb-16 bg-white rounded-3xl shadow-[0px_5.8px_23.17px_0px_#3326AE14] overflow-hidden',
             className
         )}>
             {/* Tabs */}
@@ -104,7 +104,7 @@ export default function DataDisplayTableWrapper({
                 )}
             </div>
 
-            <div className="w-full overflow-x-auto px-4">
+            <div className="w-full overflow-x-auto px-4 mt-8">
                 {children}
             </div>
         </div>

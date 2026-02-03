@@ -24,7 +24,7 @@ export default function DraftedEventsTable() {
             <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
+                        <thead className="bg-brand-neutral-3 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Status</th>
                                 <th className="text-left py-4 px-5 text-sm font-semibold text-brand-secondary-8 capitalize whitespace-nowrap">Event Name</th>

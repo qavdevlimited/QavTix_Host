@@ -36,7 +36,7 @@ export default function TopPerformingEventsSlotPW({
                     >
                         Top Performing Events
                         {activeTab === 'topPerformingEvents' && (
-                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-6" />
+                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-primary-6" />
                         )}
                     </button>
                 </div>

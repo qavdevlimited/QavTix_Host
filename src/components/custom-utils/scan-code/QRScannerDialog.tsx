@@ -115,7 +115,7 @@ export default function QRScannerDialog({
                 >
                     <DialogPrimitive.DialogTitle className='sr-only'>Scan QR Code</DialogPrimitive.DialogTitle>
                     
-                    <DialogPrimitive.Close className="absolute top-4 right-4 z-50 bg-brand-neutral-400 hover:text-white transition-colors">
+                    <DialogPrimitive.Close className="absolute top-4 right-4 z-50 text-neutral-400 hover:text-white transition-colors">
                         <Icon icon="ri:close-circle-fill" width="32" height="32" />
                     </DialogPrimitive.Close>
 

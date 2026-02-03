@@ -52,7 +52,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
             <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-2 border-b border-brand-neutral-3">
+                        <thead className="bg-brand-neutral-3 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="w-12 py-4 px-4">
                                     <Checkbox
@@ -69,7 +69,7 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                                 <th className="w-12 py-4 px-4"></th>
                             </tr>
                         </thead>
-                        <tbody className="divide-y divide-neutral-2 bg-white">
+                        <tbody className="divide-y divide-neutral-5 bg-white">
                             {pagination.currentItems.map((customer) => {
                                 const status = customerListStatusConfig[customer.status as keyof typeof customerListStatusConfig]
                                 const isSelected = selectedCustomers.includes(customer.id)
@@ -141,8 +141,8 @@ export default function CustomersTable({ setSelectedCustomers, selectedCustomers
                        <div 
                             key={customer.id} 
                             className={cn(
-                                "border-b border-brand-neutral-5 p-4 transition-colors",
-                                isSelected && "bg-brand-primary-1"
+                                "border border-brand-neutral-3 rounded-lg p-2",
+                                isSelected && "bg-brand-primary-1 border-brand-primary-3"
                             )}
                         >
                             {/* Row 1: Status, Stats, and Actions */}
