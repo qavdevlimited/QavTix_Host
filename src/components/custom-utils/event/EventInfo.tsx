@@ -37,10 +37,10 @@ export default function EventInfo({
             </div>
 
             {/* Text Content */}
-            <div className={cn("min-w-0", isDesktop ? "flex-1" : "")}>
+            <div className={cn(isDesktop ? "flex-1 min-w-25" : "min-w-0")}>
                 <h3
                     className={cn(
-                        "font-bold text-brand-secondary-9",
+                        "font-semibold text-brand-secondary-9",
                         isDesktop ? "text-sm" : "text-xs"
                     )}
                     >

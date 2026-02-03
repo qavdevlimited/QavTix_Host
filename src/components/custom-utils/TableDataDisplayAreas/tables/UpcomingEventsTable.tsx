@@ -20,7 +20,7 @@ export default function UpcomingEventsTable() {
     return (
         <div className="w-full space-y-4">
             {/* Desktop Table */}
-            <div className="hidden bg-white md:block border border-brand-neutral-2 overflow-x-auto">
+            <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-x-auto">
                 <table className="w-full">
                     <thead className="bg-brand-neutral-3 border-b border-brand-neutral-3">
                         <tr>

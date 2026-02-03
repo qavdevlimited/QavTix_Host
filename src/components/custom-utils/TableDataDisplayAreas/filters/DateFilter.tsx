@@ -7,17 +7,19 @@ import { formatDate } from '@/helper-fns/date-utils'
 import { DateRange } from 'react-day-picker'
 import { QuickDateButtons } from './buttons-and-inputs/QuickDateButtons'
 import { EventSearchDateRangePicker } from './buttons-and-inputs/EventSearchDateRangePicker'
-import { MobileBottomSheet } from '../../dropdown/EventFilterDropdownMobileBottomSheet'
 import EventFilterTypeBtn from './buttons-and-inputs/EventFilterTypeBtn'
 import FilterButtonsActions1 from './buttons-and-inputs/FilterActionButtons1'
 import { useMediaQuery } from '@/custom-hooks/UseMediaQuery'
+import { MobileBottomSheet } from '../../dropdown/EventFilterDropdownMobileBottomSheet'
 
 interface DateFilterProps {
     value?: DateRange | null
     onChange: (value: DateRange | null) => void,
+    icon?: string
+    label?: string
 }
 
-export default function DateFilter({ value, onChange }: DateFilterProps) {
+export default function DateFilter({ value, onChange, icon, label = "Date Range" }: DateFilterProps) {
 
     
     const [isOpen, setIsOpen] = useState(false)
@@ -30,14 +32,14 @@ export default function DateFilter({ value, onChange }: DateFilterProps) {
     const hasActiveFilter = value && (value?.from || value?.to)
 
     const displayText = (() => {
-        if (!hasActiveFilter) return 'Date Range'
+        if (!hasActiveFilter) return label
         if (value?.from && value?.to) {
             return `${formatDate(value.from, 'MMM dd')} - ${formatDate(value.to, 'MMM dd')}`
         }
         if (value?.from) {
             return formatDate(value.from, 'MMM dd, yyyy')
         }
-        return 'Date Range'
+        return label
     })()
 
     const handleApply = () => {
@@ -77,6 +79,7 @@ export default function DateFilter({ value, onChange }: DateFilterProps) {
                         onClick={() => setIsOpen(true)}
                         displayText={displayText} 
                         hasActiveFilter={!!hasActiveFilter}
+                        icon={icon}
                     />
 
                     <MobileBottomSheet
@@ -100,6 +103,7 @@ export default function DateFilter({ value, onChange }: DateFilterProps) {
                         <EventFilterTypeBtn 
                             displayText={displayText} 
                             hasActiveFilter={!!hasActiveFilter}
+                            icon={icon}
                         />
                     </DropdownMenuTrigger>
                     <DropdownMenuContent 

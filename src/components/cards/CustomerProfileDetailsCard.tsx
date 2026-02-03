@@ -13,7 +13,7 @@ interface CustomerCardProps {
 
 export function CustomerProfileDetailsCard({ customer, onSendEmail, onSendSMS, className }: CustomerCardProps) {
     return (
-        <div className={cn('bg-white rounded-2xl h-full border border-brand-neutral-2 p-6', className)}>
+        <div className={cn('bg-white rounded-2xl h-full shadow-[0px_5.8px_23.17px_0px_#3326AE14] border border-brand-neutral-2 p-6', className)}>
             <div className="flex flex-col items-center text-center mb-6">
                 <CustomAvatar name={customer.name} profileImg={customer.profileImg} id={customer.id} size="16" />
                 

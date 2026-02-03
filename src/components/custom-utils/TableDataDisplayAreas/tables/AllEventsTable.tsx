@@ -50,7 +50,7 @@ export default function AllEventsTable({
             <div className="hidden md:block border border-brand-neutral-2 rounded-xl overflow-hidden!">
                 <div className="overflow-x-auto">
                     <table className="w-full">
-                        <thead className="bg-brand-neutral-3/80 border-b border-brand-neutral-3">
+                        <thead className="bg-brand-neutral-3 border-b border-brand-neutral-3">
                             <tr>
                                 <th className="w-12 p-4">
                                     <Checkbox
