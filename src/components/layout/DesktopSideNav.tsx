@@ -8,6 +8,8 @@ import { NAVIGATION_LINKS } from "@/enums/navigation"
 import AuthUserDetails from "./AuthUserDetails"
 import { cn } from "@/lib/utils"
 
+
+
 function DesktopSideNav() {
     const pathName = usePathname()
     
