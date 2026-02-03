@@ -20,10 +20,12 @@ export default function MobileNavMenu({ isOpen, onClose }: MobileNavMenuProps) {
 
     const isActiveRoute = (route: string) => {
         if (!pathName) return false;
-        if (pathName === "/dashboard") return route === pathName;
-        const routeSegment = route.split('/')[1];
-        const currentSegment = pathName.split('/')[1];
-        return currentSegment?.startsWith(routeSegment) ?? false;
+
+        if (route === "/dashboard") {
+            return pathName === "/dashboard";
+        }
+
+        return pathName === route || pathName.startsWith(`${route}/`)
     }
 
     useEffect(() => {
