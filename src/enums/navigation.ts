@@ -43,12 +43,12 @@ export const NAVIGATION_LINKS = {
 
 
 export const CUSTOMERS_PROFILE = {
-    href: "/customers/profile/[customer_id]",
+    href: `${NAVIGATION_LINKS.CUSTOMERS.href}/profile/[profile_id]`,
     label: "Customer Profile"
 } as const;
 
 export const CREATE_EVENT = {
-    href: "/events/create",
+    href: `${NAVIGATION_LINKS.MY_EVENTS.href}/create`,
     label: "Create Event"
 } as const;
 
